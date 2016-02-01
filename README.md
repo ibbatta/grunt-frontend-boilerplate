@@ -24,7 +24,7 @@ TODO: Write usage instructions
 
 ## History
 
-Started 02-01-2016
+- Started 02-01-2016
 
 
 ## Credits
