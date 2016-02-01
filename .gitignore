@@ -54,3 +54,4 @@ coverage
 dist
 dist-components
 jsdoc
+.jshintrc
