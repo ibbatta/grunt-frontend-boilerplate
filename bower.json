@@ -1,0 +1,23 @@
+{
+  "name": "my-grunt-angular-boilerplate",
+  "description": "Custom grunt and angular.js boilerplate (to start projects)",
+  "main": "",
+  "authors": [
+    "Maurizio Battaghini"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "grunt",
+    "angular",
+    "custom",
+    "boilerplate",
+    "project"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.9",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

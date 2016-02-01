@@ -23,7 +23,7 @@
 *.tar
 *.zip
 node_modules
-bower_components
+app/vendors
 
 
 # Logs and databases #
@@ -55,3 +55,4 @@ dist
 dist-components
 jsdoc
 .jshintrc
+app/tmp

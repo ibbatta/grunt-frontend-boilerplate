@@ -34,8 +34,21 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/css/main.css': 'app/index.scss'
+          'app/tmp/css/main.css': 'app/index.scss'
         }
+      }
+    },
+
+    // AUTOPREFIXER
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer')()
+        ]
+      },
+      dist: {
+        src: 'app/tmp/css/main.css',
+        dest: 'app/tmp/css/main.css'
       }
     },
 
@@ -43,8 +56,44 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'dist/css/main.min.css': 'dist/css/main.css'
+          'dist/css/main.min.css': 'tmp/css/main.css'
         }
+      }
+    },
+
+    // MINIFY HTML
+    htmlmin: { 
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'app/',
+          src: '**/*.html',
+          dest: 'dist/'
+        }]
+     }
+    },
+
+    // INJECTOR
+    injector: {
+      options: {
+        template: 'app/index.html',
+        min: true,
+        relative: true
+      },
+      local_dependencies: {
+        files: {
+          'app/index.html': ['app/**/*.js', 'app/**/*.css', '!app/vendors/**/*'],
+        }
+      },
+    },
+
+    wiredep: {
+      task: {
+        src: ['app/index.html']
       }
     },
 
@@ -56,26 +105,36 @@ module.exports = function(grunt) {
 
       stylesheet: {
         files: ['app/index.scss'],
-        tasks: ['sass', 'cssmin']
+        tasks: ['sass', 'postcss', 'injector']
       },
       scripts: {
         files:['app/**/*.js'],
-        tasks:['jshint', 'uglify']
-      }
+        tasks:['jshint', 'injector']
+      },
+      bower: {
+        files: ['bower_components/*'],
+        tasks: ['wiredep']
+      },
     },
 
     // EXPRESS SERVER
     express:{
-      all:{
+      build:{
         options:{
           port:9001,
           hostname:'localhost',
-          bases:['./app'],
+          bases:['app/'],
           livereload: true 
         }
       }
-    }
-    
+    },  
+
+    // CLEAN
+    clean: {
+      build: {
+        src: ['app/tmp/**/*']
+      }
+    }  
 
   });
 
@@ -87,6 +146,9 @@ module.exports = function(grunt) {
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
-  grunt.registerTask('default', ['express', 'watch']);
+  grunt.registerTask('server', ['jshint', 'express', 'sass', 'postcss', 'injector', 'wiredep', 'watch']);
+
+  // Build task
+  grunt.registerTask('build', ['jshint', 'uglify', 'sass', 'postcss', 'cssmin', 'htmlmin']);
 
 };
