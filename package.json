@@ -2,10 +2,6 @@
   "name": "my-grunt-angular-boilerplate",
   "version": "0.1.0",
   "description": "Custom grunt and angular.js boilerplate (to start projects)",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://ibbatta@bitbucket.org/ibbatta/grunt-custom.git"
