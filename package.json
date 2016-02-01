@@ -1,6 +1,6 @@
 {
   "name": "my-grunt-angular-boilerplate",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Custom grunt and angular.js boilerplate (to start projects)",
   "main": "Gruntfile.js",
   "scripts": {
@@ -19,5 +19,14 @@
   ],
   "author": "Maurizio Battaghini",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ibbatta/grunt-custom#readme"
+  "homepage": "https://bitbucket.org/ibbatta/grunt-custom#readme",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "latest",
+    "jshint-stylish": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-watch": "latest"
+  }
 }
