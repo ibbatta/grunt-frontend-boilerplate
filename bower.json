@@ -17,8 +17,10 @@
   "homepage": "",
   "private": true,
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "angular": "^1.4.9",
-    "bootstrap-sass": "^3.3.6",
-    "reset-css": "^2.0.2011012603"
+    "angular-bootstrap": "^1.1.2",
+    "angular-ui-router": "^0.2.17",
+    "angular-animate": "^1.4.9"
   }
 }

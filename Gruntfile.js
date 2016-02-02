@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       },
       local_dependencies: {
         files: {
-          'app/index.html': ['app/js/*.js', 'app/tmp/*.css'],
+          'app/index.html': ['app/**/*.js', 'app/tmp/**/*.css', '!app/public/**/*', 'app/index.js', 'app/tmp/css/main.css'],
         }
       },
 
@@ -125,13 +125,16 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'injector']
       },
       scripts: {
-        files:['app/**/*.js'],
+        files:['app/**/*.js', '!app/public/*'],
         tasks:['jshint', 'injector']
       },
       bower_components: {
-        files: ['bower_components/*'],
+        files: ['app/public/**/*'],
         tasks: ['wiredep']
       },
+      views: {
+        files: ['app/**/*.html']
+      }
     },
 
     // EXPRESS SERVER
@@ -148,10 +151,13 @@ module.exports = function(grunt) {
     // CLEAN
     clean: {
       tmp: {
-        src: ['app/tmp/**/*', 'app/tmp']
+        src: ['app/tmp']
       },
       dist: {
-        src: ['app/dist/**/*', 'app/dist']
+        src: ['app/dist']
+      },
+      bower: {
+        src: ['app/public']
       }
     }  
 
@@ -171,6 +177,6 @@ module.exports = function(grunt) {
   grunt.registerTask('server', ['jshint', 'express', 'sass', 'postcss', 'injector', 'wiredep', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['jshint', 'uglify', 'sass', 'postcss', 'cssmin', 'htmlmin']);
+  grunt.registerTask('build', ['jshint', 'uglify', 'sass', 'postcss', 'cssmin', 'injector', 'wiredep', 'htmlmin']);
 
 };

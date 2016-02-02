@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="gruntWebapp">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Grunt boilerplate</title>
 
     <!-- bower:css -->
     <!-- endbower -->
 
     <!-- injector:css -->
+    <link rel="stylesheet" href="/tmp/css/main.css">
     <!-- endinjector -->
 
-</head>
-<body>
-    
-    <div>
-        <h1>start test: [ OK ]</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam harum pariatur deserunt repellat quam aspernatur recusandae repellendus, autem illo cumque dolorum perferendis eligendi beatae eos asperiores deleniti ut nam sit!</p>
-    </div>
+    <!-- Bootstrap main theme -->
+    <link rel="stylesheet" href="public/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
+</head>
+<body ng-controller="MainCtrl as main">
+
+    <div ng-include="main.templateUrl.header"></div>
+     
+    <div ui-view></div>
+
+    <div ng-include="main.templateUrl.footer"></div>
 
     <!-- bower:js -->
+    <script src="public/jquery/dist/jquery.js"></script>
+    <script src="public/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="public/angular/angular.js"></script>
+    <script src="public/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="public/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="public/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
 
     <!-- injector:js -->
+    <script src="/index.js"></script>
+    <script src="/view/home/home.ctrl.js"></script>
     <!-- endinjector -->
 
 </body>
