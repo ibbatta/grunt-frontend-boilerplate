@@ -7,3 +7,4 @@ dist-components
 jsdoc
 .jshintrc
 app/tmp
+app/public

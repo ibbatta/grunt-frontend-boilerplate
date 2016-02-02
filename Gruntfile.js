@@ -16,6 +16,20 @@ module.exports = function(grunt) {
       all: ['Grunfile.js', 'src/**/*.js']
     },
 
+    // BOWER
+    bower: {
+      install: {
+        options: {
+          targetDir: 'app/public/',
+          layout: 'byComponent',
+          install: true,
+          bowerOptions: {
+            production: true
+          }
+        }
+      }
+    },
+
     // UGLIFY
     uglify: {
       build: {
@@ -86,14 +100,17 @@ module.exports = function(grunt) {
       },
       local_dependencies: {
         files: {
-          'app/index.html': ['app/**/*.js', 'app/**/*.css', '!app/vendors/**/*'],
+          'app/index.html': ['app/js/*.js', 'app/tmp/*.css'],
         }
       },
+
     },
 
+    // WIREDEP
     wiredep: {
       task: {
-        src: ['app/index.html']
+        directory: 'app/public',
+        src: ['app/index.html'],
       }
     },
 
@@ -111,7 +128,7 @@ module.exports = function(grunt) {
         files:['app/**/*.js'],
         tasks:['jshint', 'injector']
       },
-      bower: {
+      bower_components: {
         files: ['bower_components/*'],
         tasks: ['wiredep']
       },
@@ -122,7 +139,6 @@ module.exports = function(grunt) {
       build:{
         options:{
           port:9001,
-          hostname:'localhost',
           bases:['app/'],
           livereload: true 
         }
@@ -131,8 +147,11 @@ module.exports = function(grunt) {
 
     // CLEAN
     clean: {
-      build: {
-        src: ['app/tmp/**/*']
+      tmp: {
+        src: ['app/tmp/**/*', 'app/tmp']
+      },
+      dist: {
+        src: ['app/dist/**/*', 'app/dist']
       }
     }  
 
@@ -146,6 +165,9 @@ module.exports = function(grunt) {
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
+  grunt.registerTask('default', ['bower', 'server']);
+
+  // Server task
   grunt.registerTask('server', ['jshint', 'express', 'sass', 'postcss', 'injector', 'wiredep', 'watch']);
 
   // Build task

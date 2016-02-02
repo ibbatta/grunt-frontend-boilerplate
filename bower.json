@@ -18,6 +18,7 @@
   "private": true,
   "dependencies": {
     "angular": "^1.4.9",
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "reset-css": "^2.0.2011012603"
   }
 }
