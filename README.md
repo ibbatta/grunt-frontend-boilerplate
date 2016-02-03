@@ -1,6 +1,6 @@
 # __MY-GRUNT-BOILERPLATE__
 
-This repo contains a simplified boilerplate to start a project with *grunt*, *angular* and *bootstrap* in order to make easier and faster to develop new layouts.
+This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster to develop new layouts.
 
 ---
 
@@ -19,8 +19,7 @@ Before cloning the repo __be sure__ you have installed:
 
 ## __INSTALLATION__
 
-To install the npm repositories and bower packages run (from the directory of the project): 
-`npm install && bower install`
+To install the npm repositories and bower packages run (from the directory of the project): `npm install && bower install`
 
 ---
 
