@@ -46,7 +46,7 @@ The Gruntfile expose these tasks:
 
 ## __HISTORY__
 
-- Started 02-01-2016
+[Full commit history](https://bitbucket.org/ibbatta/my-boilerplate/commits/branch/master)
 
 ---
 
