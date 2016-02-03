@@ -56,7 +56,7 @@ The Gruntfile expose these tasks:
 
 ---
 
-# __TODO__
+## __TODO__
 
 - _Write a project description_
 - _Describe the installation process_
