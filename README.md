@@ -1,6 +1,8 @@
 # __MY-GRUNT-BOILERPLATE__
 
-This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster to develop new layouts.
+This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
+
+Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
 
 ---
 

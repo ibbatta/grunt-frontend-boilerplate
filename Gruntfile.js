@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       },
       local_dependencies: {
         files: {
-          'app/index.html': ['app/**/*.js', 'app/tmp/**/*.css', '!app/public/**/*', 'app/index.js', 'app/tmp/css/main.css'],
+          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/tmp/css/main.css', '!app/public/**/*'],
         }
       },
 
