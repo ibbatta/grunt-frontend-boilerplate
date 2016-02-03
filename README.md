@@ -1,12 +1,10 @@
 # __MY-GRUNT-BOILERPLATE__
 ---
-
 This repo contains a simplified boilerplate to start a project with *grunt*, *angular* and *bootstrap* in order to make easier and faster to develop new layouts.
 
 
 ## __SET UP__
 ---
-
 Before cloning the repo __be sure__ you have installed:
 
 * [NodeJs & npm](http://nodejs.org/download/) (version 4.2.4 or >)
@@ -19,13 +17,12 @@ Before cloning the repo __be sure__ you have installed:
 
 ## __INSTALLATION__
 ---
-
-To install the npm repositories and bower packages run (from the directory of the project): `npm install && bower install`
+To install the npm repositories and bower packages run (from the directory of the project): 
+`npm install && bower install`
 
 
 ## __USAGE__
 ---
-
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
 
@@ -36,7 +33,6 @@ The Gruntfile expose these tasks:
 
 ## __CONTRIBUTING__
 ---
-
 - Fork it!
 - Create your feature branch: `git checkout -b my-new-feature`
 - Commit your changes: `git commit -am 'Add some feature'`
@@ -55,6 +51,7 @@ The Gruntfile expose these tasks:
 
 
 # __TODO__
+
 - _Write a project description_
 - _Describe the installation process_
 - _Wite usage instructions_
