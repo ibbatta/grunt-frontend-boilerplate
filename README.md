@@ -1,5 +1,5 @@
-# MY-GRUNT-BOILERPLATE
-
+# __MY-GRUNT-BOILERPLATE__
+---
 
 ## Installation
 
@@ -26,11 +26,11 @@
 - Maurizio Battaghini
 
 
-#TODO
-- [] Write a project description
-- [] Describe the installation process
-- [] Wite usage instructions
-- [X] Update / Automate history
+# __TODO__
+- _Write a project description_
+- _Describe the installation process_
+- _Wite usage instructions_
+- _Update / Automate history_
 
 
 ## License
