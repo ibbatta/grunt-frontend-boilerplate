@@ -132,11 +132,9 @@ module.exports = function(grunt) {
         files: ['app/public/**/*'],
         tasks: ['wiredep']
       },
-      views: {
-        files: ['app/**/*.html']
-      },
       all: {
-        files: ['app/**/*']
+        files: ['app/**/*'],
+        tasks: ['jshint', 'sass', 'postcss', 'injector']
       }
     },
 
