@@ -3,6 +3,7 @@
 This repo contains a simplified boilerplate to start a project with *grunt*, *angular* and *bootstrap* in order to make easier and faster to develop new layouts.
 
 
+
 ## __SET UP__
 ---
 Before cloning the repo __be sure__ you have installed:
@@ -15,10 +16,12 @@ Before cloning the repo __be sure__ you have installed:
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
 
 
+
 ## __INSTALLATION__
 ---
 To install the npm repositories and bower packages run (from the directory of the project): 
 `npm install && bower install`
+
 
 
 ## __USAGE__
@@ -31,6 +34,7 @@ The Gruntfile expose these tasks:
 - `grunt clean` (to clean / remove tmp, dist and bower's component folders)
 
 
+
 ## __CONTRIBUTING__
 ---
 - Fork it!
@@ -40,14 +44,17 @@ The Gruntfile expose these tasks:
 - Submit a pull request
 
 
+
 ## __HISTORY__
 
 - Started 02-01-2016
 
 
+
 ## __CREDITS__
 
 - Maurizio Battaghini
+
 
 
 # __TODO__
@@ -58,9 +65,11 @@ The Gruntfile expose these tasks:
 - _Update / Automate history_
 
 
+
 ### __TROUBLESHOOTING__ ###
 
 This boilerplate is not ready for production yet
+
 
 
 ## __LICENSE__
