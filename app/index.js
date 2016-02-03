@@ -1,31 +1,39 @@
-angular
+(function() {
+  'use strict';
+
+  angular
     .module('gruntWebapp', [
         'ui.router',
         'ngAnimate'
     ])
     .controller('MainCtrl', MainCtrl)
-    .config(function($stateProvider, $urlRouterProvider) {
-     
-      $urlRouterProvider.otherwise("/");
-      
-      $stateProvider     
-        .state('home', {
-          url: "/",
-          templateUrl: "view/home/home.tpl.html",
-          controller: HomeCtrl,
-          controllerAs: 'home'
-        });
+    .config(config);
 
-    });
-
-
-function MainCtrl($scope){
+  // CONFIG
+  function($stateProvider, $urlRouterProvider){
+   
+    $urlRouterProvider.otherwise('/');
     
+    $stateProvider     
+      .state('home', {
+        url: '/',
+        templateUrl: 'templates/home/home.tpl.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'vm'
+      });
+
+  }
+
+  // MAIN CONTROLLER
+  function MainCtrl(){
+      
     var vm = this;
 
     vm.templateUrl = {
-      header: 'view/header/header.tpl.html',
-      footer: 'view/footer/footer.tpl.html'
+      header: 'templates/header/header.tpl.html',
+      footer: 'templates/footer/footer.tpl.html'
     }
 
-}
+  }
+
+})();
