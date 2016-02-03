@@ -27,10 +27,10 @@
 
 
 #TODO
-- [ ] Write a project description
-- [ ] Describe the installation process
-- [ ] Wite usage instructions
-- [ ] Update / Automate history
+- [] Write a project description
+- [] Describe the installation process
+- [] Wite usage instructions
+- [X] Update / Automate history
 
 
 ## License
