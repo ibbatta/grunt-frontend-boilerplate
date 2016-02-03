@@ -1,10 +1,6 @@
 node_modules
-app/vendors
 build
-coverage
 dist
 dist-components
-jsdoc
-.jshintrc
 app/tmp
 app/public

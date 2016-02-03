@@ -33,6 +33,7 @@
     "grunt-postcss": "^0.7.1",
     "grunt-wiredep": "^2.0.0",
     "jshint-stylish": "^2.1.0",
-    "load-grunt-tasks": "^3.4.0"
+    "load-grunt-tasks": "^3.4.0",
+    "lodash": "^4.2.0"
   }
 }

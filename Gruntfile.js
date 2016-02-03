@@ -134,6 +134,9 @@ module.exports = function(grunt) {
       },
       views: {
         files: ['app/**/*.html']
+      },
+      all: {
+        files: ['app/**/*']
       }
     },
 
