@@ -1,16 +1,10 @@
 # MY-GRUNT-BOILERPLATE
 
-TODO: Write a project description
-
 
 ## Installation
 
-TODO: Describe the installation process
-
 
 ## Usage
-
-TODO: Write usage instructions
 
 
 ## Contributing
@@ -32,8 +26,15 @@ TODO: Write usage instructions
 - Maurizio Battaghini
 
 
+#TODO
+- [ ] Write a project description
+- [ ] Describe the installation process
+- [ ] Wite usage instructions
+- [ ] Update / Automate history
+
+
 ## License
 
-[Full license](LICENSE/)
-
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+[Full license](LICENSE/)
