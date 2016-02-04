@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     bower: {
       install: {
         options: {
-          targetDir: 'app/public/',
+          targetDir: 'app/vendors/',
           layout: 'byComponent',
           install: true,
           bowerOptions: {
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       },
       local_dependencies: {
         files: {
-          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/tmp/css/main.css', '!app/public/**/*'],
+          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/tmp/css/main.css', '!app/vendors/**/*'],
         }
       },
 
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
     // WIREDEP
     wiredep: {
       task: {
-        directory: 'app/public',
+        directory: 'app/vendors',
         src: ['app/index.html'],
       }
     },
@@ -125,11 +125,11 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss', 'injector']
       },
       scripts: {
-        files:['app/**/*.js', '!app/public/*'],
+        files:['app/**/*.js', '!app/vendors/*'],
         tasks:['jshint', 'injector']
       },
       bower_components: {
-        files: ['app/public/**/*'],
+        files: ['app/vendors/**/*'],
         tasks: ['wiredep']
       },
       all: {
@@ -158,7 +158,7 @@ module.exports = function(grunt) {
         src: ['app/dist']
       },
       bower: {
-        src: ['app/public']
+        src: ['app/vendors']
       }
     }  
 
