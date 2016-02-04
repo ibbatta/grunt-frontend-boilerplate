@@ -10,7 +10,7 @@
     .config(config);
 
   // CONFIG
-  function($stateProvider, $urlRouterProvider){
+  function config($stateProvider, $urlRouterProvider){
    
     $urlRouterProvider.otherwise('/');
     
@@ -32,7 +32,7 @@
     vm.templateUrl = {
       header: 'templates/header/header.tpl.html',
       footer: 'templates/footer/footer.tpl.html'
-    }
+    };
 
   }
 

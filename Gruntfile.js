@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       options: {
         reporter: require('jshint-stylish')
       },
-      all: ['Grunfile.js', 'src/**/*.js']
+      all: ['Grunfile.js', 'app/**/*.js']
     },
 
     // BOWER
