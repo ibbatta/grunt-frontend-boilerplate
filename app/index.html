@@ -13,12 +13,16 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
 
-    <!-- bower:css -->
-    <!-- endbower -->
+    <!-- build:css css/main.min.css -->
 
-    <!-- injector:css -->
-    <link rel="stylesheet" href=".tmp/css/index.css">
-    <!-- endinjector -->
+        <!-- bower:css -->
+        <!-- endbower -->
+
+        <!-- injector:css -->
+        <link rel="stylesheet" href=".tmp/css/main.css">
+        <!-- endinjector -->
+
+    <!-- endbuild -->
 
 </head>
 <body ng-controller="MainCtrl as main">
@@ -29,18 +33,22 @@
 
     <div ng-include="main.templateUrl.footer"></div>
 
-    <!-- bower:js -->
-    <script src="vendors/jquery/dist/jquery.js"></script>
-    <script src="vendors/angular/angular.js"></script>
-    <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="vendors/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-    <!-- endbower -->
+    <!-- build:js js/main.min.js -->
 
-    <!-- injector:js -->
-    <script src="index.js"></script>
-    <script src="templates/home/home.ctrl.js"></script>
-    <!-- endinjector -->
+        <!-- bower:js -->
+        <script src="vendors/jquery/dist/jquery.js"></script>
+        <script src="vendors/angular/angular.js"></script>
+        <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="vendors/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+        <!-- endbower -->
+
+        <!-- injector:js -->
+        <script src="index.js"></script>
+        <script src="templates/home/home.ctrl.js"></script>
+        <!-- endinjector -->
+
+    <!-- endbuild -->
 
 </body>
 </html>

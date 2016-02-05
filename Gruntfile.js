@@ -47,11 +47,8 @@ module.exports = function(grunt) {
     // BOWER CONCAT
     bower_concat: {
       build: {
-        dest: 'build/.tmp/js/_bower.js',
-        cssDest: 'build/.tmp/css/_bower.css',
-        dependencies: {
-          'bootstrap-sass': 'jquery',
-        },
+        dest: 'build/js/_bower.js',
+        cssDest: 'build/css/_bower.css',
         bowerOptions: {
           relative: true
         }
@@ -74,7 +71,7 @@ module.exports = function(grunt) {
           sourcemap: 'none'
         },
         files: {
-          'app/.tmp/css/index.css': 'app/index.scss'
+          'app/.tmp/css/main.css': 'app/index.scss'
         }
       }
     },
@@ -109,7 +106,7 @@ module.exports = function(grunt) {
           relative: true
         },
         files: {
-          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/.tmp/css/index.css', '!app/vendors/**'],
+          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/.tmp/css/main.css', '!app/vendors/**'],
         }
       }
     },
@@ -149,11 +146,112 @@ module.exports = function(grunt) {
       dist:{
         options:{
           port:9003,
-          bases:['dist/'],
+          bases:['dist/static/'],
           livereload: true 
         }
       }
     },  
+
+    // CONCAT
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['build/js/_bower.js', 'build/js/index.js', 'build/templates/**/*.js'],
+        dest: 'dist/.tmp/js/main.concat.js'
+      },
+    },
+
+    // UGLIFY
+    uglify: {
+      options: {
+        mangle: false
+      },
+      dist: {
+        files: {
+          'dist/static/js/main.min.js': [ 'dist/.tmp/js/main.concat.js' ]
+        }
+      }
+    },
+
+    // CSSMIN
+    cssmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'build/css',
+          src: ['*.css', '!*.min.css'],
+          dest: 'dist/static/css',
+          ext: '.min.css'
+        }]
+      }
+    },
+
+    // COPY
+    copy: {
+      options: {
+        encoding: 'utf-8'
+      },
+      build: {
+        files: [
+          {expand: true, cwd: 'app', src: ['images/**/*'], dest: 'build/'},
+          {expand: true, cwd: 'app', src: ['templates/**'], dest: 'build/'},
+          {expand: true, cwd: 'app', src: ['**/*.html'], dest: 'build/'},
+          {expand: true, cwd: 'app', src: ['index.js'], dest: 'build/js'},
+          {expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/'},
+        ]
+      },
+      dist: {
+        files: [
+          {expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/'},
+          {expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/'},
+        ]
+      }
+    },
+
+    //USEMIN
+    
+      // --> usemin prepare
+      // useminPrepare: {
+      //   options: {
+      //     dest: 'dist/static/',
+      //     flow: {
+      //       html: {
+      //         steps: {
+      //           js: ['concat', 'uglify'],
+      //           css: ['cssmin']
+      //         },
+      //         post: {}
+      //       }
+      //     }
+      //   }
+      // },
+
+      useminPrepare: {
+        html: 'dist/static/index.html',
+        options: {
+          flow: {
+            html: {
+              steps: {
+                js: ['concat', 'uglify'],
+                css: ['cssmin']
+              },
+              post: {}
+            }
+          }
+        }
+      },
+
+      // --> usemin
+      usemin: {
+        html: ['dist/static/index.html'],
+        options: {
+          root: 'app',
+          dest: 'dist/static'
+        }
+      },
+
 
   });
 
@@ -174,6 +272,11 @@ module.exports = function(grunt) {
   grunt.registerTask('server', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', []);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
+
+  // Dist task
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'clean:distTmp', 'copy:dist', 'usemin']);
+
+  grunt.registerTask('ttt', ['express:dist', 'watch']);
 
 };
