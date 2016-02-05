@@ -4,7 +4,7 @@
   angular
     .module('gruntWebapp', [
         'ui.router',
-        'ngAnimate'
+        'ui.bootstrap'
     ])
     .controller('MainCtrl', MainCtrl)
     .config(config);

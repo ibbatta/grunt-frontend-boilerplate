@@ -2,5 +2,6 @@ node_modules
 build
 dist
 dist-components
-app/tmp
-app/public
+app/.tmp
+app/vendors
+.sass-cache

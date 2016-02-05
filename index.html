@@ -16,30 +16,33 @@
     <!-- bower:css -->
     <!-- endbower -->
 
+    <!-- injector:bower:css -->
+    <!-- endinjector -->
+
     <!-- injector:css -->
-    <link rel="stylesheet" href=".tmp/css/index.css">
     <!-- endinjector -->
 
 </head>
 <body ng-controller="MainCtrl as main">
 
     <div ng-include="main.templateUrl.header"></div>
-
+     
     <div ui-view></div>
 
     <div ng-include="main.templateUrl.footer"></div>
 
     <!-- bower:js -->
-    <script src="vendors/jquery/dist/jquery.js"></script>
-    <script src="vendors/angular/angular.js"></script>
-    <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="vendors/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="app/vendors/jquery/dist/jquery.js"></script>
+    <script src="app/vendors/angular/angular.js"></script>
+    <script src="app/vendors/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="app/vendors/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
 
+    <!-- injector:bower:js -->
+    <!-- endinjector -->
+
     <!-- injector:js -->
-    <script src="index.js"></script>
-    <script src="templates/home/home.ctrl.js"></script>
     <!-- endinjector -->
 
 </body>

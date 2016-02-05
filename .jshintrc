@@ -30,21 +30,24 @@
   "bitwise"     : true,     // Prohibit bitwise operators (&, |, ^, etc.).
   "boss"        : false,    // Tolerate assignments inside if, for & while.
   "curly"       : true,     // Require {} for every new block or scope.
+  "camelcase"   : true,
   "eqeqeq"      : true,     // Require triple equals i.e. `===`.
   "eqnull"      : false,    // Tolerate use of `== null`.
   "evil"        : false,    // Tolerate use of `eval`.
   "expr"        : false,    // Tolerate `ExpressionStatement` as Programs.
   "forin"       : false,    // Tolerate `for in` loops without `hasOwnPrototype`.
   "immed"       : true,     // Require immediate invocations to be wrapped in parens e.g. `( function(){}() );`
-  "latedef"     : true,     // Prohipit variable use before definition.
+  "latedef"     : "nofunc", // Prohipit variable use before definition.
   "loopfunc"    : false,    // Allow functions to be defined within loops.
   "noarg"       : true,     // Prohibit use of `arguments.caller` and `arguments.callee`.
-  "regexp"      : false,    // Prohibit `.` and `[^...]` in regular expressions.
+  "regexp"      : true,     // Prohibit `.` and `[^...]` in regular expressions.
   "regexdash"   : false,    // Tolerate unescaped last dash i.e. `[-...]`.
   "scripturl"   : true,     // Tolerate script-targeted URLs.
   "shadow"      : false,    // Allows re-define variables later in code e.g. `var x=1; x=2;`.
   "supernew"    : false,    // Tolerate `new function () { ... };` and `new Object;`.
   "undef"       : true,     // Require all non-global variables be declared before they are used.
+  "quotmark"    : "single",
+  "unused"      : false,
 
   // -----------------------------------------------------
   // ---------------- Personal styling -------------------
@@ -58,7 +61,7 @@
   "sub"           : false,  // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
   "trailing"      : true,   // Prohibit trailing whitespaces.
   "white"         : false,  // Check against strict whitespace and indentation rules.
-  "indent"        : 2       // Specify indentation spacing
-
+  "indent"        : 2,       // Specify indentation spacing
+  "smarttabs"     : true
 
 }

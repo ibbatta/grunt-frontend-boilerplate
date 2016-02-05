@@ -8,102 +8,88 @@ module.exports = function(grunt) {
     // get the configuration info from package.json
     pkg: grunt.file.readJSON('package.json'),
 
-    // JSHINT
-    jshint: {
-      options: {
-        reporter: require('jshint-stylish')
-      },
-      all: ['Grunfile.js', 'app/**/*.js']
+    // CLEAN
+    clean: {
+      tmp: 'app/.tmp',
+      build: 'build/',
+      dist: 'dist/',
+      distTmp: 'dist/.tmp'
     },
 
     // BOWER
     bower: {
       install: {
         options: {
-          targetDir: 'app/vendors/',
+          targetDir: 'app/vendors',
           layout: 'byComponent',
           install: true,
+          verbose: false,
+          cleanTargetDir: true,
+          cleanBowerDir: false,
           bowerOptions: {
-            production: true
+
           }
         }
       }
     },
 
-    // UGLIFY
-    uglify: {
+    // BOWER REQUIRE JS
+    bowerRequirejs: {
       build: {
-        files: {
-          'dist/js/main.min.js': 'app/**/*.js'
-        }
-      }
-    },
-
-    // COMPILE SASS
-    sass: {
-      options: {
-        noCache: true,
-        update: true,
-        sourcemap: 'none'
-      },
-      dist: {
-        files: {
-          'app/tmp/css/main.css': 'app/index.scss'
-        }
-      }
-    },
-
-    // AUTOPREFIXER
-    postcss: {
-      options: {
-        processors: [
-          require('autoprefixer')()
-        ]
-      },
-      dist: {
-        src: 'app/tmp/css/main.css',
-        dest: 'app/tmp/css/main.css'
-      }
-    },
-
-    // MINIFY CSS
-    cssmin: {
-      build: {
-        files: {
-          'dist/css/main.min.css': 'tmp/css/main.css'
-        }
-      }
-    },
-
-    // MINIFY HTML
-    htmlmin: { 
-      dist: {
+        rjsConfig: 'config.js',
         options: {
-          removeComments: true,
-          collapseWhitespace: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'app/',
-          src: '**/*.html',
-          dest: 'dist/'
-        }]
-     }
+          transitive: true,
+          excludeDev: true
+        }
+      }
     },
 
-    // INJECTOR
-    injector: {
-      options: {
-        template: 'app/index.html',
-        min: true,
-        relative: true
-      },
-      local_dependencies: {
-        files: {
-          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/tmp/css/main.css', '!app/vendors/**/*'],
+    // BOWER CONCAT
+    bower_concat: {
+      build: {
+        dest: 'build/.tmp/js/_bower.js',
+        cssDest: 'build/.tmp/css/_bower.css',
+        dependencies: {
+          'bootstrap-sass': 'jquery',
+        },
+        bowerOptions: {
+          relative: true
         }
-      },
+      }
+    },
 
+    // JSHINT
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+      all: ['Grunfile.js', 'app/**/*.js', '!app/vendors/**']
+    },
+
+    // SASS
+    sass: {
+      dev: {
+        options: {
+          sourcemap: 'none'
+        },
+        files: {
+          'app/.tmp/css/index.css': 'app/index.scss'
+        }
+      }
+    },
+
+    // POSTCSS
+    postcss: {
+      dev: {
+        options: {
+          map: false,
+          processors: [
+            require('autoprefixer')()
+          ],
+        },
+        src: 'app/.tmp/css/*.css'
+      }
     },
 
     // WIREDEP
@@ -113,54 +99,61 @@ module.exports = function(grunt) {
         src: ['app/index.html'],
       }
     },
+    
+    // INJECTOR
+    injector: {
+      dev: {
+        options: {
+          template: 'app/index.html',
+          min: true,
+          relative: true
+        },
+        files: {
+          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/.tmp/css/index.css', '!app/vendors/**'],
+        }
+      }
+    },
 
     // WATCH
     watch: {
       options:{
         livereload: true
       },
-
       stylesheet: {
         files: ['app/index.scss'],
-        tasks: ['sass', 'postcss', 'injector']
+        tasks: ['devStyle', 'injector']
       },
       scripts: {
-        files:['app/**/*.js', '!app/vendors/*'],
-        tasks:['jshint', 'injector']
+        files:['app/**/*.js', '!app/vendors/**'],
+        tasks:['devScript', 'injector']
       },
-      bower_components: {
-        files: ['app/vendors/**/*'],
+      bower: {
+        files: ['app/vendors/**'],
         tasks: ['wiredep']
       },
       all: {
         files: ['app/**/*'],
-        tasks: ['jshint', 'sass', 'postcss', 'injector']
+        tasks: ['devStyle', 'devScript', 'injector']
       }
     },
 
     // EXPRESS SERVER
     express:{
-      build:{
+      dev:{
         options:{
           port:9001,
           bases:['app/'],
           livereload: true 
         }
+      },
+      dist:{
+        options:{
+          port:9003,
+          bases:['dist/'],
+          livereload: true 
+        }
       }
     },  
-
-    // CLEAN
-    clean: {
-      tmp: {
-        src: ['app/tmp']
-      },
-      dist: {
-        src: ['app/dist']
-      },
-      bower: {
-        src: ['app/vendors']
-      }
-    }  
 
   });
 
@@ -172,12 +165,15 @@ module.exports = function(grunt) {
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
-  grunt.registerTask('default', ['bower', 'server']);
+  grunt.registerTask('default', ['clean', 'bower', 'server']);
+
+  grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']); // Style task
+  grunt.registerTask('devScript', ['jshint']); // Script task
 
   // Server task
-  grunt.registerTask('server', ['jshint', 'express', 'sass', 'postcss', 'injector', 'wiredep', 'watch']);
+  grunt.registerTask('server', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['jshint', 'uglify', 'sass', 'postcss', 'cssmin', 'injector', 'wiredep', 'htmlmin']);
+  grunt.registerTask('build', []);
 
 };
