@@ -5,3 +5,5 @@ dist-components
 app/.tmp
 app/vendors
 .sass-cache
+*.sublime-project
+*.sublime-workspace
