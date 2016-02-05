@@ -10,9 +10,10 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo __be sure__ you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version 4.2.4 or >)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 4.2.2)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
+* [Sass](http://sass-lang.com/install) (latest version)
 
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
@@ -31,7 +32,7 @@ Once everything is installed, use grunt from the terminal to start the build tas
 The Gruntfile expose these tasks:
 
 - `grunt server` (to start the project locally)
-- `grunt build` (to minify js, html and css files)
+- `grunt dist` (to minify js, html and css files)
 - `grunt clean` (to clean / remove tmp, dist and bower's component folders)
 
 ---
