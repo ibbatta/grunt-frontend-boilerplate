@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
     // CLEAN
     clean: {
-      tmp: 'app/.tmp',
+      tmp: ['app/.tmp', '.sass-cache'],
       build: 'build/',
       dist: 'dist/',
       distTmp: 'dist/.tmp'
@@ -277,6 +277,6 @@ module.exports = function(grunt) {
   // Dist task
   grunt.registerTask('dist', ['build', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'clean:distTmp', 'copy:dist', 'usemin']);
 
-  grunt.registerTask('ttt', ['express:dist', 'watch']);
+  grunt.registerTask('server:dist', ['express:dist', 'watch']);
 
 };
