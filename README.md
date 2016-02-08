@@ -1,9 +1,9 @@
 # __MY-GRUNT-BOILERPLATE__
 
-### dependencies for PACKAGE.JSON
+#### PACKAGE.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
 
-### dependencies for BOWER.JSON
+#### BOWER.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
 This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
