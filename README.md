@@ -69,7 +69,7 @@ The Gruntfile expose these tasks:
 
 - _Prepare images for dist/_
 - _Write tests_
-- _Automate history updates_
+- _Automate changelog updates_
 
 ---
 

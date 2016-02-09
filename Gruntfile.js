@@ -13,18 +13,7 @@ module.exports = function(grunt) {
       dev: {
         options: {
           dest: 'CHANGELOG.md',
-          fileHeader: '# Changelog',
-          logArguments: [
-            '--pretty=* %h - %ad: %s',
-            //'--no-merges',
-            '--date=short'
-          ],
-          template: '{{> features}}',
-          featureRegex: /^(.*)$/gim,
-          partials: {
-            features: '{{#if features}}{{#each features}}{{> feature}}{{/each}}{{else}}{{> empty}}{{/if}}\n',
-            feature: '- {{this}} {{this.date}}\n'
-          }
+          fileHeader: '# __Changelog__'
         }
       }
     },
