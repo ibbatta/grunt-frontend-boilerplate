@@ -1,12 +1,12 @@
-# __MY-GRUNT-BOILERPLATE__
+# __ANGULAR-BOOTSTRAP-GRUNT-BOILERPLATE__
 
-#### PACKAGE.JSON
+##### PACKAGE.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
 
-#### BOWER.JSON
+##### BOWER.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
->This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
+>This repo contains a simplified boilerplate to start a project with **__grunt__**, **__angular__** and **__bootstrap__** in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
 
@@ -14,12 +14,12 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __SET UP__
 
-Before cloning the repo __be sure__ you have installed:
+Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 4.2.2)
-* [Grunt](http://gruntjs.com/getting-started) (latest version)
-* [Bower](http://bower.io/) (latest version)
-* [Sass](http://sass-lang.com/install) (latest version)
+* __[NodeJs & npm]__(http://nodejs.org/download/) (version >= 4.2.2)
+* __[Grunt]__(http://gruntjs.com/getting-started) (latest version)
+* __[Bower]__(http://bower.io/) (latest version)
+* __[Sass]__(http://sass-lang.com/install) (latest version)
 
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
@@ -67,9 +67,9 @@ The Gruntfile expose these tasks:
 
 ## __TODO__
 
-- _Prepare images for dist/_
-- _Write tests_
-- _Automate changelog updates_
+- _Prepare images for **dist**_
+- _Write **tests**_
+- _Automate **changelog** updates_
 
 ---
 
