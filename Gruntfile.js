@@ -8,6 +8,28 @@ module.exports = function(grunt) {
     // get the configuration info from package.json
     pkg: grunt.file.readJSON('package.json'),
 
+    // CHANGELOG
+    changelog: {
+      dev: {
+        options: {
+          dest: 'CHANGELOG.md',
+          fileHeader: '# Changelog',
+          logArguments: [
+            '--pretty=* %h - %ad: %s',
+            //'--no-merges',
+            '--date=short'
+          ],
+          template: '{{> features}}',
+          featureRegex: /^(.*)$/gim,
+          partials: {
+            features: '{{#if features}}{{#each features}}{{> feature}}{{/each}}{{else}}{{> empty}}{{/if}}\n',
+            feature: '- {{this}} {{this.date}}\n'
+          }
+        }
+      }
+    },
+    
+
     // CLEAN
     clean: {
       tmp: ['app/.tmp', '.sass-cache'],

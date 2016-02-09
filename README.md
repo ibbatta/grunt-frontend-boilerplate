@@ -6,7 +6,7 @@
 #### BOWER.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
-This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
+>This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
 
@@ -55,7 +55,7 @@ The Gruntfile expose these tasks:
 
 ## __HISTORY__
 
-[Full commit history](https://bitbucket.org/ibbatta/my-boilerplate/commits/branch/master)
+[Full commit history](CHANGELOG.md)
 
 ---
 
@@ -67,6 +67,7 @@ The Gruntfile expose these tasks:
 
 ## __TODO__
 
+- _Prepare images for dist/_
 - _Write tests_
 - _Automate history updates_
 

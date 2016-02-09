@@ -1,0 +1,40 @@
+# Changelog
+
+- * a90a0c5 - 2016-02-09: Merge branch &#x27;feature/grunt_dist&#x27; of https://bitbucket.org/ibbatta/my-boilerplate into feature/grunt_dist 
+- * a810013 - 2016-02-09: update readme 
+- * 32816be - 2016-02-08: README.md edited online with Bitbucket 
+- * 5ceac69 - 2016-02-08: README.md edited online with Bitbucket 
+- * 3b9dd78 - 2016-02-08: update readme with live monitoring of dependencies 
+- * 55e3c36 - 2016-02-08: change gruntTask in order to execute server for dist 
+- * 429f718 - 2016-02-05: update readme.md update package.json with grunt 
+- * a660a8f - 2016-02-05: update .gitignore to avoid sublime stuffs 
+- * d680557 - 2016-02-05: setup dist build 
+- * 863d2cc - 2016-02-05: refactory code 
+- * 2056f24 - 2016-02-04: bug fixing 
+- * 3077cc4 - 2016-02-04: modify .jshintrc add comments in .jshintrc file 
+- * b9a6f5e - 2016-02-04: fix and update bootstrap css import in html main page 
+- * 4ee62f5 - 2016-02-04: change path / name for bower_components directory update gruntfile update .bowerrc add components folder which will contain services, factories and directives 
+- * b745be6 - 2016-02-03: modify readme.md (project description) modify gruntfile (now include index.js as first) 
+- * ee8a1a4 - 2016-02-03: add IFEE for modules and controllers better manage for angular syntax (ready for angular 2) 
+- * eca3927 - 2016-02-03: add scss comments 
+- * 89b129f - 2016-02-03: README.md edited online with Bitbucket 
+- * c7352c0 - 2016-02-03: add mixin to manage responsive add favicon manage grunt to a better watch task 
+- * 4368ebf - 2016-02-03: Update readme.md 
+- * 50d47c9 - 2016-02-03: * minor readme.md 
+- * b70c42a - 2016-02-03: * minor readme.md 
+- * a954361 - 2016-02-03: README.md edited online with Bitbucket 
+- * c147f4a - 2016-02-03: README.md edited online with Bitbucket 
+- * b3ceead - 2016-02-03: README.md edited online with Bitbucket 
+- * 6a2a1f8 - 2016-02-03: README.md edited online with Bitbucket 
+- * 1b12d56 - 2016-02-03: * minor readme.md 
+- * d60c4d8 - 2016-02-03: edit README.md file 
+- * a95eb6e - 2016-02-03: README.md edited online with Bitbucket 
+- * f4004fe - 2016-02-03: README.md edited online with Bitbucket 
+- * 7c6db77 - 2016-02-03: * minor readme.md 
+- * c4d4bff - 2016-02-03: add readme.md license 
+- * 60d8699 - 2016-02-03: Merge branch &#x27;develop&#x27; of https://bitbucket.org/ibbatta/my-boilerplate into develop 
+- * b568920 - 2016-02-03: add lodash modules add scope all files to watch in grunt change .gitignore add support to favicon 
+- * 97680b3 - 2016-02-03: LICENSE created online with Bitbucket 
+- * c664fee - 2016-02-02: define a bower.json with some dependences define a basic angular template with routes 
+- * 1fa8b7b - 2016-02-02: add grunt dipendencies for grunt-bower-task change bower default folder add new bower_components into git ignore change grunt task for bower 
+
