@@ -37,9 +37,9 @@ To install the npm repositories and bower packages run (from the directory of th
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
 
-- `grunt server` (to start the project locally)
-- `grunt dist` (to minify js, html and css files)
-- `grunt clean` (to clean / remove tmp, dist and bower's component folders)
+- `grunt server` (start the project locally)
+- `grunt dist` (minify js, html and css files)
+- `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 ---
 
