@@ -9,6 +9,7 @@
 ##### BOWER.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
+
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
 
 ---
@@ -17,10 +18,10 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo **be sure** you have installed:
 
-* __[NodeJs & npm]__(http://nodejs.org/download/) (version >= 4.2.2)
-* __[Grunt]__(http://gruntjs.com/getting-started) (latest version)
-* __[Bower]__(http://bower.io/) (latest version)
-* __[Sass]__(http://sass-lang.com/install) (latest version)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 4.2.2)
+* [Grunt](http://gruntjs.com/getting-started) (latest version)
+* [Bower](http://bower.io/) (latest version)
+* [Sass](http://sass-lang.com/install) (latest version)
 
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
