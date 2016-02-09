@@ -83,4 +83,4 @@ This boilerplate is not ready for production yet
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-[Full license](LICENSE/)
+[Full license](LICENSE)
