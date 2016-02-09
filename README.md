@@ -5,6 +5,8 @@
 #### PACKAGE.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
 
+[![devDependency Status](https://david-dm.org/ibbatta/angular-bootstrap-grunt-boilerplate/dev-status.svg?style=flat-square)](https://david-dm.org/ibbatta/angular-bootstrap-grunt-boilerplate#info=devDependencies)
+
 #### BOWER.JSON
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
