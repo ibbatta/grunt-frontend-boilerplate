@@ -59,16 +59,14 @@ The Gruntfile expose these tasks:
 
 ## __CREDITS__
 
-- Maurizio Battaghini
+- [Maurizio Battaghini](http://twitter.com/battago)
 
 ---
 
 ## __TODO__
 
-- _Write a project description_
-- _Describe the installation process_
-- _Wite usage instructions_
-- _Update / Automate history_
+- _Write tests_
+- _Automate history updates_
 
 ---
 
