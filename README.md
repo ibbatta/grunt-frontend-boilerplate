@@ -67,9 +67,9 @@ The Gruntfile expose these tasks:
 
 ## __TODO__
 
-- _Prepare images for dist/_
-- _Write tests_
-- _Automate changelog updates_
+- _Prepare images for **dist**_
+- _Write **tests**_
+- _Automate **changelog** updates_
 
 ---
 
