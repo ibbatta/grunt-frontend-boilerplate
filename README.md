@@ -21,6 +21,7 @@ Before cloning the repo __be sure__ you have installed:
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
 
+
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
 
