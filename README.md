@@ -1,4 +1,4 @@
-# __MY-GRUNT-BOILERPLATE__
+# __ANGULAR-BOOTSTRAP-GRUNT-BOILERPLATE__
 
 >This repo contains a simplified boilerplate to start a project with *__grunt__*, *__angular__* and *__bootstrap__* in order to make easier and faster the template's developing
 
