@@ -7,3 +7,5 @@ app/vendors
 .sass-cache
 *.sublime-project
 *.sublime-workspace
+**/*.gz
+**/*.tar.gz

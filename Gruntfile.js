@@ -7,24 +7,15 @@ module.exports = function(grunt) {
 
     // get the configuration info from package.json
     pkg: grunt.file.readJSON('package.json'),
-
-    // CHANGELOG
-    changelog: {
-      dev: {
-        options: {
-          dest: 'CHANGELOG.md',
-          fileHeader: '# __Changelog__'
-        }
-      }
-    },
-    
-
+   
     // CLEAN
     clean: {
-      tmp: ['app/.tmp', '.sass-cache'],
+      tmp: 'app/.tmp',
       build: 'build/',
       dist: 'dist/',
-      distTmp: 'dist/.tmp'
+      distTmp: 'dist/.tmp',
+      sassCache: '.sass-cache',
+      compressed: 'cupido-frontend.tar.gz'
     },
 
     // BOWER
@@ -79,7 +70,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          sourcemap: 'none'
+          sourceMap: false
         },
         files: {
           'app/.tmp/css/main.css': 'app/index.scss'
@@ -222,23 +213,7 @@ module.exports = function(grunt) {
     },
 
     //USEMIN
-    
       // --> usemin prepare
-      // useminPrepare: {
-      //   options: {
-      //     dest: 'dist/static/',
-      //     flow: {
-      //       html: {
-      //         steps: {
-      //           js: ['concat', 'uglify'],
-      //           css: ['cssmin']
-      //         },
-      //         post: {}
-      //       }
-      //     }
-      //   }
-      // },
-
       useminPrepare: {
         html: 'dist/static/index.html',
         options: {
@@ -263,6 +238,20 @@ module.exports = function(grunt) {
         }
       },
 
+    // COMPRESS
+    compress: {
+      dist: {
+        options: {
+          archive: 'boilerplate.tar.gz',
+          mode: 'tgz',
+          pretty: true
+        },
+        expand: true,
+        cwd: 'dist/static/',
+        src: ['**/*'],
+        dest: '/'
+      }
+    },
 
   });
 
@@ -278,16 +267,19 @@ module.exports = function(grunt) {
 
   grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']); // Style task
   grunt.registerTask('devScript', ['jshint']); // Script task
+  grunt.registerTask('optimizeScript', ['concat', 'uglify']); // Script optimizer
+  grunt.registerTask('optimizeStyle', ['cssmin']); // Style optimizer
 
   // Server task
   grunt.registerTask('server', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'watch']);
+
+  // Server dist
+  grunt.registerTask('server:dist', ['express:dist', 'watch']);
 
   // Build task
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'clean:distTmp', 'copy:dist', 'usemin']);
-
-  grunt.registerTask('server:dist', ['express:dist', 'watch']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress']);
 
 };

@@ -57,7 +57,7 @@ The Gruntfile expose these tasks:
 
 ## __HISTORY__
 
-[Full commit history](CHANGELOG.md)
+TODO:
 
 ---
 
