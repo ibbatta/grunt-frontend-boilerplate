@@ -9,6 +9,8 @@
       
     var vm = this;
 
+    vm.test = null;
+
   }
 
 })();
