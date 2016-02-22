@@ -70,7 +70,6 @@ TODO:
 ## __TODO__
 
 - _Prepare images for **dist**_
-- _Write **tests**_
 - _Automate **changelog** updates_
 
 ---
