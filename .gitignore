@@ -7,3 +7,4 @@ app/vendors
 .sass-cache
 *.sublime-project
 *.sublime-workspace
+coverage
