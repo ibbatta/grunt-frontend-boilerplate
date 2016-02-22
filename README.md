@@ -64,7 +64,8 @@ The Gruntfile expose these tasks:
 
 ## __CREDITS__
 
-- [Maurizio Battaghini](http://twitter.com/battago)
+- [Maurizio Battaghini](https://github.com/ibbatta)
+- [Aristeidis Bampakos](https://github.com/bampakoa)
 
 ---
 
