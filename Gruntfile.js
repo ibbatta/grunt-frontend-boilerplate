@@ -180,14 +180,14 @@ module.exports = function(grunt) {
 
     // CSSMIN
     cssmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'build/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'dist/static/css',
-          ext: '.min.css'
-        }]
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'dist/static/css/main.min.css': ['build/css/_bower.css', 'build/css/main.css']
+        }
       }
     },
 
