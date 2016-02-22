@@ -15,7 +15,8 @@ module.exports = function(grunt) {
       dist: 'dist/',
       distTmp: 'dist/.tmp',
       sassCache: '.sass-cache',
-      compressed: 'cupido-frontend.tar.gz'
+      compressed: 'cupido-frontend.tar.gz',
+      coverage: 'coverage/',
     },
 
     // BOWER
@@ -63,7 +64,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-      all: ['Grunfile.js', 'app/**/*.js', '!app/vendors/**']
+      all: ['Grunfile.js', 'app/**/*.js', '!app/vendors/**', '!app/**/*.spec.js']
     },
 
     // SASS

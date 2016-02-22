@@ -11,6 +11,8 @@
     
     vm.test = null;
 
+    vm.test = null;
+
   }
 
 })();

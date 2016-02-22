@@ -10,3 +10,4 @@ app/vendors
 **/*.gz
 **/*.tar.gz
 coverage
+
