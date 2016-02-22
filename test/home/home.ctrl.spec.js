@@ -9,7 +9,11 @@ describe('CONTROLLER: HomeCtrl', function() {
       vm = $controller('HomeCtrl');
     }));
 
-    it('expect description', function() {
+    it('should be created successfully', function () {
+        expect(vm).toBeDefined();
+    });
+    
+    it('shoud have test', function() {
       expect(vm.test).toBeNull();
     });
 

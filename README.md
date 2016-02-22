@@ -6,7 +6,9 @@
 
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
 
-##### BOWER.JSON
+
+#### BOWER.JSON
+
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
 
@@ -22,6 +24,7 @@ Before cloning the repo **be sure** you have installed:
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
+
 
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
@@ -39,9 +42,9 @@ To install the npm repositories and bower packages run (from the directory of th
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
 
-- `grunt server` (to start the project locally)
-- `grunt dist` (to minify js, html and css files)
-- `grunt clean` (to clean / remove tmp, dist and bower's component folders)
+- `grunt server` (start the project locally)
+- `grunt dist` (minify js, html and css files)
+- `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 ---
 
@@ -63,7 +66,8 @@ TODO:
 
 ## __CREDITS__
 
-- [Maurizio Battaghini](http://twitter.com/battago)
+- [Maurizio Battaghini](https://github.com/ibbatta)
+- [Aristeidis Bampakos](https://github.com/bampakoa)
 
 ---
 

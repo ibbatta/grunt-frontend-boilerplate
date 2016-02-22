@@ -16,9 +16,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'app/vendors/angular/angular.js',
-      'node_modules/angular-mocks/angular-mocks.js',
+      'app/vendors/angular-mocks/angular-mocks.js',
       'app/vendors/angular-bootstrap/ui-bootstrap.js',
-      'app/vendors/angular-ui-router/angular-ui-router.js',
+      'app/vendors/angular-ui-router/release/angular-ui-router.js',
       'app/index.js',
       'app/templates/**/*.js',
       'app/**/*.html',
@@ -35,7 +35,8 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'app/**/*.html': ['ng-html2js'],
-      'app/**/!(*.mock|*.spec).js': ['coverage']
+      'app/templates/**/!(*.mock|*.spec).js': ['coverage'],
+      'app/index.js': ['coverage']
     },
 
     ngHtml2JsPreprocessor: {
@@ -88,4 +89,6 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
+
 }
+
