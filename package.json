@@ -40,7 +40,19 @@
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^2.0.0",
     "jshint-stylish": "^2.1.0",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.7",
+    "karma-ng-html2js-preprocessor": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-safari-launcher": "^0.1.1",
     "load-grunt-tasks": "^3.4.0",
-    "lodash": "^4.2.0"
+    "lodash": "^4.2.0",
+    "phantomjs-prebuilt": "^2.1.4"
+  },
+  "scripts": {
+    "test": "karma start"
   }
 }

@@ -9,3 +9,4 @@ app/vendors
 *.sublime-workspace
 **/*.gz
 **/*.tar.gz
+coverage
