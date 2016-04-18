@@ -169,7 +169,10 @@ module.exports = function(grunt) {
     // UGLIFY
     uglify: {
       options: {
-        mangle: false
+        mangle: false,
+        compress: {
+          drop_console: true
+        },
       },
       dist: {
         files: {
