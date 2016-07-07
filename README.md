@@ -1,4 +1,4 @@
-# __ANGULAR-BOOTSTRAP-GRUNT-BOILERPLATE__
+# __BASIC FRONT-END BOILERPLATE__
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
@@ -58,11 +58,6 @@ The Gruntfile expose these tasks:
 
 ---
 
-## __HISTORY__
-
-TODO:
-
----
 
 ## __CREDITS__
 
