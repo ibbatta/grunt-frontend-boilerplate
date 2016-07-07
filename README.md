@@ -69,7 +69,7 @@ The Gruntfile expose these tasks:
 
 ### __TROUBLESHOOTING__ ###
 
-This boilerplate is not ready for production yet
+This is just my personal boilerplate, it may or may not be a good fit for your project(s).
 
 ---
 
