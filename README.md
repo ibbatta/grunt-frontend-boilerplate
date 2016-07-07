@@ -66,12 +66,6 @@ The Gruntfile expose these tasks:
 
 ---
 
-## __TODO__
-
-- _Prepare images for **dist**_
-- _Automate **changelog** updates_
-
----
 
 ### __TROUBLESHOOTING__ ###
 
