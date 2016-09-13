@@ -27,7 +27,7 @@ Before cloning the repo **be sure** you have installed:
 
 
 - Choose a folder project in your system and switch in `cd [folder path]`
-- Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
+- Clone the repo in your folder `git clone https://github.com/ibbatta/grunt-frontend-boilerplate.git`
 
 ---
 
