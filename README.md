@@ -68,8 +68,8 @@ The Gruntfile expose these tasks:
 
 ## __CREDITS__
 
-- [Maurizio Battaghini](https://github.com/ibbatta)
-- [Aristeidis Bampakos](https://github.com/bampakoa)
+- [Maurizio Battaghini](https://github.com/ibbatta) (template develop)
+- [Aristeidis Bampakos](https://github.com/bampakoa) (tests integration)
 
 ---
 
@@ -79,9 +79,3 @@ The Gruntfile expose these tasks:
 This is just my personal boilerplate, it may or may not be a good fit for your project(s).
 
 ---
-
-## __LICENSE__
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
-
-[Full license](LICENSE)
