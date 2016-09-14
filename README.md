@@ -48,6 +48,12 @@ The Gruntfile expose these tasks:
 
 ---
 
+## __TODO__
+
+Update the develop environment with __browser sync__ for grunt
+
+---
+
 ## __CONTRIBUTING__
 
 - Fork it!
