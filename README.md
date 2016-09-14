@@ -50,7 +50,8 @@ The Gruntfile expose these tasks:
 
 ## __TODO__
 
-Update the develop environment with __browser sync__ for grunt
+- Update the develop environment with __browser sync__ for grunt
+- Migrate from controllers to Angular's components
 
 ---
 
