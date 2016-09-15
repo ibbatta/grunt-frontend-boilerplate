@@ -1,16 +1,23 @@
+'use strict';
+
 require.config({
-  shim: {
+    shim: {
+        angular: {
+            deps: [
+                'jquery'
+            ],
+            exports: 'angular'
+        }
+    },
+    paths: {
+        angular: 'app/bower_components/angular/angular',
+        'angular-bootstrap': 'app/bower_components/angular-bootstrap/ui-bootstrap-tpls',
+        'angular-ui-router': 'app/bower_components/angular-ui-router/release/angular-ui-router',
+        'bootstrap-sass': 'app/bower_components/bootstrap-sass/assets/javascripts/bootstrap',
+        jquery: 'app/bower_components/jquery/dist/jquery',
+        'angular-mocks': 'app/bower_components/angular-mocks/angular-mocks'
+    },
+    packages: [
 
-  },
-  paths: {
-    angular: "app/vendors/angular/angular",
-    "angular-bootstrap": "app/vendors/angular-bootstrap/ui-bootstrap-tpls",
-    "angular-ui-router": "app/vendors/angular-ui-router/release/angular-ui-router",
-    "bootstrap-sass": "app/vendors/bootstrap-sass/assets/javascripts/bootstrap",
-    jquery: "app/vendors/jquery/dist/jquery",
-    "angular-mocks": "app/vendors/angular-mocks/angular-mocks"
-  },
-  packages: [
-
-  ]
+    ]
 });

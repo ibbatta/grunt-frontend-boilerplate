@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
   // ===========================================================================
@@ -7,7 +9,7 @@ module.exports = function(grunt) {
 
     // get the configuration info from package.json
     pkg: grunt.file.readJSON('package.json'),
-   
+
     // CLEAN
     clean: {
       tmp: 'app/.tmp',
@@ -17,13 +19,14 @@ module.exports = function(grunt) {
       sassCache: '.sass-cache',
       compressed: 'cupido-frontend.tar.gz',
       coverage: 'coverage/',
+      bowerComponents: 'app/bower_components',
     },
 
     // BOWER
     bower: {
       install: {
         options: {
-          targetDir: 'app/vendors',
+          targetDir: 'app/bower_components',
           layout: 'byComponent',
           install: true,
           verbose: false,
@@ -48,7 +51,7 @@ module.exports = function(grunt) {
     },
 
     // BOWER CONCAT
-    bower_concat: {
+    bowerConcat: {
       build: {
         dest: 'build/js/_bower.js',
         cssDest: 'build/css/_bower.css',
@@ -95,11 +98,11 @@ module.exports = function(grunt) {
     // WIREDEP
     wiredep: {
       task: {
-        directory: 'app/vendors',
+        directory: 'app/bower_components',
         src: ['app/index.html'],
       }
     },
-    
+
     // INJECTOR
     injector: {
       dev: {
@@ -116,7 +119,7 @@ module.exports = function(grunt) {
 
     // WATCH
     watch: {
-      options:{
+      options: {
         livereload: true
       },
       stylesheet: {
@@ -124,11 +127,11 @@ module.exports = function(grunt) {
         tasks: ['devStyle', 'injector']
       },
       scripts: {
-        files:['app/**/*.js', '!app/vendors/**'],
-        tasks:['devScript', 'injector']
+        files: ['app/**/*.js', '!app/vendors/**'],
+        tasks: ['devScript', 'injector']
       },
       bower: {
-        files: ['app/vendors/**'],
+        files: ['app/bower_components/**'],
         tasks: ['wiredep']
       },
       all: {
@@ -138,22 +141,22 @@ module.exports = function(grunt) {
     },
 
     // EXPRESS SERVER
-    express:{
-      dev:{
-        options:{
-          port:9001,
-          bases:['app/'],
-          livereload: true 
+    express: {
+      dev: {
+        options: {
+          port: 9001,
+          bases: ['app/'],
+          livereload: true
         }
       },
-      dist:{
-        options:{
-          port:9003,
-          bases:['dist/static/'],
-          livereload: true 
+      dist: {
+        options: {
+          port: 9003,
+          bases: ['dist/static/'],
+          livereload: true
         }
       }
-    },  
+    },
 
     // CONCAT
     concat: {
@@ -176,7 +179,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/static/js/main.min.js': [ 'dist/.tmp/js/main.concat.js' ]
+          'dist/static/js/main.min.js': ['dist/.tmp/js/main.concat.js']
         }
       }
     },
@@ -201,46 +204,46 @@ module.exports = function(grunt) {
       },
       build: {
         files: [
-          {expand: true, cwd: 'app', src: ['images/**/*'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['templates/**'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['**/*.html'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['index.js'], dest: 'build/js'},
-          {expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/'},
+          { expand: true, cwd: 'app', src: ['images/**/*'], dest: 'build/' },
+          { expand: true, cwd: 'app', src: ['templates/**'], dest: 'build/' },
+          { expand: true, cwd: 'app', src: ['**/*.html'], dest: 'build/' },
+          { expand: true, cwd: 'app', src: ['index.js'], dest: 'build/js' },
+          { expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/' },
         ]
       },
       dist: {
         files: [
-          {expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/'},
-          {expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/'},
+          { expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/' },
+          { expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/' },
         ]
       }
     },
 
     //USEMIN
-      // --> usemin prepare
-      useminPrepare: {
-        html: 'dist/static/index.html',
-        options: {
-          flow: {
-            html: {
-              steps: {
-                js: ['concat', 'uglify'],
-                css: ['cssmin']
-              },
-              post: {}
-            }
+    // --> usemin prepare
+    useminPrepare: {
+      html: 'dist/static/index.html',
+      options: {
+        flow: {
+          html: {
+            steps: {
+              js: ['concat', 'uglify'],
+              css: ['cssmin']
+            },
+            post: {}
           }
         }
-      },
+      }
+    },
 
-      // --> usemin
-      usemin: {
-        html: ['dist/static/index.html'],
-        options: {
-          root: 'app',
-          dest: 'dist/static'
-        }
-      },
+    // --> usemin
+    usemin: {
+      html: ['dist/static/index.html'],
+      options: {
+        root: 'app',
+        dest: 'dist/static'
+      }
+    },
 
     // COMPRESS
     compress: {
@@ -281,9 +284,10 @@ module.exports = function(grunt) {
   grunt.registerTask('server:dist', ['express:dist', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bowerConcat']);
 
   // Dist task
   grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress']);
 
 };
+

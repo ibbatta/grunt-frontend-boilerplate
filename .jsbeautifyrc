@@ -1,0 +1,11 @@
+{
+    "css": {
+        "end_with_newline": true,
+        "indent_size": 2
+    },
+    "js": {
+        "break_chained_methods": false,
+        "end_with_newline": true,
+        "indent_size": 2
+    }
+}
