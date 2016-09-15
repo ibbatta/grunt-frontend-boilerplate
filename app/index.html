@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Grunt boilerplate</title>
+    <title>WEBAPP (boilerplate)</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
     <!-- CDN IMPORT -->
@@ -23,7 +23,9 @@
 
 <body>
     <div ng-if="$themeFinishLoading" class="app-wrapper">
+        <main-header></main-header>
         <div ui-view></div>
+        <main-footer></main-footer>
     </div>
     <!-- build:js js/main.min.js -->
     <!-- bower:js -->
@@ -38,9 +40,12 @@
     <!-- endbower -->
     <!-- injector:js -->
     <script src="index.js"></script>
+    <script src="src/components/components.module.js"></script>
     <script src="src/home/home.module.js"></script>
     <script src="src/pages.module.js"></script>
     <script src="src/home/home.ctrl.js"></script>
+    <script src="src/components/footer/footer.component.js"></script>
+    <script src="src/components/header/header.component.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->
 </body>
