@@ -1,7 +1,7 @@
 {
   "name": "webapp-boilerplate",
-  "version": "0.1.0",
-  "description": "Custom grunt and angular.js boilerplate (to start projects)",
+  "version": "1.0.0",
+  "description": "Custom webapp boilerplate",
   "repository": {
     "type": "git",
     "url": "https://github.com/ibbatta/grunt-frontend-boilerplate.git"
@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "start": "grunt",
-    "dist": "grunt dist",
-    "bower-requirejs": "bower-requirejs -c ./config.js"
+    "build": "grunt dist",
+    "test": "karma start"
   },
   "author": "Maurizio Battaghini",
   "license": "ISC",
@@ -59,9 +59,6 @@
     "load-grunt-tasks": "^3.4.0",
     "lodash": "^4.2.0",
     "phantomjs-prebuilt": "^2.1.4"
-  },
-  "scripts": {
-    "test": "karma start"
   }
 }
 

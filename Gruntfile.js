@@ -113,7 +113,7 @@ module.exports = function(grunt) {
           relative: true
         },
         files: {
-          './app/index.html': ['./app/index.js', './app/src/**/*.js', './app/.tmp/css/main.css'],
+          './app/index.html': ['./app/index.js', './app/src/**/*.module.js', './app/src/**/*.ctrl.js', './app/src/**/*.js', './app/.tmp/css/main.css'],
         }
       }
     },
@@ -278,7 +278,7 @@ module.exports = function(grunt) {
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
-  grunt.registerTask('default', ['clean', 'bower', 'server']);
+  grunt.registerTask('default', ['clean', 'bower', 'dev']);
 
   grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']); // Style task
   grunt.registerTask('devScript', ['jshint']); // Script task
@@ -286,10 +286,10 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin']); // Style optimizer
 
   // Server task
-  grunt.registerTask('server', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync', 'watch']);
+  grunt.registerTask('dev', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync', 'watch']);
 
   // Server dist
-  grunt.registerTask('server:dist', ['express:dist', 'watch']);
+  grunt.registerTask('dev:dist', ['express:dist', 'watch']);
 
   // Build task
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bowerConcat']);
