@@ -1,16 +1,14 @@
-# __ANGULAR-BOOTSTRAP-GRUNT-BOILERPLATE__
-
->This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
+# __BASIC FRONT-END BOILERPLATE__
 
 ##### PACKAGE.JSON
 
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
 
-
 #### BOWER.JSON
 
 [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
 
+>This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
 
@@ -27,7 +25,7 @@ Before cloning the repo **be sure** you have installed:
 
 
 - Choose a folder project in your system and switch in `cd [folder path]`
-- Clone the repo in your folder `git clone https://ibbatta@bitbucket.org/ibbatta/my-boilerplate.git`
+- Clone the repo in your folder `git clone https://github.com/ibbatta/grunt-frontend-boilerplate.git`
 
 ---
 
@@ -48,6 +46,13 @@ The Gruntfile expose these tasks:
 
 ---
 
+## __TODO__
+
+- Update the develop environment with __browser sync__ for grunt
+- Migrate from controllers to Angular's components
+
+---
+
 ## __CONTRIBUTING__
 
 - Fork it!
@@ -58,34 +63,17 @@ The Gruntfile expose these tasks:
 
 ---
 
-## __HISTORY__
-
-TODO:
-
----
 
 ## __CREDITS__
 
-- [Maurizio Battaghini](https://github.com/ibbatta)
-- [Aristeidis Bampakos](https://github.com/bampakoa)
+- [Maurizio Battaghini](https://github.com/ibbatta) (template develop)
+- [Aristeidis Bampakos](https://github.com/bampakoa) (tests integration)
 
 ---
 
-## __TODO__
-
-- _Prepare images for **dist**_
-- _Automate **changelog** updates_
-
----
 
 ### __TROUBLESHOOTING__ ###
 
-This boilerplate is not ready for production yet
+This is just my personal boilerplate, it may or may not be a good fit for your project(s).
 
 ---
-
-## __LICENSE__
-
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](http://creativecommons.org/publicdomain/zero/1.0/)
-
-[Full license](LICENSE)
