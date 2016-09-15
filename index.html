@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>WEBAPP (boilerplate)</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+    <title>Webapp Boilerplate</title>
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="shortcut icon" type="image/svg+xml" href="assets/favicon.svg">
+    <!--[if IE]><link rel="shortcut icon" href="assets/favicon.ico"><![endif]-->
     <!-- CDN IMPORT -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -17,9 +18,9 @@
 
 <body>
     <div ng-if="$themeFinishLoading" class="app-wrapper">
-        <main-header project-name="Webapp Boilerplate"></main-header>
+        <page-header project-name="Webapp Boilerplate"></page-header>
         <div ui-view></div>
-        <main-footer author="Maurizio Battaghini" year="2016"></main-footer>
+        <page-footer author="Maurizio Battaghini" year="2016"></page-footer>
     </div>
     <script src="js/main.min.js"></script>
 </body>
