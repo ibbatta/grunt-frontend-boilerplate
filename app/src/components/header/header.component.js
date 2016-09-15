@@ -8,13 +8,10 @@
     controllerAs: 'vm'
   };
 
-  function headerCtrl() {
-    var vm = this;
-    console.log('HEADER COMPONENT', vm);
-  }
+  function headerCtrl() {}
 
   angular.module('boilerplate.components')
-    .component('mainHeader', headerConfig);
+    .component('pageHeader', headerConfig);
 
 })();
 

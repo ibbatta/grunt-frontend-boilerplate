@@ -7,7 +7,13 @@
   /** @ngInject */
   function HomeCtrl() {
     var vm = this;
-    console.log('HOME CTRL', vm);
+    vm.showOffCanvas = showOffCanvas;
+    vm.offCanvasActivate = false;
+
+    function showOffCanvas() {
+      vm.offCanvasActivate = !vm.offCanvasActivate;
+      console.log('entro');
+    }
   }
 
 })();

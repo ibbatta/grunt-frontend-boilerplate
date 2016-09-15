@@ -8,13 +8,10 @@
     controllerAs: 'vm'
   };
 
-  function footerCtrl() {
-    var vm = this;
-    console.log('FOOTER COMPONENT', vm);
-  }
+  function footerCtrl() {}
 
   angular.module('boilerplate.components')
-    .component('mainFooter', footerConfig);
+    .component('pageFooter', footerConfig);
 
 })();
 
