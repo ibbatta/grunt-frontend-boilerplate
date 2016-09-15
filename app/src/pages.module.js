@@ -3,7 +3,7 @@
 
   angular.module('boilerplate.pages', [
       'ui.router',
-      'boilerplate.pages.main'
+      'boilerplate.pages.home'
     ])
     .config(themeConfig)
     .run(themeRun);

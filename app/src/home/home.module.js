@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('boilerplate.pages.main', [])
+  angular.module('boilerplate.pages.home', [])
     .config(routeConfig);
 
   /** @ngInject */
@@ -10,9 +10,9 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'src/main/main.tpl.html',
-        controller: 'MainCtrl',
-        controllerAs: 'mainCtrl'
+        templateUrl: 'src/home/home.tpl.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'homeCtrl'
       });
 
   }

@@ -13,14 +13,14 @@ module.exports = function(grunt) {
     // CLEAN
     clean: {
       log: '**/*.log',
-      tmp: './app/.tmp',
-      build: './build/',
-      dist: './dist/',
-      distTmp: './dist/.tmp',
+      tmp: 'app/.tmp',
+      build: 'build/',
+      dist: 'dist/',
+      distTmp: 'dist/.tmp',
       sassCache: '.sass-cache',
       compressed: ['boilerplate.tar.gz', './boilerplate'],
       coverage: 'coverage/',
-      bowerComponents: './app/bower_components',
+      bowerComponents: 'app/bower_components',
       annotated: '**/*.annotated.*',
     },
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     bower: {
       install: {
         options: {
-          targetDir: './app/bower_components',
+          targetDir: 'app/bower_components',
           layout: 'byComponent',
           install: true,
           verbose: false,
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
     // BOWER CONCAT
     bower_concat: {
       build: {
-        dest: './build/js/_bower.concat.js',
-        cssDest: './build/css/_bower.concat.css',
+        dest: 'build/js/_bower.concat.js',
+        cssDest: 'build/css/_bower.concat.css',
         bowerOptions: {
           relative: true
         }
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-      all: ['Grunfile.js', './app/src/**/*.js', '!./app/**/*.spec.js']
+      all: ['Grunfile.js', 'app/src/**/*.js', '!app/**/*.spec.js']
     },
 
     // SASS
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
           sourceMap: false
         },
         files: {
-          './app/.tmp/css/main.css': './app/index.scss'
+          'app/.tmp/css/main.css': 'app/index.scss'
         }
       }
     },
@@ -93,15 +93,15 @@ module.exports = function(grunt) {
             require('autoprefixer')()
           ],
         },
-        src: './app/.tmp/css/*.css'
+        src: 'app/.tmp/css/*.css'
       }
     },
 
     // WIREDEP
     wiredep: {
       task: {
-        directory: './app/bower_components',
-        src: ['./app/index.html'],
+        directory: 'app/bower_components',
+        src: ['app/index.html'],
       }
     },
 
@@ -109,35 +109,32 @@ module.exports = function(grunt) {
     injector: {
       dev: {
         options: {
-          template: './app/index.html',
+          template: 'app/index.html',
           min: true,
           relative: true
         },
         files: {
-          './app/index.html': ['./app/index.js', './app/src/**/*.module.js', './app/src/**/*.ctrl.js', './app/src/**/*.js', './app/.tmp/css/main.css'],
+          'app/index.html': ['app/index.js', 'app/src/**/*.module.js', 'app/src/**/*.ctrl.js', 'app/src/**/*.js', 'app/.tmp/css/main.css'],
         }
       }
     },
 
     // WATCH
     watch: {
-      options: {
-        livereload: true
-      },
       stylesheet: {
-        files: ['./app/index.scss'],
+        files: ['app/index.scss'],
         tasks: ['devStyle', 'injector']
       },
       scripts: {
-        files: ['./app/**/*.js'],
+        files: ['app/**/*.js'],
         tasks: ['devScript', 'injector']
       },
       bower: {
-        files: ['./app/bower_components/**'],
+        files: ['app/bower_components/**'],
         tasks: ['wiredep']
       },
       all: {
-        files: ['./app/**/*'],
+        files: ['app/**/*'],
         tasks: ['devStyle', 'devScript', 'injector']
       }
     },
@@ -148,8 +145,8 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['./build/js/_bower.concat.js', './build/js/index.annotated.js', './build/**/*.module.annotated.js', './build/**/*.ctrl.annotated.js', './build/**/*.annotated.js', './build/**/*.js'],
-        dest: './dist/.tmp/js/main.concat.js'
+        src: ['build/js/_bower.concat.js', 'build/js/index.annotated.js', 'build/**/*.module.annotated.js', 'build/**/*.ctrl.annotated.js', 'build/**/*.annotated.js', 'build/**/*.js'],
+        dest: 'dist/.tmp/js/main.concat.js'
       },
     },
 
@@ -160,7 +157,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          './dist/static/js/main.min.js': ['./dist/.tmp/js/main.concat.js']
+          'dist/static/js/main.min.js': ['dist/.tmp/js/main.concat.js']
         }
       }
     },
@@ -173,7 +170,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          './dist/static/css/main.min.css': ['./build/css/_bower.concat.css', './build/css/main.css']
+          'dist/static/css/main.min.css': ['build/css/_bower.concat.css', 'build/css/main.css']
         }
       }
     },
@@ -185,17 +182,17 @@ module.exports = function(grunt) {
       },
       build: {
         files: [
-          { expand: true, cwd: 'app', src: ['index.html'], dest: './build/' },
-          { expand: true, cwd: 'app', src: ['index.annotated.js'], dest: './build/js' },
-          { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: './build/src' },
-          { expand: true, cwd: 'app/src', src: ['**/*.annotated.js'], dest: './build/js' },
-          { expand: true, cwd: './app/.tmp', src: ['css/**/*.css'], dest: './build/' },
+          { expand: true, cwd: 'app', src: ['index.html'], dest: 'build/' },
+          { expand: true, cwd: 'app', src: ['index.annotated.js'], dest: 'build/js' },
+          { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: 'build/src' },
+          { expand: true, cwd: 'app/src', src: ['**/*.annotated.js'], dest: 'build/js' },
+          { expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/' },
         ]
       },
       dist: {
         files: [
-          { expand: true, cwd: 'build', src: ['images/**/*'], dest: './dist/static/' },
-          { expand: true, cwd: 'build', src: ['**/*.html'], dest: './dist/static/' },
+          { expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/' },
+          { expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/' },
         ]
       }
     },
@@ -203,7 +200,7 @@ module.exports = function(grunt) {
     //USEMIN
     // --> usemin prepare
     useminPrepare: {
-      html: './dist/static/index.html',
+      html: 'dist/static/index.html',
       options: {
         flow: {
           html: {
@@ -219,10 +216,10 @@ module.exports = function(grunt) {
 
     // --> usemin
     usemin: {
-      html: ['./dist/static/index.html'],
+      html: ['dist/static/index.html'],
       options: {
         root: 'app',
-        dest: './dist/static'
+        dest: 'dist/static'
       }
     },
 
@@ -235,7 +232,7 @@ module.exports = function(grunt) {
           pretty: true
         },
         expand: true,
-        cwd: './dist/static/',
+        cwd: 'dist/static/',
         src: ['**/*'],
         dest: '/'
       }
@@ -245,20 +242,20 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src: './app/**/*'
+          src: 'app/**/*'
         },
         options: {
           watchTask: true,
-          server: './app/'
+          server: 'app/'
         }
       },
       dist: {
         bsFiles: {
-          src: './dist/static/**/*'
+          src: 'dist/static/**/*'
         },
         options: {
           watchTask: false,
-          server: './dist/static/'
+          server: 'dist/static/'
         }
       }
     },
