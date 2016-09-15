@@ -12,4 +12,5 @@ app/.tmp
 **/*.gz
 **/*.tar.gz
 coverage
+**/*.annotated.*
 

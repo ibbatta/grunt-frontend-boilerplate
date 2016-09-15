@@ -21,6 +21,7 @@ module.exports = function(grunt) {
       compressed: ['boilerplate.tar.gz', './boilerplate'],
       coverage: 'coverage/',
       bowerComponents: './app/bower_components',
+      annotated: '**/*.annotated.*',
     },
 
     // BOWER
@@ -147,7 +148,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['./build/js/_bower.concat.js', './build/js/index.js', './build/**/*.module.js', './build/**/*.ctrl.js', './build/**/*.js'],
+        src: ['./build/js/_bower.concat.js', './build/js/index.annotated.js', './build/**/*.module.annotated.js', './build/**/*.ctrl.annotated.js', './build/**/*.annotated.js', './build/**/*.js'],
         dest: './dist/.tmp/js/main.concat.js'
       },
     },
@@ -185,9 +186,9 @@ module.exports = function(grunt) {
       build: {
         files: [
           { expand: true, cwd: 'app', src: ['index.html'], dest: './build/' },
-          { expand: true, cwd: 'app', src: ['index.js'], dest: './build/js' },
+          { expand: true, cwd: 'app', src: ['index.annotated.js'], dest: './build/js' },
           { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: './build/src' },
-          { expand: true, cwd: 'app/src', src: ['**/*.js'], dest: './build/js' },
+          { expand: true, cwd: 'app/src', src: ['**/*.annotated.js'], dest: './build/js' },
           { expand: true, cwd: './app/.tmp', src: ['css/**/*.css'], dest: './build/' },
         ]
       },
@@ -260,7 +261,22 @@ module.exports = function(grunt) {
           server: './dist/static/'
         }
       }
-    }
+    },
+
+    // NG ANNOTATE
+    ngAnnotate: {
+      options: {
+        singleQuotes: true
+      },
+      app: {
+        files: [{
+          expand: true,
+          src: ['app/**/*.js', '!**/*.annotated.js'],
+          ext: '.annotated.js',
+          extDot: 'last'
+        }],
+      }
+    },
 
   });
 
@@ -283,10 +299,10 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', ['devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'browserSync:dist']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'browserSync:dist', 'clean:annotated']);
 
 };
 
