@@ -1,1 +1,27 @@
-<h1>Work in progress</h1>
+<!DOCTYPE html>
+<html lang="en" ng-app="boilerplate">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>WEBAPP (boilerplate)</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+    <!-- CDN IMPORT -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <div ng-if="$themeFinishLoading" class="app-wrapper">
+        <main-header project-name="Webapp Boilerplate"></main-header>
+        <div ui-view></div>
+        <main-footer author="Maurizio Battaghini" year="2016"></main-footer>
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
