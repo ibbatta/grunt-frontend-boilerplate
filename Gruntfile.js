@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       dist: './dist/',
       distTmp: './dist/.tmp',
       sassCache: '.sass-cache',
-      compressed: 'boilerplate.tar.gz',
+      compressed: ['boilerplate.tar.gz', './boilerplate'],
       coverage: 'coverage/',
       bowerComponents: './app/bower_components',
     },
@@ -52,10 +52,10 @@ module.exports = function(grunt) {
     },
 
     // BOWER CONCAT
-    bowerConcat: {
+    bower_concat: {
       build: {
-        dest: './build/js/_bower.js',
-        cssDest: './build/css/_bower.css',
+        dest: './build/js/_bower.concat.js',
+        cssDest: './build/css/_bower.concat.css',
         bowerOptions: {
           relative: true
         }
@@ -141,31 +141,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // EXPRESS SERVER
-    express: {
-      dev: {
-        options: {
-          port: 9001,
-          bases: ['./app/'],
-          livereload: true
-        }
-      },
-      dist: {
-        options: {
-          port: 9003,
-          bases: ['./dist/static/'],
-          livereload: true
-        }
-      }
-    },
-
     // CONCAT
     concat: {
       options: {
         separator: ';',
       },
       dist: {
-        src: ['./build/js/_bower.js', './build/js/index.js', './build/src/**/*.js'],
+        src: ['./build/js/_bower.concat.js', './build/js/index.js', './build/**/*.module.js', './build/**/*.ctrl.js', './build/**/*.js'],
         dest: './dist/.tmp/js/main.concat.js'
       },
     },
@@ -190,7 +172,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          './dist/static/css/main.min.css': ['./build/css/_bower.css', './build/css/main.css']
+          './dist/static/css/main.min.css': ['./build/css/_bower.concat.css', './build/css/main.css']
         }
       }
     },
@@ -202,8 +184,9 @@ module.exports = function(grunt) {
       },
       build: {
         files: [
-          { expand: true, cwd: 'app/src', src: ['**/*', '!**/*.js'], dest: './build/' },
-          { expand: true, cwd: 'app/src', src: ['index.js'], dest: './build/js' },
+          { expand: true, cwd: 'app', src: ['index.html'], dest: './build/' },
+          { expand: true, cwd: 'app', src: ['index.js'], dest: './build/js' },
+          { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: './build/src' },
           { expand: true, cwd: 'app/src', src: ['**/*.js'], dest: './build/js' },
           { expand: true, cwd: './app/.tmp', src: ['css/**/*.css'], dest: './build/' },
         ]
@@ -259,12 +242,23 @@ module.exports = function(grunt) {
 
     // BROWSER SYNC
     browserSync: {
-      bsFiles: {
-        src: './app/**/*'
+      dev: {
+        bsFiles: {
+          src: './app/**/*'
+        },
+        options: {
+          watchTask: true,
+          server: './app/'
+        }
       },
-      options: {
-        watchTask: true,
-        server: './app/'
+      dist: {
+        bsFiles: {
+          src: './dist/static/**/*'
+        },
+        options: {
+          watchTask: false,
+          server: './dist/static/'
+        }
       }
     }
 
@@ -286,16 +280,13 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin']); // Style optimizer
 
   // Server task
-  grunt.registerTask('dev', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync', 'watch']);
-
-  // Server dist
-  grunt.registerTask('dev:dist', ['express:dist', 'watch']);
+  grunt.registerTask('dev', ['devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bowerConcat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'browserSync:dist']);
 
 };
 

@@ -1,3 +1,5 @@
+'use strict';
+
 // Karma configuration
 // Generated on Wed Feb 17 2016 17:56:06 GMT+0100 (CET)
 
@@ -87,7 +89,6 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-
-}
+  });
+};
 
