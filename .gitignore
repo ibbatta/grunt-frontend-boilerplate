@@ -14,4 +14,4 @@ app/.tmp
 coverage
 **/*.annotated.*
 *.sublime-project
-
+*.sublime-workspace
