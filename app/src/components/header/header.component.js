@@ -2,8 +2,8 @@
   'use strict';
 
   var headerConfig = {
-    bindings: {},
-    templateUrl: 'src/components/header.tpl.html',
+    bindings: { projectName: '@' },
+    templateUrl: 'src/components/header/header.tpl.html',
     controller: headerCtrl,
     controllerAs: 'vm'
   };
@@ -14,7 +14,7 @@
   }
 
   angular.module('boilerplate.components')
-    .component('main-header', headerConfig);
+    .component('mainHeader', headerConfig);
 
 })();
 

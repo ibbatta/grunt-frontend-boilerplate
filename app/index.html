@@ -16,36 +16,20 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- injector:css -->
-    <link rel="stylesheet" href=".tmp/css/main.css">
     <!-- endinjector -->
     <!-- endbuild -->
 </head>
 
 <body>
     <div ng-if="$themeFinishLoading" class="app-wrapper">
-        <main-header></main-header>
+        <main-header project-name="Webapp Boilerplate"></main-header>
         <div ui-view></div>
-        <main-footer></main-footer>
+        <main-footer author="Maurizio Battaghini" year="2016"></main-footer>
     </div>
     <!-- build:js js/main.min.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
     <!-- endbower -->
     <!-- injector:js -->
-    <script src="index.js"></script>
-    <script src="src/components/components.module.js"></script>
-    <script src="src/home/home.module.js"></script>
-    <script src="src/pages.module.js"></script>
-    <script src="src/home/home.ctrl.js"></script>
-    <script src="src/components/footer/footer.component.js"></script>
-    <script src="src/components/header/header.component.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->
 </body>

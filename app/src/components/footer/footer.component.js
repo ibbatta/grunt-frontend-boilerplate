@@ -2,8 +2,8 @@
   'use strict';
 
   var footerConfig = {
-    bindings: {},
-    templateUrl: 'src/components/footer.tpl.html',
+    bindings: { author: '@', year: '@' },
+    templateUrl: 'src/components/footer/footer.tpl.html',
     controller: footerCtrl,
     controllerAs: 'vm'
   };
@@ -14,7 +14,7 @@
   }
 
   angular.module('boilerplate.components')
-    .component('main-footer', footerConfig);
+    .component('mainFooter', footerConfig);
 
 })();
 
