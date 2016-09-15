@@ -1,10 +1,10 @@
 {
-  "name": "my-grunt-angular-boilerplate",
+  "name": "webapp-boilerplate",
   "version": "0.1.0",
   "description": "Custom grunt and angular.js boilerplate (to start projects)",
   "repository": {
     "type": "git",
-    "url": "git+https://ibbatta@bitbucket.org/ibbatta/grunt-custom.git"
+    "url": "https://github.com/ibbatta/grunt-frontend-boilerplate.git"
   },
   "keywords": [
     "grunt",
@@ -13,9 +13,14 @@
     "boilerplate",
     "project"
   ],
+  "scripts": {
+    "start": "grunt",
+    "dist": "grunt dist",
+    "bower-requirejs": "bower-requirejs -c ./config.js"
+  },
   "author": "Maurizio Battaghini",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ibbatta/grunt-custom#readme",
+  "homepage": "https://github.com/ibbatta/grunt-frontend-boilerplate",
   "devDependencies": {
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.3.1",
