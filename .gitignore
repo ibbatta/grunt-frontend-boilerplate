@@ -13,4 +13,5 @@ app/.tmp
 **/*.tar.gz
 coverage
 **/*.annotated.*
+*.sublime-project
 
