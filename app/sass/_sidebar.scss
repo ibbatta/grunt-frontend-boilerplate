@@ -1,0 +1,58 @@
+/* =====================================
+ * SIDEBAR
+ * ===================================== */
+
+.sidebar-offcanvas {
+  position: fixed;
+  z-index: 1;
+  top: $body-padding;
+  width: $sidebar-size-width;
+  transition: $animation-target $animation-time $animation-fx;
+  @include responsive(sm) {
+    position: relative;
+    width: 25%;
+    top: 0;
+  }
+}
+
+.row-offcanvas {
+  position: relative;
+  transition: $animation-target $animation-time $animation-fx;
+  &-right {
+    left: 0;
+    .sidebar-offcanvas {
+      right: $sidebar-size-width * -1;
+      @include responsive(sm) {
+        right: 0;
+      }
+    }
+    &.active {
+      left: $sidebar-size-width * -1;
+      @include responsive(sm) {
+        left: 0;
+      }
+      .sidebar-offcanvas {
+        right: 0;
+      }
+    }
+  }
+  &-left {
+    right: 0;
+    .sidebar-offcanvas {
+      left: $sidebar-size-width * -1;
+      @include responsive(sm) {
+        left: 0;
+      }
+    }
+    &.active {
+      right: $sidebar-size-width * -1;
+      @include responsive(sm) {
+        right: 0;
+      }
+      .sidebar-offcanvas {
+        left: 0;
+      }
+    }
+  }
+}
+
