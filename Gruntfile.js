@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(grunt) {
 
   // ===========================================================================
@@ -7,23 +9,26 @@ module.exports = function(grunt) {
 
     // get the configuration info from package.json
     pkg: grunt.file.readJSON('package.json'),
-   
+
     // CLEAN
     clean: {
+      log: '**/*.log',
       tmp: 'app/.tmp',
       build: 'build/',
       dist: 'dist/',
       distTmp: 'dist/.tmp',
       sassCache: '.sass-cache',
-      compressed: 'cupido-frontend.tar.gz',
+      compressed: ['boilerplate.tar.gz', './boilerplate'],
       coverage: 'coverage/',
+      bowerComponents: 'app/bower_components',
+      annotated: '**/*.annotated.*',
     },
 
     // BOWER
     bower: {
       install: {
         options: {
-          targetDir: 'app/vendors',
+          targetDir: 'app/bower_components',
           layout: 'byComponent',
           install: true,
           verbose: false,
@@ -50,8 +55,8 @@ module.exports = function(grunt) {
     // BOWER CONCAT
     bower_concat: {
       build: {
-        dest: 'build/js/_bower.js',
-        cssDest: 'build/css/_bower.css',
+        dest: 'build/js/_bower.concat.js',
+        cssDest: 'build/css/_bower.concat.css',
         bowerOptions: {
           relative: true
         }
@@ -64,7 +69,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-      all: ['Grunfile.js', 'app/**/*.js', '!app/vendors/**', '!app/**/*.spec.js']
+      all: ['Grunfile.js', 'app/src/**/*.js', '!app/**/*.spec.js']
     },
 
     // SASS
@@ -95,11 +100,11 @@ module.exports = function(grunt) {
     // WIREDEP
     wiredep: {
       task: {
-        directory: 'app/vendors',
+        directory: 'app/bower_components',
         src: ['app/index.html'],
       }
     },
-    
+
     // INJECTOR
     injector: {
       dev: {
@@ -109,26 +114,23 @@ module.exports = function(grunt) {
           relative: true
         },
         files: {
-          'app/index.html': ['app/index.js', 'app/**/*.js', 'app/.tmp/css/main.css', '!app/vendors/**'],
+          'app/index.html': ['app/index.js', 'app/src/**/*.module.js', 'app/src/**/*.ctrl.js', 'app/src/**/*.js', 'app/.tmp/css/main.css'],
         }
       }
     },
 
     // WATCH
     watch: {
-      options:{
-        livereload: true
-      },
       stylesheet: {
         files: ['app/index.scss'],
         tasks: ['devStyle', 'injector']
       },
       scripts: {
-        files:['app/**/*.js', '!app/vendors/**'],
-        tasks:['devScript', 'injector']
+        files: ['app/**/*.js'],
+        tasks: ['devScript', 'injector']
       },
       bower: {
-        files: ['app/vendors/**'],
+        files: ['app/bower_components/**'],
         tasks: ['wiredep']
       },
       all: {
@@ -137,31 +139,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // EXPRESS SERVER
-    express:{
-      dev:{
-        options:{
-          port:9001,
-          bases:['app/'],
-          livereload: true 
-        }
-      },
-      dist:{
-        options:{
-          port:9003,
-          bases:['dist/static/'],
-          livereload: true 
-        }
-      }
-    },  
-
     // CONCAT
     concat: {
       options: {
         separator: ';',
       },
       dist: {
-        src: ['build/js/_bower.js', 'build/js/index.js', 'build/templates/**/*.js'],
+        src: ['build/js/_bower.concat.js', 'build/js/index.annotated.js', 'build/**/*.module.annotated.js', 'build/**/*.ctrl.annotated.js', 'build/**/*.annotated.js', 'build/**/*.js'],
         dest: 'dist/.tmp/js/main.concat.js'
       },
     },
@@ -170,13 +154,10 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: false,
-        compress: {
-          drop_console: true
-        },
       },
       dist: {
         files: {
-          'dist/static/js/main.min.js': [ 'dist/.tmp/js/main.concat.js' ]
+          'dist/static/js/main.min.js': ['dist/.tmp/js/main.concat.js']
         }
       }
     },
@@ -189,7 +170,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/static/css/main.min.css': ['build/css/_bower.css', 'build/css/main.css']
+          'dist/static/css/main.min.css': ['build/css/_bower.concat.css', 'build/css/main.css']
         }
       }
     },
@@ -201,46 +182,46 @@ module.exports = function(grunt) {
       },
       build: {
         files: [
-          {expand: true, cwd: 'app', src: ['images/**/*'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['templates/**'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['**/*.html'], dest: 'build/'},
-          {expand: true, cwd: 'app', src: ['index.js'], dest: 'build/js'},
-          {expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/'},
+          { expand: true, cwd: 'app', src: ['index.html'], dest: 'build/' },
+          { expand: true, cwd: 'app', src: ['index.annotated.js'], dest: 'build/js' },
+          { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: 'build/src' },
+          { expand: true, cwd: 'app/src', src: ['**/*.annotated.js'], dest: 'build/js' },
+          { expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/' },
         ]
       },
       dist: {
         files: [
-          {expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/'},
-          {expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/'},
+          { expand: true, cwd: 'build', src: ['images/**/*'], dest: 'dist/static/' },
+          { expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/' },
         ]
       }
     },
 
     //USEMIN
-      // --> usemin prepare
-      useminPrepare: {
-        html: 'dist/static/index.html',
-        options: {
-          flow: {
-            html: {
-              steps: {
-                js: ['concat', 'uglify'],
-                css: ['cssmin']
-              },
-              post: {}
-            }
+    // --> usemin prepare
+    useminPrepare: {
+      html: 'dist/static/index.html',
+      options: {
+        flow: {
+          html: {
+            steps: {
+              js: ['concat', 'uglify'],
+              css: ['cssmin']
+            },
+            post: {}
           }
         }
-      },
+      }
+    },
 
-      // --> usemin
-      usemin: {
-        html: ['dist/static/index.html'],
-        options: {
-          root: 'app',
-          dest: 'dist/static'
-        }
-      },
+    // --> usemin
+    usemin: {
+      html: ['dist/static/index.html'],
+      options: {
+        root: 'app',
+        dest: 'dist/static'
+      }
+    },
 
     // COMPRESS
     compress: {
@@ -257,6 +238,43 @@ module.exports = function(grunt) {
       }
     },
 
+    // BROWSER SYNC
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src: 'app/**/*'
+        },
+        options: {
+          watchTask: true,
+          server: 'app/'
+        }
+      },
+      dist: {
+        bsFiles: {
+          src: 'dist/static/**/*'
+        },
+        options: {
+          watchTask: false,
+          server: 'dist/static/'
+        }
+      }
+    },
+
+    // NG ANNOTATE
+    ngAnnotate: {
+      options: {
+        singleQuotes: true
+      },
+      app: {
+        files: [{
+          expand: true,
+          src: ['app/**/*.js', '!**/*.annotated.js'],
+          ext: '.annotated.js',
+          extDot: 'last'
+        }],
+      }
+    },
+
   });
 
   // ===========================================================================
@@ -267,7 +285,7 @@ module.exports = function(grunt) {
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
-  grunt.registerTask('default', ['clean', 'bower', 'server']);
+  grunt.registerTask('default', ['clean', 'bower', 'dev']);
 
   grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']); // Style task
   grunt.registerTask('devScript', ['jshint']); // Script task
@@ -275,15 +293,13 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin']); // Style optimizer
 
   // Server task
-  grunt.registerTask('server', ['express', 'devScript', 'devStyle', 'wiredep', 'injector:dev', 'watch']);
-
-  // Server dist
-  grunt.registerTask('server:dist', ['express:dist', 'watch']);
+  grunt.registerTask('dev', ['devScript', 'devStyle', 'wiredep', 'injector:dev', 'browserSync:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'copy:build', 'bower_concat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dev', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'browserSync:dist', 'clean:annotated']);
 
 };
+

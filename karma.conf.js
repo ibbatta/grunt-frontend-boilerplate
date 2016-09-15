@@ -1,3 +1,5 @@
+'use strict';
+
 // Karma configuration
 // Generated on Wed Feb 17 2016 17:56:06 GMT+0100 (CET)
 
@@ -15,10 +17,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/vendors/angular/angular.js',
-      'app/vendors/angular-mocks/angular-mocks.js',
-      'app/vendors/angular-bootstrap/ui-bootstrap.js',
-      'app/vendors/angular-ui-router/release/angular-ui-router.js',
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+      'app/bower_components/angular-ui-router/release/angular-ui-router.js',
       'app/index.js',
       'app/templates/**/*.js',
       'app/**/*.html',
@@ -27,8 +29,7 @@ module.exports = function(config) {
 
 
     // list of files to exclude
-    exclude: [
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
@@ -53,9 +54,9 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage'],
 
     coverageReporter: {
-      type : 'html',
+      type: 'html',
       // output coverage reports
-      dir : 'coverage/'
+      dir: 'coverage/'
     },
 
 
@@ -88,7 +89,6 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-
-}
+  });
+};
 

@@ -1,54 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="gruntWebapp">
+<html lang="en" ng-app="boilerplate">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Grunt boilerplate</title>
-
+    <title>WEBAPP (boilerplate)</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
-
+    <!-- CDN IMPORT -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- build:css css/main.min.css -->
-
-        <!-- bower:css -->
-        <!-- endbower -->
-
-        <!-- injector:css -->
-        <link rel="stylesheet" href=".tmp/css/main.css">
-        <!-- endinjector -->
-
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- injector:css -->
+    <!-- endinjector -->
     <!-- endbuild -->
-
 </head>
-<body ng-controller="MainCtrl as main">
 
-    <div ng-include="main.templateUrl.header"></div>
-
-    <div ui-view></div>
-
-    <div ng-include="main.templateUrl.footer"></div>
-
+<body>
+    <div ng-if="$themeFinishLoading" class="app-wrapper">
+        <main-header project-name="Webapp Boilerplate"></main-header>
+        <div ui-view></div>
+        <main-footer author="Maurizio Battaghini" year="2016"></main-footer>
+    </div>
     <!-- build:js js/main.min.js -->
-
-        <!-- bower:js -->
-        <script src="vendors/jquery/dist/jquery.js"></script>
-        <script src="vendors/angular/angular.js"></script>
-        <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="vendors/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-        <!-- endbower -->
-
-        <!-- injector:js -->
-        <script src="index.js"></script>
-        <script src="templates/home/home.ctrl.js"></script>
-        <!-- endinjector -->
-
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- injector:js -->
+    <!-- endinjector -->
     <!-- endbuild -->
-
 </body>
+
 </html>

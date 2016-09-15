@@ -40,16 +40,16 @@ To install the npm repositories and bower packages run (from the directory of th
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
 
-- `grunt server` (start the project locally)
-- `grunt dist` (minify js, html and css files)
+- `npm start` (start the project locally)
+- `npm run build` (minify js, html and css files)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 ---
 
 ## __TODO__
 
-- Update the develop environment with __browser sync__ for grunt
-- Migrate from controllers to Angular's components
+- Add Karma / Jasmine tests
+
 
 ---
 
@@ -67,7 +67,7 @@ The Gruntfile expose these tasks:
 ## __CREDITS__
 
 - [Maurizio Battaghini](https://github.com/ibbatta) (template develop)
-- [Aristeidis Bampakos](https://github.com/bampakoa) (tests integration)
+- [Aristeidis Bampakos](https://github.com/bampakoa) (tests integration and inspiration)
 
 ---
 

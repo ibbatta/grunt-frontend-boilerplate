@@ -1,10 +1,10 @@
 {
-  "name": "my-grunt-angular-boilerplate",
-  "version": "0.1.0",
-  "description": "Custom grunt and angular.js boilerplate (to start projects)",
+  "name": "webapp-boilerplate",
+  "version": "1.0.0",
+  "description": "Custom webapp boilerplate",
   "repository": {
     "type": "git",
-    "url": "git+https://ibbatta@bitbucket.org/ibbatta/grunt-custom.git"
+    "url": "https://github.com/ibbatta/grunt-frontend-boilerplate.git"
   },
   "keywords": [
     "grunt",
@@ -13,9 +13,14 @@
     "boilerplate",
     "project"
   ],
+  "scripts": {
+    "start": "grunt",
+    "build": "grunt dist",
+    "test": "karma start"
+  },
   "author": "Maurizio Battaghini",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ibbatta/grunt-custom#readme",
+  "homepage": "https://github.com/ibbatta/grunt-frontend-boilerplate",
   "devDependencies": {
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.3.1",
@@ -23,6 +28,7 @@
     "grunt-bower-concat": "^0.6.0",
     "grunt-bower-requirejs": "^2.0.0",
     "grunt-bower-task": "^0.4.0",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-compress": "^0.14.0",
     "grunt-contrib-concat": "^0.5.1",
@@ -35,6 +41,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express": "^1.4.1",
     "grunt-injector": "^0.6.1",
+    "grunt-ng-annotate": "^2.0.2",
     "grunt-parallel": "^0.4.1",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",
@@ -52,9 +59,7 @@
     "karma-safari-launcher": "^0.1.1",
     "load-grunt-tasks": "^3.4.0",
     "lodash": "^4.2.0",
+    "ng-annotate": "^1.2.1",
     "phantomjs-prebuilt": "^2.1.4"
-  },
-  "scripts": {
-    "test": "karma start"
   }
 }
