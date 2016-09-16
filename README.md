@@ -57,12 +57,13 @@ The Gruntfile expose these tasks:
 ####__How to create spritesheets__
 
 This boilerplate contains a grunt's task to create a sprit automamatically:
-1- insert selected .png inside the `app/assets/spritesheet` folder
-2- when you run the task `grunt sprite` the boilerplate generates a css file and a png sprite inside the .tmp folder
+- insert selected .png inside the `app/assets/spritesheet` folder.
+- when you run the task `grunt sprite` the boilerplate generates a css file and a png sprite inside the .tmp folder (or basically when you run `npm start` command).
+- to use a specific image inside the sprite, just use the css class `.-sprite_icon` + image name.
 
 ---
 
-## __ToDo__
+## __Todo__
 
 - Add Karma / Jasmine tests
 - Manage a spinner / loading for page routing
