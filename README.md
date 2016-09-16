@@ -1,12 +1,8 @@
 # __BASIC FRONT-END BOILERPLATE__
 
-##### PACKAGE.JSON
-
-[![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
-
-#### BOWER.JSON
-
-[![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
+| PACKAGE.JSON | BOWER.JSON |
+| --- | --- |
+| [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce) | [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247) |
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
@@ -16,15 +12,15 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __WHAT THIS SEXY BOILERPLATE CONTAINS__
 
-![](./github_readme_assets/logo-angular.png =200x)
-![](./github_readme_assets/logo-bootstrap.png =200x)
-![](./github_readme_assets/logo-uibootstrap.png =200x)
-![](./github_readme_assets/logo-fontawesome.png =200x)
-![](./github_readme_assets/logo-bower.png =200x)
-![](./github_readme_assets/logo-npm.png =200x)
-![](./github_readme_assets/logo-grunt.png =200x)
-![](./github_readme_assets/logo-jasmine.png =200x)
-![](./github_readme_assets/logo-karma.png =200x)
+<img src="./github_readme_assets/logo-angular.png" width="200">
+<img src="./github_readme_assets/logo-uibootstrap.png" width="200">
+<img src="./github_readme_assets/logo-bootstrap.png" width="200">
+<img src="./github_readme_assets/logo-fontawesome.png" width="200">
+<img src="./github_readme_assets/logo-bower.png" width="200">
+<img src="./github_readme_assets/logo-npm.png" width="200">
+<img src="./github_readme_assets/logo-grunt.png" width="200">
+<img src="./github_readme_assets/logo-jasmine.png" width="200">
+<img src="./github_readme_assets/logo-karma.png" width="200">
 
 ---
 
