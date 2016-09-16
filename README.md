@@ -12,15 +12,15 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __WHAT THIS SEXY BOILERPLATE CONTAINS__
 
-<img src="./github_readme_assets/logo-angular.png" height="64">
-<img src="./github_readme_assets/logo-uibootstrap.png" height="64">
-<img src="./github_readme_assets/logo-bootstrap.png" height="64">
-<img src="./github_readme_assets/logo-sass.png" height="64">
-<img src="./github_readme_assets/logo-bower.png" height="64">
-<img src="./github_readme_assets/logo-npm.png" height="64">
-<img src="./github_readme_assets/logo-grunt.png" height="64">
-<img src="./github_readme_assets/logo-jasmine.png" height="64">
-<img src="./github_readme_assets/logo-karma.png" height="64">
+<img src="./github_readme_assets/logo-angular.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-uibootstrap.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bootstrap.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-sass.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bower.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-npm.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-grunt.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;&nbsp;
 
 ---
 
