@@ -58,9 +58,6 @@ The Gruntfile expose these tasks:
 
 ## __TODO__
 
-- Add favicon
-- Automate Grunt for images
-- Automate Grunt for bootstrap html linter (linter)[https://github.com/twbs/grunt-bootlint]
 - Add Karma / Jasmine tests
 
 
