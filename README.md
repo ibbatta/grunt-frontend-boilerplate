@@ -1,16 +1,26 @@
-# __BASIC FRONT-END BOILERPLATE__
+# __BASIC WEBAPP BOILERPLATE__
 
-##### PACKAGE.JSON
-
-[![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce)
-
-#### BOWER.JSON
-
-[![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247)
+| PACKAGE.JSON | BOWER.JSON |
+| --- | --- |
+| [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ff6e5060033d602ce) | [![Dependency Status](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b8832ef6e506003a88f247) |
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
+
+---
+
+## __WHAT THIS BOILERPLATE CONTAINS__
+
+<img src="./github_readme_assets/logo-angular.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-uibootstrap.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bootstrap.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-sass.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bower.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-npm.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-grunt.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;
 
 ---
 
