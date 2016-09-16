@@ -6,11 +6,11 @@
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
-Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide), in anticipation of the arrival of Angular 2
+Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide)
 
 ---
 
-## __WHAT THIS BOILERPLATE CONTAINS__
+## __What this boilerplate contains__
 
 <img src="./github_readme_assets/logo-angular.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-uibootstrap.png" height="64">&nbsp;&nbsp;
@@ -24,7 +24,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ---
 
-## __SET UP__
+## __Set up__
 
 Before cloning the repo **be sure** you have installed:
 
@@ -39,13 +39,13 @@ Before cloning the repo **be sure** you have installed:
 
 ---
 
-## __INSTALLATION__
+## __Installation__
 
 To install the npm repositories and bower packages run (from the directory of the project): `npm install && bower install`
 
 ---
 
-## __USAGE__
+## __Usage__
 
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
@@ -54,16 +54,23 @@ The Gruntfile expose these tasks:
 - `npm run build` (minify js, html and css files)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
+####__How to create spritesheets__
+
+This boilerplate contains a grunt's task to create a sprit automamatically:
+- insert selected .png inside the `app/assets/spritesheet` folder.
+- when you run the task `grunt sprite` the boilerplate generates a css file and a png sprite inside the .tmp folder (or basically when you run `npm start` command).
+- to use a specific image inside the sprite, just use the css class `.-sprite_icon` + image name.
+
 ---
 
-## __TODO__
+## __Todo__
 
 - Add Karma / Jasmine tests
 
 
 ---
 
-## __CONTRIBUTING__
+## __Contributing__
 
 - Fork it!
 - Create your feature branch: `git checkout -b my-new-feature`
@@ -74,7 +81,7 @@ The Gruntfile expose these tasks:
 ---
 
 
-## __CREDITS__
+## __Credits__
 
 - [Maurizio Battaghini](https://github.com/ibbatta) (template develop)
 - [Aristeidis Bampakos](https://github.com/bampakoa) (tests integration and inspiration)
@@ -82,7 +89,7 @@ The Gruntfile expose these tasks:
 ---
 
 
-### __TROUBLESHOOTING__ ###
+### __Troubleshootings__ ###
 
 This is just my personal boilerplate, it may or may not be a good fit for your project(s).
 
