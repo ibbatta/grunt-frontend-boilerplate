@@ -18,11 +18,10 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 4.2.2)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 5.2.0)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
-
 
 - Choose a folder project in your system and switch in `cd [folder path]`
 - Clone the repo in your folder `git clone https://github.com/ibbatta/grunt-frontend-boilerplate.git`
