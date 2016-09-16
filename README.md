@@ -12,15 +12,15 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __WHAT THIS SEXY BOILERPLATE CONTAINS__
 
-<img src="./github_readme_assets/logo-angular.png" width="200">
-<img src="./github_readme_assets/logo-uibootstrap.png" width="200">
-<img src="./github_readme_assets/logo-bootstrap.png" width="200">
-<img src="./github_readme_assets/logo-fontawesome.png" width="200">
-<img src="./github_readme_assets/logo-bower.png" width="200">
-<img src="./github_readme_assets/logo-npm.png" width="200">
-<img src="./github_readme_assets/logo-grunt.png" width="200">
-<img src="./github_readme_assets/logo-jasmine.png" width="200">
-<img src="./github_readme_assets/logo-karma.png" width="200">
+<img src="./github_readme_assets/logo-angular.png" width="100" height="100">
+<img src="./github_readme_assets/logo-uibootstrap.png" width="100" height="100">
+<img src="./github_readme_assets/logo-bootstrap.png" width="100" height="100">
+<img src="./github_readme_assets/logo-fontawesome.png" width="100" height="100">
+<img src="./github_readme_assets/logo-bower.png" width="100" height="100">
+<img src="./github_readme_assets/logo-npm.png" width="100" height="100">
+<img src="./github_readme_assets/logo-grunt.png" width="100" height="100">
+<img src="./github_readme_assets/logo-jasmine.png" width="100" height="100">
+<img src="./github_readme_assets/logo-karma.png" width="100" height="100">
 
 ---
 
