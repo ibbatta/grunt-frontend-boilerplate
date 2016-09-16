@@ -14,6 +14,20 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ---
 
+## __WHAT THIS SEXY BOILERPLATE CONTAINS__
+
+![](./github_readme_assets/logo-angular.png =200x)
+![](./github_readme_assets/logo-bootstrap.png =200x)
+![](./github_readme_assets/logo-uibootstrap.png =200x)
+![](./github_readme_assets/logo-fontawesome.png =200x)
+![](./github_readme_assets/logo-bower.png =200x)
+![](./github_readme_assets/logo-npm.png =200x)
+![](./github_readme_assets/logo-grunt.png =200x)
+![](./github_readme_assets/logo-jasmine.png =200x)
+![](./github_readme_assets/logo-karma.png =200x)
+
+---
+
 ## __SET UP__
 
 Before cloning the repo **be sure** you have installed:
