@@ -25,6 +25,7 @@
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.3.1",
     "grunt": "^1.0.1",
+    "grunt-bootlint": "^0.10.1",
     "grunt-bower-concat": "^1.0.0",
     "grunt-bower-requirejs": "^2.0.0",
     "grunt-bower-task": "^0.4.0",
@@ -35,6 +36,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
@@ -45,6 +47,7 @@
     "grunt-parallel": "^0.5.1",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
+    "grunt-spritesmith": "^6.3.1",
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^3.0.1",
     "jasmine-core": "^2.4.1",
@@ -63,4 +66,3 @@
     "phantomjs-prebuilt": "^2.1.4"
   }
 }
-
