@@ -64,8 +64,8 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 ## __Todo__
 
-- Add Karma / Jasmine tests
-- Manage a spinner / loading for page routing
+- [ ] Add Karma / Jasmine tests
+- [ ] Manage a spinner / loading for page routing
 
 
 ---
