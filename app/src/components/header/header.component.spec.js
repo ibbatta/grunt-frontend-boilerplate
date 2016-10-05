@@ -1,14 +1,17 @@
-describe('component: pageHeader', function(){
-    var component;
-    var projectName = 'Fake project';
+'use strict';
 
-    beforeEach(module('boilerplate.components'));
+describe('component: pageHeader', function() {
+  var component;
+  var projectName = 'Fake project';
 
-    beforeEach(inject(function(_$componentController_){
-        component = _$componentController_('pageHeader', null, {projectName: projectName});
-    }));
+  beforeEach(module('boilerplate.components'));
 
-    it('should set projectName', function() {
-        expect(component.projectName).toEqual(projectName);
-    });
+  beforeEach(inject(function(_$componentController_) {
+    component = _$componentController_('pageHeader', null, { projectName: projectName });
+  }));
+
+  it('should set projectName', function() {
+    expect(component.projectName).toEqual(projectName);
+  });
 });
+

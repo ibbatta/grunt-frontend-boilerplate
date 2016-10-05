@@ -1,13 +1,16 @@
-describe('component: pageSidebar', function(){
-    var component;
+'use strict';
 
-    beforeEach(module('boilerplate.components'));
+describe('component: pageSidebar', function() {
+  var component;
 
-    beforeEach(inject(function(_$componentController_){
-        component = _$componentController_('pageSidebar', null, {});
-    }));
+  beforeEach(module('boilerplate.components'));
 
-    it('should create component successfully', function() {
-        expect(component).not.toBeNull();
-    });
+  beforeEach(inject(function(_$componentController_) {
+    component = _$componentController_('pageSidebar', null, {});
+  }));
+
+  it('should create component successfully', function() {
+    expect(component).not.toBeNull();
+  });
 });
+
