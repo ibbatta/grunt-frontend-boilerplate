@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     },
 
     // BOWER REQUIRE JS
-    bowerRequirejs: {
+    npmequirejs: {
       build: {
         rjsConfig: 'config.js',
         options: {
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
           relative: true
         },
         files: {
-          'app/index.html': ['app/index.js', 'app/src/**/*.module.js', 'app/src/**/*.ctrl.js', 'app/src/**/*.js'],
+          'app/index.html': ['app/index.js', 'app/src/**/*.module.js', 'app/src/**/*.ctrl.js', 'app/src/**/*.js', '!app/**/*.spec.js'],
         }
       },
       css: {
@@ -328,7 +328,7 @@ module.exports = function(grunt) {
       app: {
         files: [{
           expand: true,
-          src: ['app/**/*.js', '!**/*.annotated.js'],
+          src: ['app/**/*.js', '!**/*.annotated.js', '!app/**/*.spec.js'],
           ext: '.annotated.js',
           extDot: 'last'
         }],

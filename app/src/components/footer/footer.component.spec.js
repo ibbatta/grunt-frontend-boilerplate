@@ -1,19 +1,22 @@
-describe('component: pageFooter', function(){
-    var component;
-    var author = 'Fake author';
-    var year = '2016';
+'use strict';
 
-    beforeEach(module('boilerplate.components'));
+describe('component: pageFooter', function() {
+  var component;
+  var author = 'Fake author';
+  var year = '2016';
 
-    beforeEach(inject(function(_$componentController_){
-        component = _$componentController_('pageFooter', null, {author: author, year: year});
-    }));
+  beforeEach(module('boilerplate.components'));
 
-    it('should set author', function() {
-        expect(component.author).toEqual(author);
-    });
+  beforeEach(inject(function(_$componentController_) {
+    component = _$componentController_('pageFooter', null, { author: author, year: year });
+  }));
 
-    it('should set year', function() {
-        expect(component.year).toEqual(year);
-    });
+  it('should set author', function() {
+    expect(component.author).toEqual(author);
+  });
+
+  it('should set year', function() {
+    expect(component.year).toEqual(year);
+  });
 });
+

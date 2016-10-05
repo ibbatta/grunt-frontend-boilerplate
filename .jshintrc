@@ -16,7 +16,17 @@
 
   },
   "predef": [ // Custom globals
-    "angular"
+    "angular",
+    "URI",
+    "moment",
+    "describe",
+    "beforeEach",
+    "afterEach",
+    "beforeAll",
+    "afterAll",
+    "expect",
+    "it",
+    "inject"
   ],
 
   // -----------------------------------------------------
