@@ -42,7 +42,7 @@ Then:
 
 ## __Installation__
 
-To install the npm repositories and bower packages run (from the directory of the project): `npm install && bower install`
+From the directory of the project run `npm install && bower install`
 
 ---
 
@@ -52,7 +52,8 @@ Once everything is installed, use grunt from the terminal to start the build tas
 The Gruntfile expose these tasks:
 
 - `npm start` (start the project locally)
-- `npm run build` (minify js, html and css files)
+- `npm test` (start test and watch for changes)
+- `npm run build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 ####__How to create spritesheets__
@@ -68,6 +69,11 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 - [x] Add Karma / Jasmine tests
 - [ ] Manage a spinner / loading for page routing
+- [ ] Create a simple backend in node.js + express.js
+- [ ] Manage backend routes and render some datas with angular
+- [ ] Introduce a simply db to store data
+- [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, _a database_ and _angular_
+- [ ] Try to create this project using react (?)
 
 
 ---
@@ -93,6 +99,6 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 ### __Troubleshootings__ ###
 
-This is just my personal boilerplate, it may or may not be a good fit for your project(s).
+This is just a personal boilerplate create for demonstration purpose only, it may or may not be a good fit for your project(s).
 
 ---
