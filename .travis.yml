@@ -3,7 +3,6 @@ node_js:
   - "6"
 
 before_script:
-  - sudo npm install -g bower karma
   - npm install
   - bower install
 
