@@ -1,6 +1,3 @@
 {
-    "directory": "app/bower_components",
-    "scripts": {
-        "postinstall": "grunt bowerRequirejs"
-    }
+    "directory": "app/bower_components"
 }
