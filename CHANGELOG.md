@@ -1,7 +1,16 @@
-### CHANGELOGS
+## Change Log
 
-- * 94eea70 - 2016-10-17: - add changelog task for grunt - update yarn dependencies - add changelog task for npm script - generate a basic changelog.md 
-- * 0dfb6fa - 2016-10-17: - remove unused code that create a bug while install bower components - remove unused code inside grunt and empty lines - update readme and node version - migrate to yarn package manager (test) 
-- * 4bfac90 - 2016-10-17: Update README.md 
-- * 55c53dd - 2016-10-17: Update README.md 
-
+### upcoming (2016/10/17 12:20 +00:00)
+- [#14](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/14) update jshintrc in order to prevent linting on karma / jasmine test. (@ibbatta)
+- [#13](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/13) Added unit tests. (@bampakoa)
+- [#12](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/12) Develop (@ibbatta)
+- [#11](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/11) Update README.md (@ibbatta)
+- [#10](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/10) remove unused file for tests (@ibbatta)
+- [#9](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/9) add favicon (@ibbatta)
+- [#8](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/8) update visual-dependencies recap (@ibbatta)
+- [#7](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/7) Develop (@ibbatta)
+- [#6](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/6) Develop (@ibbatta)
+- [#5](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/5) Develop (@ibbatta)
+- [#4](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/4) First beta release (@ibbatta)
+- [#2](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/2) Update home.ctrl.js (@bampakoa)
+- [#1](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/1) Added tests. (@bampakoa)
