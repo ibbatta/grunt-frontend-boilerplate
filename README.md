@@ -42,7 +42,7 @@ Then:
 
 ## __Installation__
 
-To install the npm repositories and bower packages run (from the directory of the project): `npm install && bower install`
+From the directory of the project run `npm install && bower install`
 
 ---
 
@@ -52,7 +52,8 @@ Once everything is installed, use grunt from the terminal to start the build tas
 The Gruntfile expose these tasks:
 
 - `npm start` (start the project locally)
-- `npm run build` (minify js, html and css files)
+- `npm test` (start test and watch for changes)
+- `npm run build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 ####__How to create spritesheets__
