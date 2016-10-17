@@ -8,7 +8,9 @@
   top: $body-padding;
   width: $sidebar-size-animation;
   transition: $animation-target $animation-time $animation-fx;
+  transform: translate3d(-100%, 0, 0);
   @include responsive(sm) {
+    transform: translate3d(0, 0, 0);
     position: relative;
     width: $sidebar-width;
     top: 0;
@@ -18,40 +20,20 @@
 .row-offcanvas {
   position: relative;
   transition: $animation-target $animation-time $animation-fx;
-  &-right {
-    left: 0;
-    .sidebar-offcanvas {
-      right: $sidebar-size-animation * -1;
-      @include responsive(sm) {
-        right: 0;
-      }
-    }
-    &.active {
-      left: $sidebar-size-animation * -1;
-      @include responsive(sm) {
-        left: 0;
-      }
-      .sidebar-offcanvas {
-        right: 0;
-      }
+  transform: translate3d(0, 0, 0);
+  .sidebar-offcanvas {
+    transform: translate3d(-100%, 0, 0);
+    @include responsive(sm) {
+      transform: translate3d(0, 0, 0);
     }
   }
-  &-left {
-    right: 0;
-    .sidebar-offcanvas {
-      left: $sidebar-size-animation * -1;
-      @include responsive(sm) {
-        left: 0;
-      }
+  &.active {
+    transform: translate3d($sidebar-size-animation, 0, 0);
+    @include responsive(sm) {
+      transform: translate3d(0, 0, 0);
     }
-    &.active {
-      right: $sidebar-size-animation * -1;
-      @include responsive(sm) {
-        right: 0;
-      }
-      .sidebar-offcanvas {
-        left: 0;
-      }
+    .sidebar-offcanvas {
+      transform: translate3d(-100%, -70px, 0);
     }
   }
 }
