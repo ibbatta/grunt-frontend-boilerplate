@@ -337,7 +337,18 @@ module.exports = function(grunt) {
       }
     },
 
-    // CHANGELOG
+    // PUBLISH GH-PAGES
+    buildGhPages: {
+      ghPages: {
+        // Leave empty if you just want to run the defaults
+      },
+      production: {
+        options: {
+          dist: 'dist/static',
+          pull: false
+        }
+      }
+    },
 
 
   });
