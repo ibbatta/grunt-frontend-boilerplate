@@ -338,15 +338,12 @@ module.exports = function(grunt) {
     },
 
     // PUBLISH GH-PAGES
-    buildGhPages: {
-      ghPages: {
-        // Leave empty if you just want to run the defaults
-      },
-      production: {
-        options: {
-          dist: 'dist/static',
-          pull: false
-        }
+    ghDeploy: {
+      options: {
+        repository: 'https://github.com/ibbatta/grunt-frontend-boilerplate.git',
+        branch: 'gh-pages',
+        deployPath: 'dist/static/',
+        message: 'Auto deplyment ' + grunt.template.today()
       }
     },
 
