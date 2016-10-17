@@ -1,5 +1,6 @@
 before_script:
-  - "npm install && bower install"
+  - "npm install"
+  - "bower install"
 
 after_script:
   - "npm test"
