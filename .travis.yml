@@ -3,6 +3,11 @@ node_js:
   - "6"
 
 before_script:
+  - sudo npm install -g bower karma
   - npm install
+  - bower install
 
-script: node_modules/karma/bin/karma start karma.conf.js --single-run
+
+before_script:
+  - npm node_modules/karma/bin/karma start karma.conf.js --single-run
+
