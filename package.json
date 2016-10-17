@@ -17,8 +17,7 @@
     "start": "grunt",
     "build": "grunt dist",
     "test": "karma start",
-    "changelog-pullrequest": "github-changes -o ibbatta -r grunt-frontend-boilerplate -a --only-pulls --use-commit-body",
-    "changelog-commit": "github-changes -o ibbatta -r grunt-frontend-boilerplate -a"
+    "changelog": "github-changes -o ibbatta -r grunt-frontend-boilerplate -a --only-pulls --use-commit-body"
   },
   "author": "Maurizio Battaghini",
   "license": "ISC",
@@ -77,3 +76,4 @@
     "karma-jasmine": "^1.0.2"
   }
 }
+
