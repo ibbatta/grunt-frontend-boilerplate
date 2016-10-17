@@ -1,6 +1,11 @@
 before_script:
+  - "npm install angular angular-mocks"
   - "npm install karma karma-chrome-launcher karma-coverage karma-firefox-launcher karma-jasmine karma-ng-html2js-preprocessor karma-phantomjs-launcher karma-safari-launcher github-changes"
 
 after_script:
   - "npm test"
   - "npm run changelog-pullrequest"
+
+notifications:
+    email:
+        on_failure: always
