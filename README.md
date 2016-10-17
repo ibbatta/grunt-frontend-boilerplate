@@ -69,6 +69,11 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 - [x] Add Karma / Jasmine tests
 - [ ] Manage a spinner / loading for page routing
+- [ ] Create a simple backend in node.js + express.js
+- [ ] Manage backend routes and render some datas with angular
+- [ ] Introduce a simply db to store data
+- [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, _a database_ and _angular_
+- [ ] Try to create this project using react (?)
 
 
 ---
@@ -94,6 +99,6 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 ### __Troubleshootings__ ###
 
-This is just my personal boilerplate, it may or may not be a good fit for your project(s).
+This is just a personal boilerplate create for demonstration purpose only, it may or may not be a good fit for your project(s).
 
 ---
