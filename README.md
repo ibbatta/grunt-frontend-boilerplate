@@ -1,5 +1,7 @@
 # __BASIC WEBAPP BOILERPLATE__
 
+[![bitHound Overall Score](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate/badges/score.svg)](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate)
+
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide)
@@ -60,7 +62,7 @@ This boilerplate contains a grunt's task to create a sprit automamatically:
 
 ## __Todo__
 
-- [ ] Add Karma / Jasmine tests
+- [x] Add Karma / Jasmine tests
 - [ ] Manage a spinner / loading for page routing
 
 
