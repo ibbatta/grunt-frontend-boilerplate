@@ -618,6 +618,10 @@ bower-requirejs@^1.0.0:
     sudo-block "^1.0.0"
     update-notifier "^0.3.0"
 
+bower@^1.7.9, bower@~1.7.7:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/bower/-/bower-1.7.9.tgz#b7296c2393e0d75edaa6ca39648132dd255812b0"
+
 bower@~1.3.0:
   version "1.3.12"
   resolved "https://registry.yarnpkg.com/bower/-/bower-1.3.12.tgz#37de0edb3904baf90aee13384a1a379a05ee214c"
@@ -663,10 +667,6 @@ bower@~1.3.0:
     tmp "0.0.23"
     update-notifier "0.2.0"
     which "~1.0.5"
-
-bower@~1.7.7:
-  version "1.7.9"
-  resolved "https://registry.yarnpkg.com/bower/-/bower-1.7.9.tgz#b7296c2393e0d75edaa6ca39648132dd255812b0"
 
 brace-expansion@^1.0.0:
   version "1.1.6"
@@ -2515,7 +2515,7 @@ gifsicle@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-github-changes:
+github-changes@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/github-changes/-/github-changes-1.0.4.tgz#b9bbad261f2ec43e39c0a2fc36f3c7bcc1fd05bb"
   dependencies:
@@ -3806,7 +3806,7 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-jasmine-core@^2.4.1:
+jasmine-core@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.5.2.tgz#6f61bd79061e27f43e6f9355e44b3c6cab6ff297"
 
@@ -3947,6 +3947,12 @@ karma-chrome-launcher@^2.0.0:
   dependencies:
     fs-access "^1.0.0"
     which "^1.2.1"
+
+karma-cli@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/karma-cli/-/karma-cli-1.0.1.tgz#ae6c3c58a313a1d00b45164c455b9b86ce17f960"
+  dependencies:
+    resolve "^1.1.6"
 
 karma-coverage@^1.1.1:
   version "1.1.1"
@@ -5852,7 +5858,7 @@ resolve-pkg@^0.1.0:
   dependencies:
     resolve-from "^2.0.0"
 
-resolve@~1.1.0, resolve@1.1.x:
+resolve@^1.1.6, resolve@~1.1.0, resolve@1.1.x:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
