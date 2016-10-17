@@ -16,7 +16,8 @@
   "scripts": {
     "start": "grunt",
     "build": "grunt dist",
-    "test": "karma start"
+    "test": "karma start",
+    "changelog": "grunt changelog"
   },
   "author": "Maurizio Battaghini",
   "license": "ISC",
@@ -30,6 +31,7 @@
     "grunt-bower-requirejs": "^2.0.0",
     "grunt-bower-task": "^0.4.0",
     "grunt-browser-sync": "^2.2.0",
+    "grunt-changelog": "^0.3.2",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-compress": "^1.3.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -66,3 +68,4 @@
     "phantomjs-prebuilt": "^2.1.4"
   }
 }
+
