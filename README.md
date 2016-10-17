@@ -1,6 +1,8 @@
 # __BASIC WEBAPP BOILERPLATE__
 
-[![bitHound Overall Score](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate/badges/score.svg)](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate)
+|[![bitHound Overall Score](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate/badges/score.svg)](https://www.bithound.io/github/ibbatta/grunt-frontend-boilerplate)|[![Build Status](https://travis-ci.org/ibbatta/grunt-frontend-boilerplate.svg?branch=master)](https://travis-ci.org/ibbatta/grunt-frontend-boilerplate)|
+|:-:|:-:|
+
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
