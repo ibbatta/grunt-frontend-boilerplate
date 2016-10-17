@@ -1,9 +1,5 @@
 # __BASIC WEBAPP BOILERPLATE__
 
-| PACKAGE.JSON | BOWER.JSON |
-| --- | --- |
-| [![Dependency Status](https://www.versioneye.com/user/projects/57dbb9ea037c2000458f6a08/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57dbb9ea037c2000458f6a08) | [![Dependency Status](https://www.versioneye.com/user/projects/57dbb9ea037c2000458f6a08/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57dbb9ea037c2000458f6a08) |
-
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide)
