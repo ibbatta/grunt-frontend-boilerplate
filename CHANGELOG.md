@@ -1,0 +1,16 @@
+## Change Log
+
+### upcoming (2016/10/17 12:20 +00:00)
+- [#14](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/14) update jshintrc in order to prevent linting on karma / jasmine test. (@ibbatta)
+- [#13](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/13) Added unit tests. (@bampakoa)
+- [#12](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/12) Develop (@ibbatta)
+- [#11](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/11) Update README.md (@ibbatta)
+- [#10](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/10) remove unused file for tests (@ibbatta)
+- [#9](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/9) add favicon (@ibbatta)
+- [#8](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/8) update visual-dependencies recap (@ibbatta)
+- [#7](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/7) Develop (@ibbatta)
+- [#6](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/6) Develop (@ibbatta)
+- [#5](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/5) Develop (@ibbatta)
+- [#4](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/4) First beta release (@ibbatta)
+- [#2](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/2) Update home.ctrl.js (@bampakoa)
+- [#1](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/1) Added tests. (@bampakoa)

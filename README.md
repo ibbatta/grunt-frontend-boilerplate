@@ -26,7 +26,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 5.2.0)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 6)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
