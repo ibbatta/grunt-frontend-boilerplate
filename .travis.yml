@@ -4,6 +4,7 @@ node_js:
 
 before_script:
   - "npm install -g angular karma github-changes"
+  - "npm install"
 
 after_script:
   - "npm test"
