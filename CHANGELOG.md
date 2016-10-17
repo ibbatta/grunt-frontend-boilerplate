@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2016/10/17 12:20 +00:00)
+### upcoming (2016/10/17 15:27 +00:00)
+- [#17](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/17) Develop (@ibbatta)
 - [#14](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/14) update jshintrc in order to prevent linting on karma / jasmine test. (@ibbatta)
 - [#13](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/13) Added unit tests. (@bampakoa)
 - [#12](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/12) Develop (@ibbatta)

@@ -337,7 +337,15 @@ module.exports = function(grunt) {
       }
     },
 
-    // CHANGELOG
+    // PUBLISH GH-PAGES
+    ghDeploy: {
+      options: {
+        repository: 'https://github.com/ibbatta/grunt-frontend-boilerplate.git',
+        branch: 'gh-pages',
+        deployPath: 'dist/static/',
+        message: 'GRUNT AUTO DEPLOYMENT ' + grunt.template.today()
+      }
+    },
 
 
   });
@@ -359,7 +367,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'sprite', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'browserSync:dist', 'clean:annotated']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'ghDeploy', 'browserSync:dist']);
 
 };
 
