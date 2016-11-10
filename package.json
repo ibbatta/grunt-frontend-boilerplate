@@ -46,7 +46,7 @@
     "grunt-express": "^1.4.1",
     "grunt-gh-deploy": "^0.1.3",
     "grunt-injector": "^1.0.1",
-    "grunt-ng-annotate": "^2.0.2",
+    "grunt-ng-annotate": "^3.0.0",
     "grunt-parallel": "^0.5.1",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",

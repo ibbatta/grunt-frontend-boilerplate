@@ -3004,11 +3004,11 @@ grunt-legacy-util@~1.0.0:
     underscore.string "~3.2.3"
     which "~1.2.1"
 
-grunt-ng-annotate@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/grunt-ng-annotate/-/grunt-ng-annotate-2.0.2.tgz#4993cbaf568d51d1c0c3be0af04a08a82299d14a"
+grunt-ng-annotate@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/grunt-ng-annotate/-/grunt-ng-annotate-3.0.0.tgz#76a2a21a16ba63e56f7be1b75ee5c4ad93027939"
   dependencies:
-    lodash.clonedeep "^4.3.2"
+    lodash.clonedeep "^4.5.0"
     ng-annotate "^1.2.1"
 
 grunt-parallel@^0.3.1:
@@ -4203,7 +4203,7 @@ lodash.assign@^4.0.3, lodash.assign@^4.0.6, lodash.assign@^4.0.9, lodash.assign@
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
 
-lodash.clonedeep@^4.3.2:
+lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
 
@@ -5614,8 +5614,8 @@ readable-stream@^1.0.27-1, readable-stream@~1.1.8, readable-stream@~1.1.9:
     string_decoder "~0.10.x"
 
 readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.5:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.0.tgz#bb2d810631416edf095ebdadc246f68cec65bf2c"
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.1.tgz#c459a6687ad6195f936b959870776edef27a7655"
   dependencies:
     buffer-shims "^1.0.0"
     core-util-is "~1.0.0"
