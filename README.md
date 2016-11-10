@@ -56,24 +56,17 @@ The Gruntfile expose these tasks:
 - `npm run build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
-####__How to create spritesheets__
-
-This boilerplate contains a grunt's task to create a sprit automamatically:
-- insert selected .png inside the `app/assets/spritesheet` folder.
-- when you run the task `grunt sprite` the boilerplate generates a css file and a png sprite inside the .tmp folder (or basically when you run `npm start` command).
-- to use a specific image inside the sprite, just use the css class `.-sprite_icon` + image name.
 
 ---
 
 ## __Todo__
 
 - [x] Add Karma / Jasmine tests
-- [ ] Manage a spinner / loading for page routing
 - [ ] Create a simple backend in node.js + express.js
 - [ ] Manage backend routes and render some datas with angular
 - [ ] Introduce a simply db to store data
 - [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, _a database_ and _angular_
-- [ ] Try to create this project using react (?)
+- [ ] Migrate to Gulp.js and React.js (?)
 
 
 ---

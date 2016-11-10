@@ -1,11 +1,7 @@
-@import 'sass/reset';
+@import 'sass/theme/reset';
 @import 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-@import 'sass/variables';
-@import 'sass/colours';
-@import 'sass/responsive';
-@import 'sass/sprite';
-@import 'sass/header';
-@import 'sass/footer';
-@import 'sass/sidebar';
+@import 'sass/theme/variables';
+@import 'sass/theme/colours';
+@import 'sass/theme/responsive';
 @import 'sass/main';
 
