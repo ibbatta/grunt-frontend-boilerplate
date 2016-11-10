@@ -18,10 +18,10 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 <img src="./github_readme_assets/logo-sass.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-bower.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-npm.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-yarn.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-grunt.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-yarn.png" height="64">&nbsp;&nbsp;
 
 - [x] Grunt automations
 - [x] Javascript linter
