@@ -4,7 +4,7 @@
 |:---:|:---:|
 
 
->This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing
+>This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing.
 
 Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide)
 
@@ -21,6 +21,16 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 <img src="./github_readme_assets/logo-grunt.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-yarn.png" height="64">&nbsp;&nbsp;
+
+- [x] Grunt automations
+- [x] Javascript linter
+- [x] Bootstrap html linter
+- [x] Sass / Scss compiler
+- [x] Images optimization
+- [x] Karma / Jasmine tests
+- [x] Yarn and Bower as package managers
+
 
 ---
 
@@ -28,7 +38,8 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 6)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.1)
+* [Yarn](https://yarnpkg.com/en/docs/install) (versione >= 0.16)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
@@ -42,7 +53,7 @@ Then:
 
 ## __Installation__
 
-From the directory of the project run `npm install && bower install`
+From the directory of the project run `yarn && bower install`
 
 ---
 
@@ -51,29 +62,21 @@ From the directory of the project run `npm install && bower install`
 Once everything is installed, use grunt from the terminal to start the build tasks.
 The Gruntfile expose these tasks:
 
-- `npm start` (start the project locally)
-- `npm test` (start test and watch for changes)
-- `npm run build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
+- `yarn start` (start the project locally)
+- `yarn test` (start test and watch for changes)
+- `yarn build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
-####__How to create spritesheets__
-
-This boilerplate contains a grunt's task to create a sprit automamatically:
-- insert selected .png inside the `app/assets/spritesheet` folder.
-- when you run the task `grunt sprite` the boilerplate generates a css file and a png sprite inside the .tmp folder (or basically when you run `npm start` command).
-- to use a specific image inside the sprite, just use the css class `.-sprite_icon` + image name.
 
 ---
 
 ## __Todo__
 
-- [x] Add Karma / Jasmine tests
-- [ ] Manage a spinner / loading for page routing
 - [ ] Create a simple backend in node.js + express.js
+- [ ] Introduce a simply db to store data (maybe firebase?)
 - [ ] Manage backend routes and render some datas with angular
-- [ ] Introduce a simply db to store data
-- [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, _a database_ and _angular_
-- [ ] Try to create this project using react (?)
+- [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, a _ database_ and _angular_
+- [ ] Migrate to Gulp.js and React.js (?)
 
 
 ---

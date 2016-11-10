@@ -97,20 +97,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // GENERATE SPRITE
-    sprite: {
-      all: {
-        src: 'app/assets/spritesheet/**/*.png',
-        dest: 'app/.tmp/sprite/sprite.png',
-        destCss: 'app/.tmp/css/sprite.css',
-        cssOpts: {
-          cssSelector: function(sprite) {
-            return '.sprite_icon-' + sprite.name;
-          }
-        }
-      }
-    },
-
     // POSTCSS
     postcss: {
       dev: {
@@ -151,7 +137,7 @@ module.exports = function(grunt) {
           relative: true
         },
         files: {
-          'app/index.html': ['app/.tmp/css/sprite.css', 'app/.tmp/css/main.css']
+          'app/index.html': ['app/.tmp/css/main.css']
         }
       }
     },
@@ -169,10 +155,6 @@ module.exports = function(grunt) {
       bower: {
         files: ['app/bower_components/**'],
         tasks: ['wiredep']
-      },
-      imgSprite: {
-        files: ['app/assets/spritesheet/**'],
-        tasks: ['sprite', 'injector:css']
       },
       html: {
         files: ['app/**/*.html', '!app/bower_components'],
@@ -211,7 +193,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/static/css/main.min.css': ['build/css/_bower.concat.css', 'build/css/sprite.css', 'build/css/main.css']
+          'dist/static/css/main.min.css': ['build/css/_bower.concat.css', 'build/css/main.css']
         }
       }
     },
@@ -225,15 +207,7 @@ module.exports = function(grunt) {
           src: 'assets/img/**/*.{gif,GIF,jpg,JPG,png,PNG}',
           dest: 'dist/static/'
         }]
-      },
-      sprite: {
-        files: [{
-          expand: true,
-          cwd: 'app/.tmp/',
-          src: 'sprite/**/*.{gif,GIF,jpg,JPG,png,PNG}',
-          dest: 'dist/static/'
-        }]
-      },
+      }
     },
 
     // COPY
@@ -361,10 +335,10 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']); // Style optimizer
 
   // Server task
-  grunt.registerTask('dev', ['bootlint', 'sprite', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'watch']);
+  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'sprite', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
   grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'ghDeploy', 'browserSync:dist']);
