@@ -105,3 +105,7 @@ The Gruntfile expose these tasks:
 This is just a personal boilerplate create for demonstration purpose only, it may or may not be a good fit for your project(s).
 
 ---
+
+
+> GitHub [@ibbatta](https://github.com/ibbatta) &nbsp;&middot;&nbsp;
+> Twitter [@battago](https://twitter.com/battago)
