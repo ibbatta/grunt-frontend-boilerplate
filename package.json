@@ -18,7 +18,7 @@
     "build": "grunt dist",
     "test": "grunt wiredep && karma start",
     "changelog": "github-changes -o ibbatta -r grunt-frontend-boilerplate -a --only-pulls --use-commit-body",
-    "github-page": "grunt dist && grunt ghDeploy"
+    "gh-page": "grunt gh-page"
   },
   "author": "Maurizio Battaghini",
   "license": "ISC",

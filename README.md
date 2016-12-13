@@ -66,7 +66,7 @@ The Gruntfile expose these tasks:
 - `yarn start` (start the project locally)
 - `yarn test` (start test and watch for changes)
 - `yarn build` (prepare the build pack)
-- `yarn github-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github __!!change with your project branch!!__)
+- `yarn gh-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github __!!change with your project branch!!__)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 
