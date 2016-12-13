@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "bower": "^1.7.9",
-    "karma-cli": "^1.0.1",
+    "karma-cli": "^1.0.1"
   }
 }
 
