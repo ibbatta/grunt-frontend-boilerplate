@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-  - "5"
   - "6"
+
+env:
+ - SKIP_SASS_BINARY_DOWNLOAD_FOR_CI=true
 
 cache:
   bundler: true
@@ -10,9 +12,9 @@ cache:
   - app/bower_components
 
 before_script:
-  - yarn
+  - npm install
   - bower install
 
 script:
-  - grunt wiredep && karma start --single-run --browsers PhantomJS
+  - grunt wiredep && karma start --single-run --browsers "PhantomJS"
 
