@@ -43,7 +43,7 @@ Before cloning the repo **be sure** you have installed:
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
-* [Karma](https://karma-runner.github.io) (version 1.3.0)
+* [Karma](https://karma-runner.github.io) (version >= 1.3.0)
 
 Then:
 
