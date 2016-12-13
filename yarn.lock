@@ -2543,7 +2543,7 @@ gifsicle@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-github-changes@^1.0.4:
+github-changes@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/github-changes/-/github-changes-1.0.4.tgz#b9bbad261f2ec43e39c0a2fc36f3c7bcc1fd05bb"
   dependencies:
@@ -2795,14 +2795,14 @@ grunt-bower-concat@^1.0.0:
     lodash "~4.3.0"
     underscore.string "~3.2.3"
 
-grunt-bower-requirejs@^2.0.0:
+grunt-bower-requirejs@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/grunt-bower-requirejs/-/grunt-bower-requirejs-2.0.0.tgz#10dd9288d235e05df3e11de139be9803654b77fe"
   dependencies:
     bower-requirejs "^1.0.0"
     load-grunt-tasks "^2.0.0"
 
-grunt-bower-task@^0.4.0:
+grunt-bower-task@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/grunt-bower-task/-/grunt-bower-task-0.4.0.tgz#daea0a55682a79a8c79db895b79be6f3ecb65817"
   dependencies:
@@ -2931,7 +2931,7 @@ grunt-contrib-watch@^1.0.0:
     lodash "^3.10.1"
     tiny-lr "^0.2.1"
 
-grunt-express@^1.4.1:
+grunt-express@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/grunt-express/-/grunt-express-1.4.1.tgz#8ffe081ad3a47de0cea0d1e4f1565ce453edc61e"
   dependencies:
