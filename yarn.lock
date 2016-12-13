@@ -85,7 +85,7 @@ ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-0.2.1.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
 
-ansi-regex@^1.0.0:
+ansi-regex@^1.0.0, ansi-regex@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-1.1.1.tgz#41c847194646375e6a1a5d10c3ca054ef9fc980d"
 
@@ -626,6 +626,10 @@ bower-requirejs@^1.0.0:
     sudo-block "^1.0.0"
     update-notifier "^0.3.0"
 
+bower@^1.7.9, bower@~1.7.7:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/bower/-/bower-1.7.9.tgz#b7296c2393e0d75edaa6ca39648132dd255812b0"
+
 bower@~1.3.0:
   version "1.3.12"
   resolved "https://registry.yarnpkg.com/bower/-/bower-1.3.12.tgz#37de0edb3904baf90aee13384a1a379a05ee214c"
@@ -671,10 +675,6 @@ bower@~1.3.0:
     tmp "0.0.23"
     update-notifier "0.2.0"
     which "~1.0.5"
-
-bower@~1.7.7:
-  version "1.7.9"
-  resolved "https://registry.yarnpkg.com/bower/-/bower-1.7.9.tgz#b7296c2393e0d75edaa6ca39648132dd255812b0"
 
 brace-expansion@^1.0.0:
   version "1.1.6"
@@ -896,7 +896,7 @@ chainsaw@~0.1.0:
   dependencies:
     traverse ">=0.3.0 <0.4"
 
-chalk@0.5.0:
+chalk@0.5.0, chalk@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.5.0.tgz#375dfccbc21c0a60a8b61bc5b78f3dc2a55c212f"
   dependencies:
@@ -906,7 +906,7 @@ chalk@0.5.0:
     strip-ansi "^0.3.0"
     supports-color "^0.2.0"
 
-chalk@^0.5.0, chalk@^0.5.1:
+chalk@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.5.1.tgz#663b3a648b68b55d04690d49167aa837858f2174"
   dependencies:
@@ -1000,6 +1000,10 @@ cli-color@~0.3.2:
     memoizee "~0.3.8"
     timers-ext "0.1"
 
+cli-width@^1.0.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-1.1.1.tgz#a4d293ef67ebb7b88d4a4d42c0ccf00c4d1e366d"
+
 cli@~1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cli/-/cli-1.0.1.tgz#22817534f24bfa4950c34d532d48ecbc621b8c14"
@@ -1049,7 +1053,7 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-coffee-script@~1.10.0:
+coffee-script@^1.10.0, coffee-script@~1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.10.0.tgz#12938bcf9be1948fa006f92e0c4c9e81705108c0"
 
@@ -1374,6 +1378,12 @@ cryptiles@2.x.x:
   resolved "https://registry.yarnpkg.com/cryptiles/-/cryptiles-2.0.5.tgz#3bdfecdc608147c1c67202fa291e7dca59eaa3b8"
   dependencies:
     boom "2.x.x"
+
+cson-parser@^1.0.9:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/cson-parser/-/cson-parser-1.3.4.tgz#55f10d5aa9f960ccaa385551ae085cb3c8d284fc"
+  dependencies:
+    coffee-script "^1.10.0"
 
 csrf@~3.0.0:
   version "3.0.4"
@@ -1974,13 +1984,13 @@ esprima@2.7.x, esprima@^2.6.0, esprima@^2.7.1:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
 
-esprima@^1.0.3, esprima@~1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.1.1.tgz#5b6f1547f4d102e670e140c509be6771d6aeb549"
-
-"esprima@~ 1.0.2", esprima@~1.0.2, esprima@~1.0.4:
+esprima@^1.0.3, "esprima@~ 1.0.2", esprima@~1.0.2, esprima@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
+
+esprima@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.1.1.tgz#5b6f1547f4d102e670e140c509be6771d6aeb549"
 
 estraverse@^1.9.1:
   version "1.9.3"
@@ -3536,6 +3546,19 @@ inquirer@^0.6.0:
     rx "^2.2.27"
     through "~2.3.4"
 
+inquirer@^0.8.2:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-0.8.5.tgz#dbd740cf6ca3b731296a63ce6f6d961851f336df"
+  dependencies:
+    ansi-regex "^1.1.1"
+    chalk "^1.0.0"
+    cli-width "^1.0.1"
+    figures "^1.3.5"
+    lodash "^3.3.1"
+    readline2 "^0.1.1"
+    rx "^2.4.3"
+    through "^2.3.6"
+
 insight@0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/insight/-/insight-0.4.3.tgz#76d653c5c0d8048b03cdba6385a6948f74614af0"
@@ -3837,7 +3860,7 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-jasmine-core@^2.4.1:
+jasmine-core@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.5.2.tgz#6f61bd79061e27f43e6f9355e44b3c6cab6ff297"
 
@@ -3874,19 +3897,19 @@ js-yaml@3.x, js-yaml@^3.1.0, js-yaml@~3.5.2:
     argparse "^1.0.2"
     esprima "^2.6.0"
 
+js-yaml@^3.2.7, js-yaml@~3.6.0:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^2.6.0"
+
 js-yaml@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-2.0.5.tgz#a25ae6509999e97df278c6719da11bd0687743a8"
   dependencies:
     argparse "~ 0.1.11"
     esprima "~ 1.0.2"
-
-js-yaml@~3.6.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.6.1.tgz#6e5fe67d8b205ce4d22fad05b7781e8dadcc4b30"
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.0"
@@ -3978,6 +4001,12 @@ karma-chrome-launcher@^2.0.0:
   dependencies:
     fs-access "^1.0.0"
     which "^1.2.1"
+
+karma-cli@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/karma-cli/-/karma-cli-1.0.1.tgz#ae6c3c58a313a1d00b45164c455b9b86ce17f960"
+  dependencies:
+    resolve "^1.1.6"
 
 karma-coverage@^1.1.1:
   version "1.1.1"
@@ -4111,6 +4140,16 @@ limiter@^1.0.5:
 livereload-js@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-2.2.2.tgz#6c87257e648ab475bc24ea257457edcc1f8d0bc2"
+
+load-grunt-configs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-grunt-configs/-/load-grunt-configs-1.0.0.tgz#bdb9faec14ab720d5388d67c2eabdd5107717819"
+  dependencies:
+    cson-parser "^1.0.9"
+    inquirer "^0.8.2"
+    js-yaml "^3.2.7"
+    lodash "^3.6.0"
+    rimraf "^2.3.2"
 
 load-grunt-tasks@^2.0.0:
   version "2.0.0"
@@ -4298,7 +4337,7 @@ lodash@3.7.x:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.7.0.tgz#3678bd8ab995057c07ade836ed2ef087da811d45"
 
-lodash@^3.10.1, lodash@^3.2.0, lodash@^3.3.0, lodash@^3.6.0, lodash@^3.8.0, lodash@~3.10.1:
+lodash@^3.10.1, lodash@^3.2.0, lodash@^3.3.0, lodash@^3.3.1, lodash@^3.6.0, lodash@^3.8.0, lodash@~3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -5685,7 +5724,7 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-readline2@~0.1.0:
+readline2@^0.1.1, readline2@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/readline2/-/readline2-0.1.1.tgz#99443ba6e83b830ef3051bfd7dc241a82728d568"
   dependencies:
@@ -5903,7 +5942,7 @@ resolve-pkg@^0.1.0:
   dependencies:
     resolve-from "^2.0.0"
 
-resolve@1.1.x, resolve@~1.1.0:
+resolve@1.1.x, resolve@^1.1.6, resolve@~1.1.0:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
@@ -5931,7 +5970,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.2, rimraf@^2.2.6, rimraf@^2.3.3, rimraf@^2.5.1, rimraf@~2.5.1, rimraf@~2.5.4:
+rimraf@2, rimraf@^2.2.2, rimraf@^2.2.6, rimraf@^2.3.2, rimraf@^2.3.3, rimraf@^2.5.1, rimraf@~2.5.1, rimraf@~2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
@@ -5955,7 +5994,7 @@ rx@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rx@^2.2.27:
+rx@^2.2.27, rx@^2.4.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.5.3.tgz#21adc7d80f02002af50dae97fd9dbf248755f566"
 
@@ -6707,7 +6746,7 @@ through2@~0.4.1:
     readable-stream "~1.0.17"
     xtend "~2.1.1"
 
-through@^2.3.4, through@~2.3.4:
+through@^2.3.4, through@^2.3.6, through@~2.3.4:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 

@@ -65,6 +65,7 @@
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-safari-launcher": "^1.0.0",
+    "load-grunt-configs": "^1.0.0",
     "load-grunt-tasks": "^3.4.0",
     "lodash": "^4.2.0",
     "ng-annotate": "^1.2.1",
@@ -75,4 +76,3 @@
     "karma-cli": "^1.0.1"
   }
 }
-

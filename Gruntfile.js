@@ -2,347 +2,41 @@
 
 module.exports = function(grunt) {
 
+  var path = require('path');
+  var options = {
+    pkg: grunt.file.readJSON('package.json'),
+    configPath: path.join(process.cwd(), 'config')
+  };
+
   // ===========================================================================
   // LOAD GRUNT PLUGINS ========================================================
   // ===========================================================================
   require('load-grunt-tasks')(grunt);
+  var configs = require('load-grunt-configs')(grunt, options);
 
   // ===========================================================================
   // CONFIGURE GRUNT ===========================================================
   // ===========================================================================
-  grunt.initConfig({
-
-    // get the configuration info from package.json
-    pkg: grunt.file.readJSON('package.json'),
-
-    // CLEAN
-    clean: {
-      log: '**/*.log',
-      tmp: 'app/.tmp',
-      build: 'build/',
-      dist: 'dist/',
-      distTmp: 'dist/.tmp',
-      sassCache: '.sass-cache',
-      compressed: ['boilerplate.tar.gz', './boilerplate'],
-      coverage: 'coverage/',
-      bowerComponents: 'app/bower_components',
-      annotated: '**/*.annotated.*',
-    },
-
-    // BOWER
-    bower: {
-      install: {
-        options: {
-          targetDir: 'app/bower_components',
-          layout: 'byComponent',
-          install: true,
-          verbose: false,
-          cleanTargetDir: true,
-          cleanBowerDir: false
-        }
-      }
-    },
-
-    // BOWER REQUIRE JS
-    npmequirejs: {
-      build: {
-        rjsConfig: 'config.js',
-        options: {
-          transitive: true,
-          excludeDev: true
-        }
-      }
-    },
-
-    // BOWER CONCAT
-    bower_concat: {
-      build: {
-        dest: 'build/js/_bower.concat.js',
-        cssDest: 'build/css/_bower.concat.css',
-        bowerOptions: {
-          relative: true
-        }
-      }
-    },
-
-    // JSHINT
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: ['Grunfile.js', 'app/src/**/*.js', '!app/**/*.spec.js']
-    },
-
-    // BOOTSTRAP LINT
-    bootlint: {
-      options: {
-        relaxerror: ['E001', 'E013', 'W001', 'W002', 'W003', 'W005'],
-        showallerrors: false,
-        stoponerror: false,
-        stoponwarning: false
-      },
-      files: ['app/**/*.html', '!app/bower_components/**']
-    },
-
-    // SASS
-    sass: {
-      dev: {
-        options: {
-          sourceMap: false
-        },
-        files: {
-          'app/.tmp/css/main.css': 'app/index.scss'
-        }
-      }
-    },
-
-    // POSTCSS
-    postcss: {
-      dev: {
-        options: {
-          map: false,
-          processors: [
-            require('autoprefixer')()
-          ],
-        },
-        src: 'app/.tmp/css/*.css'
-      }
-    },
-
-    // WIREDEP
-    wiredep: {
-      task: {
-        directory: 'app/bower_components',
-        src: ['app/index.html', './karma.conf.js'],
-      }
-    },
-
-    // INJECTOR
-    injector: {
-      js: {
-        options: {
-          template: 'app/index.html',
-          min: true,
-          relative: true
-        },
-        files: {
-          'app/index.html': ['app/index.js', 'app/src/**/*.module.js', 'app/src/**/*.ctrl.js', 'app/src/**/*.js', '!app/**/*.spec.js'],
-        }
-      },
-      css: {
-        options: {
-          template: 'app/index.html',
-          min: true,
-          relative: true
-        },
-        files: {
-          'app/index.html': ['app/.tmp/css/main.css']
-        }
-      }
-    },
-
-    // WATCH
-    watch: {
-      stylesheet: {
-        files: ['app/**/*.scss'],
-        tasks: ['devStyle', 'injector:css']
-      },
-      scripts: {
-        files: ['app/**/*.js'],
-        tasks: ['devScript', 'injector:js', 'karma']
-      },
-      bower: {
-        files: ['app/bower_components/**'],
-        tasks: ['wiredep', 'karma']
-      },
-      html: {
-        files: ['app/**/*.html', '!app/bower_components'],
-        tasks: ['bootlint']
-      }
-    },
-
-    // CONCAT
-    concat: {
-      options: {
-        separator: ';',
-      },
-      dist: {
-        src: ['build/js/_bower.concat.js', 'build/js/index.annotated.js', 'build/**/*.module.annotated.js', 'build/**/*.ctrl.annotated.js', 'build/**/*.annotated.js', 'build/**/*.js'],
-        dest: 'dist/.tmp/js/main.concat.js'
-      },
-    },
-
-    // UGLIFY
-    uglify: {
-      options: {
-        mangle: false,
-      },
-      dist: {
-        files: {
-          'dist/static/js/main.min.js': ['dist/.tmp/js/main.concat.js']
-        }
-      }
-    },
-
-    // CSSMIN
-    cssmin: {
-      options: {
-        shorthandCompacting: false,
-        roundingPrecision: -1
-      },
-      target: {
-        files: {
-          'dist/static/css/main.min.css': ['build/css/_bower.concat.css', 'build/css/main.css']
-        }
-      }
-    },
-
-    // IMAGEMIN
-    imagemin: {
-      img: {
-        files: [{
-          expand: true,
-          cwd: 'app/',
-          src: 'assets/img/**/*.{gif,GIF,jpg,JPG,png,PNG}',
-          dest: 'dist/static/'
-        }]
-      }
-    },
-
-    // COPY
-    copy: {
-      options: {
-        encoding: 'utf-8'
-      },
-      build: {
-        files: [
-          { expand: true, cwd: 'app', src: ['index.html'], dest: 'build/' },
-          { expand: true, cwd: 'app', src: ['index.annotated.js'], dest: 'build/js' },
-          { expand: true, cwd: 'app/src', src: ['**/*.html'], dest: 'build/src' },
-          { expand: true, cwd: 'app/src', src: ['**/*.annotated.js'], dest: 'build/js' },
-          { expand: true, cwd: 'app/.tmp', src: ['css/**/*.css'], dest: 'build/' },
-          { expand: true, cwd: 'app/', src: ['favicon.*'], dest: 'build/' },
-        ]
-      },
-      dist: {
-        files: [
-          { expand: true, cwd: 'build', src: ['favicon.*'], dest: 'dist/static/' },
-          { expand: true, cwd: 'build', src: ['**/*.html'], dest: 'dist/static/' },
-        ]
-      }
-    },
-
-    //USEMIN
-    // --> usemin prepare
-    useminPrepare: {
-      html: 'dist/static/index.html',
-      options: {
-        flow: {
-          html: {
-            steps: {
-              js: ['concat', 'uglify'],
-              css: ['cssmin']
-            },
-            post: {}
-          }
-        }
-      }
-    },
-
-    // --> usemin
-    usemin: {
-      html: ['dist/static/index.html'],
-      options: {
-        root: 'app',
-        dest: 'dist/static'
-      }
-    },
-
-    // COMPRESS
-    compress: {
-      dist: {
-        options: {
-          archive: 'boilerplate.tar.gz',
-          mode: 'tgz',
-          pretty: true
-        },
-        expand: true,
-        cwd: 'dist/static/',
-        src: ['**/*'],
-        dest: '/'
-      }
-    },
-
-    // BROWSER SYNC
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src: 'app/**/*'
-        },
-        options: {
-          watchTask: true,
-          server: 'app/'
-        }
-      },
-      dist: {
-        bsFiles: {
-          src: 'dist/static/**/*'
-        },
-        options: {
-          watchTask: false,
-          server: 'dist/static/'
-        }
-      }
-    },
-
-    // NG ANNOTATE
-    ngAnnotate: {
-      options: {
-        singleQuotes: true
-      },
-      app: {
-        files: [{
-          expand: true,
-          src: ['app/**/*.js', '!**/*.annotated.js', '!app/**/*.spec.js'],
-          ext: '.annotated.js',
-          extDot: 'last'
-        }],
-      }
-    },
-
-    // PUBLISH GH-PAGES
-    ghDeploy: {
-      options: {
-        repository: 'https://github.com/ibbatta/grunt-frontend-boilerplate.git',
-        branch: 'gh-pages',
-        deployPath: 'dist/static/',
-        message: 'GRUNT AUTO DEPLOYMENT ' + grunt.template.today()
-      }
-    },
-
-    // KARMA TEST
-    karma: {
-      unit: {
-        configFile: './karma.conf.js',
-        browsers: ['PhantomJS'],
-        background: false,
-        singleRun: true
-      }
-    },
-
-
-  });
+  grunt.initConfig(configs);
 
   // ===========================================================================
   // RUN GRUNT TASKS ===========================================================
   // ===========================================================================
+
+  // Default
   grunt.registerTask('default', ['clean', 'bower', 'dev']);
 
-  grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']); // Style task
-  grunt.registerTask('devScript', ['jshint']); // Script task
-  grunt.registerTask('optimizeScript', ['concat', 'uglify']); // Script optimizer
-  grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']); // Style optimizer
+  // Style task
+  grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']);
+
+  // Script task
+  grunt.registerTask('devScript', ['jshint']);
+
+  // Script optimizer
+  grunt.registerTask('optimizeScript', ['concat', 'uglify']);
+
+  // Style optimizer
+  grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']);
 
   // Server task
   grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'karma', 'watch']);
