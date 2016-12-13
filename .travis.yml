@@ -2,16 +2,11 @@ language: node_js
 node_js:
   - "6"
 
-cache:
-  bundler: true
-  directories:
-  - node_modules
-  - app/bower_components
-
 before_script:
-  - npm install
+  - yarn
   - bower install
 
 script:
+  - npm rebuild node-sass
   - grunt wiredep && karma start --single-run --browsers PhantomJS
 

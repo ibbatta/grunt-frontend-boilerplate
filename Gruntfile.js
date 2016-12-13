@@ -351,7 +351,10 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
-  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'ghDeploy', 'browserSync:dist']);
+  grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'browserSync:dist']);
+
+  // Upload github-page
+  grunt.registerTask('gh-page', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'ghDeploy']);
 
 };
 
