@@ -74,6 +74,7 @@ The Gruntfile expose these tasks:
 
 ## __Todo__
 
+- [ ] Add ES6 support
 - [ ] Create a simple backend in node.js + express.js
 - [ ] Introduce a simply db to store data (maybe firebase?)
 - [ ] Manage backend routes and render some datas with angular
