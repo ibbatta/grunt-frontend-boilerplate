@@ -39,10 +39,11 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 Before cloning the repo **be sure** you have installed:
 
 * [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.1)
-* [Yarn](https://yarnpkg.com/en/docs/install) (versione >= 0.16)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.16)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
+* [Karma](https://karma-runner.github.io) (version 1.3.0)
 
 Then:
 
@@ -64,7 +65,8 @@ The Gruntfile expose these tasks:
 
 - `yarn start` (start the project locally)
 - `yarn test` (start test and watch for changes)
-- `yarn build` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github)
+- `yarn build` (prepare the build pack)
+- `yarn github-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github __!!change with your project branch!!__)
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 
