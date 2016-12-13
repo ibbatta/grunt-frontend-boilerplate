@@ -12,16 +12,17 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __What this boilerplate contains__
 
-<img src="./github_readme_assets/logo-angular.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-uibootstrap.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-bootstrap.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-sass.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-bower.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-npm.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-grunt.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-yarn.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-angular.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-uibootstrap.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bootstrap.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-sass.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bower.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-npm.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-grunt.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-jasmine.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-karma.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-yarn.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-es6.png" height="55">&nbsp;&nbsp;
 
 - [x] Grunt automations
 - [x] Javascript linter
@@ -30,6 +31,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 - [x] Images optimization
 - [x] Karma / Jasmine tests
 - [x] Yarn and Bower as package managers
+- [x] ES6 support
 
 
 ---
@@ -39,7 +41,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 Before cloning the repo **be sure** you have installed:
 
 * [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.1)
-* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.16)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.17)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)

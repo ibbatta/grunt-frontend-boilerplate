@@ -62,6 +62,7 @@
   "undef": true, // Require all non-global variables be declared before they are used.
   "quotmark": "single",
   "unused": true,
+  "strict": "global",
 
   // -----------------------------------------------------
   // ---------------- Personal styling -------------------
@@ -77,7 +78,7 @@
   "white": false, // Check against strict whitespace and indentation rules.
   "indent": 2, // Specify indentation spacing
   "smarttabs": true,
-  "validthis": true
-
+  "validthis": true,
+  "esversion": 6
 }
 

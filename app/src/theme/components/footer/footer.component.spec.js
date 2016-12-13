@@ -1,22 +1,22 @@
 'use strict';
 
 describe('component: pageFooter', function() {
-  var component;
-  var author = 'Fake author';
-  var year = '2016';
+
+  var $componentController;
+  var componentBind = { author: 'Fake author', year: '2016' };
 
   beforeEach(module('boilerplate.theme.components'));
 
   beforeEach(inject(function(_$componentController_) {
-    component = _$componentController_('pageFooter', null, { author: author, year: year });
+    $componentController = _$componentController_('pageFooter', null, { author: componentBind.author, year: componentBind.year });
   }));
 
   it('should set author', function() {
-    expect(component.author).toEqual(author);
+    expect($componentController.author).toEqual(componentBind.author);
   });
 
   it('should set year', function() {
-    expect(component.year).toEqual(year);
+    expect($componentController.year).toEqual(componentBind.year);
   });
 });
 
