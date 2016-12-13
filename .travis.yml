@@ -9,7 +9,7 @@ cache:
   - app/bower_components
 
 before_script:
-  - npm install
+  - yarn
   - bower install
 
 script:
