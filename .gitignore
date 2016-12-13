@@ -15,4 +15,3 @@ coverage
 **/*.annotated.*
 *.sublime-project
 *.sublime-workspace
-.yarnclean
