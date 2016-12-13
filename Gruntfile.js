@@ -114,7 +114,7 @@ module.exports = function(grunt) {
     wiredep: {
       task: {
         directory: 'app/bower_components',
-        src: ['app/index.html'],
+        src: ['app/index.html', './karma.conf.js'],
       }
     },
 
@@ -150,11 +150,11 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: ['app/**/*.js'],
-        tasks: ['devScript', 'injector:js']
+        tasks: ['devScript', 'injector:js', 'karma']
       },
       bower: {
         files: ['app/bower_components/**'],
-        tasks: ['wiredep']
+        tasks: ['wiredep', 'karma']
       },
       html: {
         files: ['app/**/*.html', '!app/bower_components'],
@@ -321,6 +321,16 @@ module.exports = function(grunt) {
       }
     },
 
+    // KARMA TEST
+    karma: {
+      unit: {
+        configFile: './karma.conf.js',
+        browsers: ['PhantomJS'],
+        background: false,
+        singleRun: true
+      }
+    },
+
 
   });
 
@@ -335,7 +345,7 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']); // Style optimizer
 
   // Server task
-  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'watch']);
+  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'karma', 'watch']);
 
   // Build task
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
