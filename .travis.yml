@@ -8,5 +8,5 @@ before_script:
 
 script:
   - npm rebuild node-sass
-  - grunt wiredep && karma start --single-run --browsers "PhantomJS"
+  - grunt wiredep && karma start --single-run --browsers PhantomJS
 
