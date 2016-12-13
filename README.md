@@ -22,6 +22,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 <img src="./github_readme_assets/logo-jasmine.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-karma.png" height="64">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-yarn.png" height="64">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-es6.png" height="64">
 
 - [x] Grunt automations
 - [x] Javascript linter
@@ -30,6 +31,7 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 - [x] Images optimization
 - [x] Karma / Jasmine tests
 - [x] Yarn and Bower as package managers
+- [x] ES6 support
 
 
 ---
@@ -74,7 +76,6 @@ The Gruntfile expose these tasks:
 
 ## __Todo__
 
-- [ ] Add ES6 support
 - [ ] Create a simple backend in node.js + express.js
 - [ ] Introduce a simply db to store data (maybe firebase?)
 - [ ] Manage backend routes and render some datas with angular

@@ -6,11 +6,11 @@ module.exports.tasks = {
   watch: {
     stylesheet: {
       files: ['app/**/*.scss'],
-      tasks: ['devStyle', 'injector:css']
+      tasks: ['devStyle', 'injector:dev']
     },
     scripts: {
       files: ['app/**/*.js'],
-      tasks: ['devScript', 'injector:js', 'karma']
+      tasks: ['devScript', 'karma', 'concat:dev', 'babel:dev', 'injector:dev']
     },
     bower: {
       files: ['app/bower_components/**'],

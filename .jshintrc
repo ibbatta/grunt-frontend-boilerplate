@@ -62,6 +62,7 @@
   "undef": true, // Require all non-global variables be declared before they are used.
   "quotmark": "single",
   "unused": true,
+  "strict": "global",
 
   // -----------------------------------------------------
   // ---------------- Personal styling -------------------

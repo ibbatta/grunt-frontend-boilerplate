@@ -33,16 +33,16 @@ module.exports = function(grunt) {
   grunt.registerTask('devScript', ['jshint']);
 
   // Script optimizer
-  grunt.registerTask('optimizeScript', ['concat', 'babel', 'uglify']);
+  grunt.registerTask('optimizeScript', ['concat:dist', 'babel:dist', 'uglify']);
 
   // Style optimizer
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']);
 
   // Server task
-  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'wiredep', 'injector', 'browserSync:dev', 'karma', 'watch']);
+  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'concat:dev', 'babel:dev', 'wiredep', 'injector:dev', 'browserSync:dev', 'karma', 'watch']);
 
   // Build task
-  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector', 'ngAnnotate', 'copy:build', 'bower_concat']);
+  grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dist', 'ngAnnotate', 'copy:build', 'bower_concat']);
 
   // Dist task
   grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'browserSync:dist']);
