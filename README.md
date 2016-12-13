@@ -12,17 +12,17 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 ## __What this boilerplate contains__
 
-<img src="./github_readme_assets/logo-angular.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-uibootstrap.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-bootstrap.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-sass.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-bower.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-npm.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-grunt.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-jasmine.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-karma.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-yarn.png" height="56">&nbsp;&nbsp;
-<img src="./github_readme_assets/logo-es6.png" height="56">
+<img src="./github_readme_assets/logo-angular.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-uibootstrap.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bootstrap.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-sass.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-bower.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-npm.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-grunt.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-jasmine.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-karma.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-yarn.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-es6.png" height="55">&nbsp;&nbsp;
 
 - [x] Grunt automations
 - [x] Javascript linter
