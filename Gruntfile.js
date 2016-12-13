@@ -33,7 +33,7 @@ module.exports = function(grunt) {
   grunt.registerTask('devScript', ['jshint']);
 
   // Script optimizer
-  grunt.registerTask('optimizeScript', ['concat', 'uglify']);
+  grunt.registerTask('optimizeScript', ['concat', 'babel', 'uglify']);
 
   // Style optimizer
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']);
