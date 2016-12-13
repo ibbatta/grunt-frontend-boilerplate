@@ -1,6 +1,12 @@
 ## Change Log
 
-### upcoming (2016/10/17 15:27 +00:00)
+### upcoming (2016/12/13 13:43 +00:00)
+- [#26](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/26) Update yarn scripts and grunt tasks (@ibbatta)
+- [#24](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/24) Update test manage (@ibbatta)
+- [#23](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/23) Update README.md (@ibbatta)
+- [#22](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/22) Develop (@ibbatta)
+- [#20](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/20) Develop (@ibbatta)
+- [#18](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/18) Develop (@ibbatta)
 - [#17](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/17) Develop (@ibbatta)
 - [#14](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/14) update jshintrc in order to prevent linting on karma / jasmine test. (@ibbatta)
 - [#13](https://github.com/ibbatta/grunt-frontend-boilerplate/pull/13) Added unit tests. (@bampakoa)
