@@ -13,5 +13,5 @@ before_script:
   - bower install
 
 script:
-  - karma start karma.conf.js --single-run
+  - grunt wiredep && karma start --single-run --browsers PhantomJS
 
