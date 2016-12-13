@@ -624,10 +624,6 @@ bower-requirejs@^1.0.0:
     sudo-block "^1.0.0"
     update-notifier "^0.3.0"
 
-bower@^1.7.9:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/bower/-/bower-1.8.0.tgz#55dbebef0ad9155382d9e9d3e497c1372345b44a"
-
 bower@~1.3.0:
   version "1.3.12"
   resolved "https://registry.yarnpkg.com/bower/-/bower-1.3.12.tgz#37de0edb3904baf90aee13384a1a379a05ee214c"
@@ -2543,7 +2539,7 @@ gifsicle@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-github-changes@^1.0.4:
+github-changes@1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/github-changes/-/github-changes-1.0.4.tgz#b9bbad261f2ec43e39c0a2fc36f3c7bcc1fd05bb"
   dependencies:
@@ -3056,7 +3052,7 @@ grunt-postcss@^0.8.0:
     diff "^2.0.2"
     postcss "^5.0.0"
 
-grunt-sass@2.0.0:
+grunt-sass@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/grunt-sass/-/grunt-sass-2.0.0.tgz#9074cf9d7b4592e20f7788caa727b8f9aa06b60a"
   dependencies:
@@ -4004,12 +4000,6 @@ karma-chrome-launcher@^2.0.0:
   dependencies:
     fs-access "^1.0.0"
     which "^1.2.1"
-
-karma-cli@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/karma-cli/-/karma-cli-1.0.1.tgz#ae6c3c58a313a1d00b45164c455b9b86ce17f960"
-  dependencies:
-    resolve "^1.1.6"
 
 karma-coverage@^1.1.1:
   version "1.1.1"
@@ -5960,7 +5950,7 @@ resolve-pkg@^0.1.0:
   dependencies:
     resolve-from "^2.0.0"
 
-resolve@^1.1.6, resolve@~1.1.0, resolve@1.1.x:
+resolve@~1.1.0, resolve@1.1.x:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
@@ -6893,8 +6883,8 @@ tunnel-agent@~0.3.0:
   resolved "https://registry.yarnpkg.com/tunnel-agent/-/tunnel-agent-0.3.0.tgz#ad681b68f5321ad2827c4cfb1b7d5df2cfe942ee"
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
-  version "0.14.4"
-  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.4.tgz#8c9dbfb52795686f166cd2023794bcf103d13c2b"
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
 type-check@~0.3.2:
   version "0.3.2"
