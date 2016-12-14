@@ -26,6 +26,8 @@ module.exports = function(config) {
       'app/bower_components/jquery/dist/jquery.js',
       'app/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
       'app/bower_components/ng-lodash/build/ng-lodash.js',
+      'app/bower_components/angular-sanitize/angular-sanitize.js',
+      'app/bower_components/angular-resource/angular-resource.js',
       // endbower
       'app/index.js',
       'app/src/**/*.module.js',
@@ -36,7 +38,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/**/*.js': ['babel'],
+      'app/src/**/*.js': ['babel'],
       'app/src/**/*.html': ['ng-html2js'],
     },
 
