@@ -39,7 +39,7 @@ module.exports = function(grunt) {
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']);
 
   // Server task
-  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'concat:dev', 'babel:dev', 'wiredep', 'injector:dev', 'browserSync:dev', 'karma', 'watch']);
+  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'concat:dev', 'babel:dev', 'wiredep', 'injector:dev', 'karma', 'browserSync:dev', 'watch']);
 
   // Build task
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dist', 'ngAnnotate', 'copy:build', 'bower_concat']);
