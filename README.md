@@ -6,7 +6,7 @@
 
 >This repo contains a simplified boilerplate to start a project with __grunt__, __angular__ and __bootstrap__ in order to make easier and faster the template's developing.
 
-Developed following the best practice for Angular.js (https://github.com/johnpapa/angular-styleguide)
+Developed following the best practice for Angular.js [John Papa angular-styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 
 ---
 
