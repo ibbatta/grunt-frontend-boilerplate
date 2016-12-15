@@ -76,11 +76,8 @@ The Gruntfile expose these tasks:
 
 ## __Todo__
 
-- [ ] Create a simple backend in node.js + express.js
-- [ ] Introduce a simply db to store data (maybe firebase?)
-- [ ] Manage backend routes and render some datas with angular
-- [ ] Try to create a simply blog (i.e. wordpress) with _node_, _express_, a _ database_ and _angular_
-- [ ] Migrate to Gulp.js and React.js (?)
+- [ ] Code optimization
+- [ ] Try to create a simply blog (i.e. wordpress) with __node__, __express__, a __database__ (maybe firebase?) and __angular__
 
 
 ---
