@@ -40,12 +40,12 @@ Developed following the best practice for Angular.js (https://github.com/johnpap
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.1)
-* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.17)
+* [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.x)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.17.x)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
-* [Karma](https://karma-runner.github.io) (version >= 1.3.0)
+* [Karma](https://karma-runner.github.io) (version >= 1.3.x)
 
 Then:
 
