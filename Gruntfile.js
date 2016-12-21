@@ -27,7 +27,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['clean', 'bower', 'dev']);
 
   // Style task
-  grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev']);
+  grunt.registerTask('devStyle', ['sass:dev', 'postcss:dev', 'copy:img']);
 
   // Script task
   grunt.registerTask('devScript', ['jshint']);
