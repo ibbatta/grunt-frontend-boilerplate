@@ -10,7 +10,7 @@ module.exports.tasks = {
     app: {
       files: [{
         expand: true,
-        src: ['app/**/*.js', '!**/*.annotated.js', '!app/**/*.spec.js'],
+        src: ['app/**/*.js', '!app/bower_components', '!**/*.annotated.js', '!app/**/*.spec.js'],
         ext: '.annotated.js',
         extDot: 'last'
       }],
