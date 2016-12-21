@@ -16,6 +16,10 @@ module.exports.tasks = {
       files: ['app/bower_components/**'],
       tasks: ['wiredep', 'karma']
     },
+    img: {
+      files: ['app/assets/**'],
+      tasks: ['copy:img']
+    },
     html: {
       files: ['app/**/*.html', '!app/bower_components'],
       tasks: ['bootlint']
