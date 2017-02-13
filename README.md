@@ -62,13 +62,16 @@ From the directory of the project run `yarn && bower install`
 
 ## __Usage__
 
-Once everything is installed, use grunt from the terminal to start the build tasks.
-The Gruntfile expose these tasks:
+Once everything is installed, use Grunt or Yarn from the terminal to start the build tasks.<br>
+The package.json exposes these tasks:
 
 - `yarn start` (start the project locally)
 - `yarn test` (start test and watch for changes)
 - `yarn build` (prepare the build pack)
 - `yarn gh-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github - __change with your data__)
+
+The Gruntfile.js exposes these tasks:
+
 - `grunt clean` (clean / remove tmp, dist and bower's component folders)
 
 
