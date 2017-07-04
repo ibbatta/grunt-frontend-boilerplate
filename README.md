@@ -56,7 +56,7 @@ Then:
 
 ## __Installation__
 
-From the directory of the project run `yarn && bower install` (or `npm install && bower install`);
+From the directory of the project run `yarn` (or `npm install`);
 
 ---
 
