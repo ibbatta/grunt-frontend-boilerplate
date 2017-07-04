@@ -47,8 +47,4 @@ module.exports = function(grunt) {
   // Dist task
   grunt.registerTask('dist', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'browserSync:dist']);
 
-  // Upload github-page
-  grunt.registerTask('gh-page', ['build', 'useminPrepare', 'optimizeScript', 'optimizeStyle', 'clean:distTmp', 'copy:dist', 'usemin', 'compress', 'clean:annotated', 'ghDeploy']);
-
 };
-

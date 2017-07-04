@@ -40,8 +40,8 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.x)
-* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.17.x)
+* [NodeJs & npm](http://nodejs.org/download/) (version 6.9.x)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.27.x)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
@@ -56,7 +56,7 @@ Then:
 
 ## __Installation__
 
-From the directory of the project run `yarn && bower install`
+From the directory of the project run `yarn && bower install` (or `npm install && bower install`);
 
 ---
 
@@ -65,10 +65,9 @@ From the directory of the project run `yarn && bower install`
 Once everything is installed, use Grunt or Yarn from the terminal to start the build tasks.<br>
 The package.json exposes these tasks:
 
-- `yarn start` (start the project locally)
-- `yarn test` (start test and watch for changes)
-- `yarn build` (prepare the build pack)
-- `yarn gh-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github - __change with your data__)
+- `yarn start` or `npm start` (start the project locally)
+- `yarn test` or `npm run test` (start test and watch for changes)
+- `yarn build` or `npm run build` (prepare the build pack)
 
 The Gruntfile.js exposes these tasks:
 
