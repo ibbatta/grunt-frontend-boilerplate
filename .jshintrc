@@ -17,8 +17,6 @@
   },
   "predef": [ // Custom globals
     "angular",
-    "URI",
-    "moment",
     "describe",
     "beforeEach",
     "afterEach",
@@ -81,4 +79,3 @@
   "validthis": true,
   "esversion": 6
 }
-

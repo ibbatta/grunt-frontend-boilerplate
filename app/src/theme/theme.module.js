@@ -11,7 +11,7 @@
     $timeout(function() {
       $rootScope.$themeFinishLoading = true;
     }, 0);
+
   }
 
 })();
-
