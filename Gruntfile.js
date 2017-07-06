@@ -33,13 +33,13 @@ module.exports = function(grunt) {
   grunt.registerTask('devScript', ['jshint']);
 
   // Script optimizer
-  grunt.registerTask('optimizeScript', ['concat:dist', 'babel:dist', 'uglify']);
+  grunt.registerTask('optimizeScript', ['concat:dist', 'browserify:dist', 'uglify']);
 
   // Style optimizer
   grunt.registerTask('optimizeStyle', ['cssmin', 'imagemin']);
 
   // Server task
-  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'concat:dev', 'babel:dev', 'wiredep', 'injector:dev', 'karma', 'browserSync:dev', 'watch']);
+  grunt.registerTask('dev', ['bootlint', 'devScript', 'devStyle', 'concat:dev', 'browserify:dev', 'wiredep', 'injector:dev', 'karma', 'browserSync:dev', 'watch']);
 
   // Build task
   grunt.registerTask('build', ['clean', 'bower', 'devStyle', 'wiredep', 'injector:dist', 'ngAnnotate', 'copy:build', 'bower_concat']);

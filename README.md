@@ -23,6 +23,7 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 <img src="./github_readme_assets/logo-karma.png" height="55">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-yarn.png" height="55">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-es6.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-browserify.png" height="55">&nbsp;&nbsp;
 
 - [x] Grunt automations
 - [x] Javascript linter

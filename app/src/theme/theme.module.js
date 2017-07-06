@@ -1,5 +1,6 @@
-(function() {
-  'use strict';
+'use strict';
+
+(() => {
 
   angular.module('boilerplate.theme', [
       'boilerplate.theme.components'

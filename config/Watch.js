@@ -10,7 +10,7 @@ module.exports.tasks = {
     },
     scripts: {
       files: ['app/**/*.js'],
-      tasks: ['devScript', 'karma', 'concat:dev', 'babel:dev', 'injector:dev']
+      tasks: ['devScript', 'karma', 'concat:dev', 'browserify:dev', 'injector:dev']
     },
     bower: {
       files: ['app/bower_components/**'],
@@ -27,4 +27,3 @@ module.exports.tasks = {
   }
 
 };
-

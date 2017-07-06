@@ -1,5 +1,6 @@
-(function() {
-  'use strict';
+'use strict';
+
+(() => {
 
   angular.module('boilerplate.pages.home', [])
     .config(routeConfig);
@@ -18,4 +19,3 @@
   }
 
 })();
-

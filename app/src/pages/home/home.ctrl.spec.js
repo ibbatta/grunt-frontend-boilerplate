@@ -1,18 +1,17 @@
 'use strict';
 
-describe('home controller', function() {
+describe('home controller', () => {
 
-  var $controller;
+  let $controller;
 
   beforeEach(module('boilerplate.pages'));
 
-  beforeEach(inject(function(_$controller_) {
+  beforeEach(inject(_$controller_ => {
     $controller = _$controller_('HomeCtrl');
   }));
 
-  it('should be created successfully', function() {
+  it('should be created successfully', () => {
     expect($controller).toBeDefined();
   });
 
 });
-

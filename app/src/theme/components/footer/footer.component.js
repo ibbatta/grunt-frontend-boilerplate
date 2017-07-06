@@ -1,7 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var footerConfig = {
+(() => {
+
+  const footerConfig = {
     bindings: {
       author: '@',
       year: '@'
