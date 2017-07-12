@@ -1,7 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var homeContentConfig = {
+(() => {
+
+  const homeContentConfig = {
     templateUrl: 'src/pages/home/components/home-content/home-content.tpl.html',
     controller: homeContentCtrl,
     controllerAs: 'vm'
@@ -13,4 +14,3 @@
     .component('homeContent', homeContentConfig);
 
 })();
-

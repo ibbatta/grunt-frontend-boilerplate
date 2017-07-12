@@ -1,5 +1,6 @@
-(function() {
-  'use strict';
+'use strict';
+
+(() => {
 
   angular.module('boilerplate.theme', [
       'boilerplate.theme.components'
@@ -11,7 +12,7 @@
     $timeout(function() {
       $rootScope.$themeFinishLoading = true;
     }, 0);
+
   }
 
 })();
-

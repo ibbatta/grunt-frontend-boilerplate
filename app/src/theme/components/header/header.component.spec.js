@@ -1,19 +1,21 @@
 'use strict';
 
-describe('component: pageHeader', function() {
+describe('component: pageHeader', () => {
 
-  var $componentController;
-  var componentBind = { projectName: 'Fake title' };
+  let $componentController;
+  const module = angular.mock.module;
+  const componentBind = {
+    projectName: 'Fake title'
+  };
 
   beforeEach(module('boilerplate.theme.components'));
 
-  beforeEach(inject(function(_$componentController_) {
+  beforeEach(inject(_$componentController_ => {
     $componentController = _$componentController_('pageHeader', null, componentBind);
   }));
 
-  it('should set project name', function() {
+  it('should set project name', () => {
     expect($componentController.projectName).toEqual(componentBind.projectName);
   });
 
 });
-

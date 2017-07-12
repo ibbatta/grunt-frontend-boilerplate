@@ -1,11 +1,12 @@
 'use strict';
 
-describe('pages module', function() {
+describe('pages module', () => {
 
-  var urlRouterProvider;
+  let urlRouterProvider;
+  const module = angular.mock.module;
 
-  beforeEach(function() {
-    module('ui.router', function($urlRouterProvider) {
+  beforeEach(() => {
+    module('ui.router', $urlRouterProvider => {
       urlRouterProvider = $urlRouterProvider;
       spyOn(urlRouterProvider, 'otherwise');
     });
@@ -13,9 +14,8 @@ describe('pages module', function() {
     inject();
   });
 
-  it('should set default route', function() {
+  it('should set default route', () => {
     expect(urlRouterProvider.otherwise).toHaveBeenCalledWith('/');
   });
 
 });
-

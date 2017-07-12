@@ -1,8 +1,11 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var headerConfig = {
-    bindings: { projectName: '@' },
+(() => {
+
+  let headerConfig = {
+    bindings: {
+      projectName: '@'
+    },
     templateUrl: 'src/theme/components/header/header.tpl.html',
     controller: headerCtrl,
     controllerAs: 'vm'
@@ -14,4 +17,3 @@
     .component('pageHeader', headerConfig);
 
 })();
-

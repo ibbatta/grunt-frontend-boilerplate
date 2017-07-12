@@ -23,6 +23,7 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 <img src="./github_readme_assets/logo-karma.png" height="55">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-yarn.png" height="55">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-es6.png" height="55">&nbsp;&nbsp;
+<img src="./github_readme_assets/logo-browserify.png" height="55">&nbsp;&nbsp;
 
 - [x] Grunt automations
 - [x] Javascript linter
@@ -40,8 +41,8 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version >= 6.x and <= 6.9.x)
-* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.17.x)
+* [NodeJs & npm](http://nodejs.org/download/) (version 6.9.x)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.27.x)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
 * [Sass](http://sass-lang.com/install) (latest version)
@@ -56,7 +57,7 @@ Then:
 
 ## __Installation__
 
-From the directory of the project run `yarn && bower install`
+From the directory of the project run `yarn` (or `npm install`);
 
 ---
 
@@ -65,10 +66,9 @@ From the directory of the project run `yarn && bower install`
 Once everything is installed, use Grunt or Yarn from the terminal to start the build tasks.<br>
 The package.json exposes these tasks:
 
-- `yarn start` (start the project locally)
-- `yarn test` (start test and watch for changes)
-- `yarn build` (prepare the build pack)
-- `yarn gh-page` (prepare the build pack and push it to the __gh-pages__ branch to show a preview inside github - __change with your data__)
+- `yarn start` or `npm start` (start the project locally)
+- `yarn test` or `npm run test` (start test and watch for changes)
+- `yarn build` or `npm run build` (prepare the build pack)
 
 The Gruntfile.js exposes these tasks:
 
@@ -79,11 +79,11 @@ The Gruntfile.js exposes these tasks:
 
 ## __Todo__
 
-- [ ] Code optimization (maybe ES6 restyle?)
-- [ ] Create Yeoman generator
+- [x] Code optimization (maybe ES6 restyle?)
 - [ ] Create and link a simple backend (__node__ + __express__)
 - [ ] Create and link a __database__ (maybe firebase?)
 - [ ] Try to create a simply blog (i.e. wordpress)
+- [ ] Create Yeoman generator
 
 
 ---

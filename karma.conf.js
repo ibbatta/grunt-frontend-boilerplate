@@ -12,7 +12,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'browserify'],
 
 
     // list of files / patterns to load in the browser
@@ -38,7 +38,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'app/src/**/*.js': ['babel'],
+      'app/src/**/*.js': ['babel', 'browserify'],
       'app/src/**/*.html': ['ng-html2js'],
     },
 
@@ -49,11 +49,25 @@ module.exports = function(config) {
       moduleName: 'templates'
     },
 
+    browserify: {
+      debug: true,
+      transform: [
+        ['babelify', {
+          presets: ['latest', 'es2015']
+        }]
+      ]
+    },
+
+    watchify: {
+      poll: true
+    },
+
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['progress'],
+
 
     // web server port
     port: 9876,
@@ -86,4 +100,3 @@ module.exports = function(config) {
     concurrency: Infinity
   });
 };
-

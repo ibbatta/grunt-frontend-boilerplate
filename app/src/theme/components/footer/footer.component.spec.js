@@ -1,22 +1,28 @@
 'use strict';
 
-describe('component: pageFooter', function() {
+describe('component: pageFooter', () => {
 
-  var $componentController;
-  var componentBind = { author: 'Fake author', year: '2016' };
+  let $componentController;
+  const module = angular.mock.module;
+  const componentBind = {
+    author: 'Fake author',
+    year: '2016'
+  };
 
   beforeEach(module('boilerplate.theme.components'));
 
-  beforeEach(inject(function(_$componentController_) {
-    $componentController = _$componentController_('pageFooter', null, { author: componentBind.author, year: componentBind.year });
+  beforeEach(inject(_$componentController_ => {
+    $componentController = _$componentController_('pageFooter', null, {
+      author: componentBind.author,
+      year: componentBind.year
+    });
   }));
 
-  it('should set author', function() {
+  it('should set author', () => {
     expect($componentController.author).toEqual(componentBind.author);
   });
 
-  it('should set year', function() {
+  it('should set year', () => {
     expect($componentController.year).toEqual(componentBind.year);
   });
 });
-

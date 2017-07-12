@@ -1,8 +1,12 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var footerConfig = {
-    bindings: { author: '@', year: '@' },
+(() => {
+
+  const footerConfig = {
+    bindings: {
+      author: '@',
+      year: '@'
+    },
     templateUrl: 'src/theme/components/footer/footer.tpl.html',
     controller: footerCtrl,
     controllerAs: 'vm'
@@ -14,4 +18,3 @@
     .component('pageFooter', footerConfig);
 
 })();
-

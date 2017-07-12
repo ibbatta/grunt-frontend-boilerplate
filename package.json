@@ -2,6 +2,9 @@
   "name": "webapp-boilerplate",
   "version": "1.0.0",
   "description": "Custom webapp boilerplate",
+  "author": "Maurizio Battaghini",
+  "license": "ISC",
+  "homepage": "https://github.com/ibbatta/grunt-frontend-boilerplate",
   "repository": {
     "type": "git",
     "url": "https://github.com/ibbatta/grunt-frontend-boilerplate.git"
@@ -13,29 +16,30 @@
     "boilerplate",
     "project"
   ],
+  "engines": {
+    "node": ">=8.0.0",
+    "yarn": "^0.27.5"
+  },
   "scripts": {
     "start": "grunt",
     "build": "grunt dist",
     "test": "grunt wiredep && karma start",
-    "changelog": "github-changes -o ibbatta -r grunt-frontend-boilerplate -a --only-pulls --use-commit-body",
-    "gh-page": "grunt gh-page"
+    "postinstall": "bower install"
   },
-  "author": "Maurizio Battaghini",
-  "license": "ISC",
-  "homepage": "https://github.com/ibbatta/grunt-frontend-boilerplate",
   "devDependencies": {
     "angular-mocks": "^1.5.0",
     "autoprefixer": "^6.3.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
-    "github-changes": "1.0.4",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
     "grunt": "^1.0.1",
-    "grunt-babel": "^6.0.0",
     "grunt-bootlint": "^0.10.1",
     "grunt-bower-concat": "^1.0.0",
     "grunt-bower-requirejs": "^2.0.0",
     "grunt-bower-task": "^0.4.0",
     "grunt-browser-sync": "^2.2.0",
+    "grunt-browserify": "^5.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-compress": "^1.3.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -48,7 +52,6 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-express": "^1.4.1",
-    "grunt-gh-deploy": "^0.1.3",
     "grunt-injector": "^1.0.1",
     "grunt-karma": "^2.0.0",
     "grunt-ng-annotate": "^3.0.0",
@@ -62,6 +65,7 @@
     "jshint-stylish": "^2.1.0",
     "karma": "^1.3.0",
     "karma-babel-preprocessor": "^6.0.1",
+    "karma-browserify": "^5.1.1",
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-firefox-launcher": "^1.0.0",
@@ -73,11 +77,11 @@
     "load-grunt-tasks": "^3.4.0",
     "lodash": "^4.2.0",
     "ng-annotate": "^1.2.1",
-    "phantomjs-prebuilt": "^2.1.4"
+    "phantomjs-prebuilt": "^2.1.4",
+    "watchify": "^3.9.0"
   },
   "dependencies": {
     "bower": "^1.7.9",
     "karma-cli": "^1.0.1"
   }
 }
-

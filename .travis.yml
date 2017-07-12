@@ -1,12 +1,10 @@
 language: node_js
 node_js:
-  - "6"
+  - "8"
 
 before_script:
   - yarn
-  - bower install
 
 script:
-  - npm rebuild node-sass
   - grunt wiredep && karma start --single-run --browsers PhantomJS
 

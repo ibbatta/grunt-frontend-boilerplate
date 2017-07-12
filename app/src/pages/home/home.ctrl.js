@@ -1,5 +1,6 @@
-(function() {
-  'use strict';
+'use strict';
+
+(() => {
 
   angular.module('boilerplate.pages.home')
     .controller('HomeCtrl', HomeCtrl);
@@ -8,4 +9,3 @@
   function HomeCtrl() {}
 
 })();
-
