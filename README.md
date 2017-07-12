@@ -79,11 +79,11 @@ The Gruntfile.js exposes these tasks:
 
 ## __Todo__
 
-- [ ] Code optimization (maybe ES6 restyle?)
-- [ ] Create Yeoman generator
+- [x] Code optimization (maybe ES6 restyle?)
 - [ ] Create and link a simple backend (__node__ + __express__)
 - [ ] Create and link a __database__ (maybe firebase?)
 - [ ] Try to create a simply blog (i.e. wordpress)
+- [ ] Create Yeoman generator
 
 
 ---
