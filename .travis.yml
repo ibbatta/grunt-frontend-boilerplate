@@ -6,5 +6,5 @@ before_script:
   - yarn
 
 script:
-  - grunt wiredep && karma start --single-run --browsers Chrome
+  - grunt wiredep && karma start --single-run --browsers PhantomJS
 
