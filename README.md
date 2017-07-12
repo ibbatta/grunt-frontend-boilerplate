@@ -41,7 +41,7 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 
 Before cloning the repo **be sure** you have installed:
 
-* [NodeJs & npm](http://nodejs.org/download/) (version 6.9.x)
+* [Node](http://nodejs.org/download/) (version >= 8.0.x)
 * [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.27.x)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
