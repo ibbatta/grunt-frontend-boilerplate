@@ -4,8 +4,7 @@ node_js:
 
 before_script:
   - yarn
-  - yarn add browserify
 
 script:
-  - grunt wiredep && karma start --single-run --browsers PhantomJS
+  - grunt wiredep && karma start --single-run --browsers Chrome
 
