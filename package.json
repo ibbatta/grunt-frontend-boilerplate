@@ -79,7 +79,6 @@
   },
   "dependencies": {
     "bower": "^1.7.9",
-    "browserify": "^14.4.0",
     "karma-cli": "^1.0.1"
   }
 }
