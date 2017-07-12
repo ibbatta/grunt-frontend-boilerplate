@@ -2,7 +2,8 @@
 
 describe('pages module', () => {
 
-  var urlRouterProvider;
+  let urlRouterProvider;
+  const module = angular.mock.module;
 
   beforeEach(() => {
     module('ui.router', $urlRouterProvider => {

@@ -3,6 +3,7 @@
 describe('component: pageFooter', () => {
 
   let $componentController;
+  const module = angular.mock.module;
   const componentBind = {
     author: 'Fake author',
     year: '2016'

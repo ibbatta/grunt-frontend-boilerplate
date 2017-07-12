@@ -3,6 +3,7 @@
 describe('component: homeContent', () => {
 
   let $componentController;
+  const module = angular.mock.module;
 
   beforeEach(module('boilerplate.pages'));
 

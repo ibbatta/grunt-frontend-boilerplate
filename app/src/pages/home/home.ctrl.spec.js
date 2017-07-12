@@ -3,6 +3,7 @@
 describe('home controller', () => {
 
   let $controller;
+  const module = angular.mock.module;
 
   beforeEach(module('boilerplate.pages'));
 

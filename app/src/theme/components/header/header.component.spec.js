@@ -3,6 +3,7 @@
 describe('component: pageHeader', () => {
 
   let $componentController;
+  const module = angular.mock.module;
   const componentBind = {
     projectName: 'Fake title'
   };

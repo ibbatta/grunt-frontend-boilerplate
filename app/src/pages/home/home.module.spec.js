@@ -5,6 +5,7 @@ describe('home module', function() {
   describe('home route', function() {
 
     let $state;
+    const module = angular.mock.module;
 
     beforeEach(module('boilerplate.pages'));
 
