@@ -30,9 +30,9 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 - [x] Bootstrap html linter
 - [x] Sass / Scss compiler
 - [x] Images optimization
-- [x] Karma / Jasmine tests
-- [x] Yarn and Bower as package managers
-- [x] ES6 support
+- [x] Karma / Jasmine test
+- [x] Yarn and Bower package managers
+- [x] ES6 supported
 
 
 ---
