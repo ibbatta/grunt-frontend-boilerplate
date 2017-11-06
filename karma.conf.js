@@ -53,7 +53,7 @@ module.exports = function(config) {
       debug: true,
       transform: [
         ['babelify', {
-          presets: ['latest', 'es2015']
+          presets: ['env']
         }]
       ]
     },
