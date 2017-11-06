@@ -25,11 +25,12 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 <img src="./github_readme_assets/logo-es6.png" height="55">&nbsp;&nbsp;
 <img src="./github_readme_assets/logo-browserify.png" height="55">&nbsp;&nbsp;
 
+- [x] Angular framework (1.x)
 - [x] Grunt automations
 - [x] Javascript linter
 - [x] Bootstrap html linter
 - [x] Sass / Scss compiler
-- [x] Images optimization
+- [x] Images, Js and Css optimization
 - [x] Karma / Jasmine test
 - [x] Yarn and Bower package managers
 - [x] ES6 supported
