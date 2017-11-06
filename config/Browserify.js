@@ -8,7 +8,7 @@ module.exports.tasks = {
       options: {
         transform: [
           ['babelify', {
-            presets: ['latest', 'es2015']
+            presets: ['env']
           }]
         ]
       },
@@ -23,7 +23,7 @@ module.exports.tasks = {
       options: {
         transform: [
           ['babelify', {
-            presets: ['latest', 'es2015']
+            presets: ['env']
           }]
         ]
       },
