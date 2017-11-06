@@ -18,12 +18,14 @@
   ],
   "engines": {
     "node": ">=8.x.x",
-    "yarn": "^1.2.x"
+    "yarn": "^1.2.x",
+    "npm": "^5.5.x"
   },
   "scripts": {
     "start": "grunt",
     "build": "grunt dist",
     "test": "grunt wiredep && karma start",
+    "clean": "grunt clean && rm -rf ./node_modules",
     "postinstall": "bower install"
   },
   "devDependencies": {

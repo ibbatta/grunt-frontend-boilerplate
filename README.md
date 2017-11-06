@@ -41,11 +41,11 @@ Developed following the best practice for Angular.js ([John Papa angular-stylegu
 
 Before cloning the repo **be sure** you have installed:
 
-* [Node](http://nodejs.org/download/) (version >= 8.0.x)
-* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 0.27.x)
+* [Node](http://nodejs.org/download/) (version >= 8.x.x)
+* [Yarn](https://yarnpkg.com/en/docs/install) (version >= 1.2.x)
+* [Npm](https://www.npmjs.com/) (version >= 5.5.x)
 * [Grunt](http://gruntjs.com/getting-started) (latest version)
 * [Bower](http://bower.io/) (latest version)
-* [Sass](http://sass-lang.com/install) (latest version)
 * [Karma](https://karma-runner.github.io) (version >= 1.3.x)
 
 Then:
@@ -69,6 +69,7 @@ The package.json exposes these tasks:
 - `yarn start` or `npm start` (start the project locally)
 - `yarn test` or `npm run test` (start test and watch for changes)
 - `yarn build` or `npm run build` (prepare the build pack)
+- `yarn clean` or `npm run clean` (remove bower components and node modules)
 
 The Gruntfile.js exposes these tasks:
 
@@ -80,10 +81,10 @@ The Gruntfile.js exposes these tasks:
 ## __Todo__
 
 - [x] Code optimization (maybe ES6 restyle?)
-- [ ] Create and link a simple backend (__node__ + __express__)
-- [ ] Create and link a __database__ (maybe firebase?)
-- [ ] Try to create a simply blog (i.e. wordpress)
-- [ ] Create Yeoman generator
+- [ ] Create and link a simple backend (__node__ + __express__) (__???__)
+- [ ] Create and link a __database__ (maybe firebase?) (__???__)
+- [ ] Try to create a simply blog (i.e. wordpress) (__???__)
+- [ ] Create Yeoman generator (__???__)
 
 
 ---
